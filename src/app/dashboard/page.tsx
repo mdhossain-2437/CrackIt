@@ -1,10 +1,10 @@
 "use client";
 
-import { liveExams, subjects } from "@/data/mock";
+import { scheduledExams, subjects } from "@/data/questionBank";
 import { useUserStore } from "@/store";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 function formatTime(date: string) {
   const d = new Date(date);
@@ -19,7 +19,7 @@ function formatTime(date: string) {
 }
 
 export default function DashboardPage() {
-  const { user, isOnboarded } = useUserStore();
+  const { user, isOnboarded, totalExamsTaken, totalQuestionsAttempted, totalCorrectAnswers } = useUserStore();
   const router = useRouter();
 
   useEffect(() => {
@@ -30,13 +30,13 @@ export default function DashboardPage() {
 
   if (!user) return null;
 
-  const upcomingLive = liveExams
-    .filter((e) => e.status !== "completed")
+  const upcomingLive = scheduledExams
+    .filter((e) => new Date(e.scheduledAt) > new Date())
     .slice(0, 2);
   const topSubjects = subjects.slice(0, 4);
-  const overallProgress = Math.round(
-    subjects.reduce((a, s) => a + s.progress, 0) / subjects.length,
-  );
+  const overallAccuracy = totalQuestionsAttempted > 0
+    ? Math.round((totalCorrectAnswers / totalQuestionsAttempted) * 100)
+    : 0;
 
   return (
     <div className="px-4 pt-6 pb-4 safe-top">
@@ -99,34 +99,56 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Overall Progress Card */}
-      <div className="card mb-4 p-4">
-        <div className="mb-3 flex items-center justify-between">
-          <h2
-            className="text-sm font-semibold"
-            style={{ color: "var(--color-text-primary)" }}
-          >
-            সার্বিক প্রস্তুতি
-          </h2>
+      {/* Stats Summary */}
+      <div className="mb-4 grid grid-cols-3 gap-3">
+        <div className="card flex flex-col items-center p-3">
           <span
-            className="text-xl font-bold"
+            className="text-lg font-bold"
             style={{ color: "var(--color-primary)" }}
           >
-            {overallProgress}%
+            {totalExamsTaken}
+          </span>
+          <span
+            className="text-[10px]"
+            style={{ color: "var(--color-text-muted)" }}
+          >
+            পরীক্ষা দিয়েছো
           </span>
         </div>
-        <div className="progress-bar">
-          <div
-            className="progress-bar-fill"
-            style={{ width: `${overallProgress}%` }}
-          />
+        <div className="card flex flex-col items-center p-3">
+          <span
+            className="text-lg font-bold"
+            style={{ color: "var(--color-primary)" }}
+          >
+            {totalQuestionsAttempted}
+          </span>
+          <span
+            className="text-[10px]"
+            style={{ color: "var(--color-text-muted)" }}
+          >
+            প্রশ্ন সমাধান
+          </span>
         </div>
-        <p
-          className="mt-2 text-xs"
-          style={{ color: "var(--color-text-muted)" }}
-        >
-          আজকে কমপক্ষে ৩০ মিনিট প্র্যাকটিস করো!
-        </p>
+        <div className="card flex flex-col items-center p-3">
+          <span
+            className="text-lg font-bold"
+            style={{
+              color: overallAccuracy >= 70
+                ? "var(--color-success)"
+                : overallAccuracy >= 50
+                  ? "var(--color-warning)"
+                  : "var(--color-text-primary)",
+            }}
+          >
+            {overallAccuracy}%
+          </span>
+          <span
+            className="text-[10px]"
+            style={{ color: "var(--color-text-muted)" }}
+          >
+            নির্ভুলতা
+          </span>
+        </div>
       </div>
 
       {/* Quick Actions */}
@@ -194,27 +216,15 @@ export default function DashboardPage() {
                 className="card min-w-[260px] flex-shrink-0 p-4"
               >
                 <div className="mb-2 flex items-center gap-2">
-                  {exam.status === "live" ? (
-                    <span
-                      className="badge"
-                      style={{
-                        backgroundColor: "rgb(239 68 68 / 0.08)",
-                        color: "var(--color-danger)",
-                      }}
-                    >
-                      ● LIVE
-                    </span>
-                  ) : (
-                    <span
-                      className="badge"
-                      style={{
-                        backgroundColor: "rgb(37 99 235 / 0.08)",
-                        color: "var(--color-primary)",
-                      }}
-                    >
-                      আসছে
-                    </span>
-                  )}
+                  <span
+                    className="badge"
+                    style={{
+                      backgroundColor: "rgb(37 99 235 / 0.08)",
+                      color: "var(--color-primary)",
+                    }}
+                  >
+                    আসছে
+                  </span>
                   {exam.isPremium && (
                     <span
                       className="badge"
@@ -246,14 +256,14 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {/* Subject Progress */}
+      {/* Subject List */}
       <div className="mb-6">
         <div className="mb-3 flex items-center justify-between">
           <h2
             className="text-sm font-semibold"
             style={{ color: "var(--color-text-primary)" }}
           >
-            বিষয় ভিত্তিক প্রগতি
+            বিষয় সমূহ
           </h2>
           <Link
             href="/subjects"
@@ -277,33 +287,38 @@ export default function DashboardPage() {
                 {subject.icon}
               </span>
               <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between mb-1">
-                  <span
-                    className="text-sm font-medium"
-                    style={{ color: "var(--color-text-primary)" }}
-                  >
-                    {subject.nameBn}
-                  </span>
-                  <span
-                    className="text-xs font-semibold"
-                    style={{ color: "var(--color-primary)" }}
-                  >
-                    {subject.progress}%
-                  </span>
-                </div>
-                <div className="progress-bar">
-                  <div
-                    className="progress-bar-fill"
-                    style={{ width: `${subject.progress}%` }}
-                  />
-                </div>
+                <span
+                  className="text-sm font-medium"
+                  style={{ color: "var(--color-text-primary)" }}
+                >
+                  {subject.nameBn}
+                </span>
+                <p
+                  className="text-xs mt-0.5"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
+                  {subject.totalTopics} টপিক
+                </p>
               </div>
+              <svg
+                className="h-5 w-5 flex-shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="var(--color-text-muted)"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Daily Tip */}
+      {/* AI Tip */}
       <div
         className="card p-4"
         style={{ backgroundColor: "rgb(37 99 235 / 0.04)" }}
@@ -321,8 +336,13 @@ export default function DashboardPage() {
               className="text-xs leading-relaxed"
               style={{ color: "var(--color-text-secondary)" }}
             >
-              তোমার Chemistry এ Organic Chemistry টপিকে আরো প্র্যাকটিস প্রয়োজন।
-              Accuracy মাত্র ৫৫%। আজকে এই টপিক থেকে ২০টি MCQ সলভ করো!
+              {totalExamsTaken === 0
+                ? "আজকে তোমার প্রথম প্র্যাকটিস শুরু করো! প্রতিদিন কমপক্ষে ৩০ মিনিট অনুশীলন করলে দ্রুত উন্নতি হবে।"
+                : overallAccuracy < 50
+                  ? `তোমার সার্বিক নির্ভুলতা ${overallAccuracy}%। মৌলিক ধারণাগুলো আবার পড়ো এবং সহজ প্রশ্ন দিয়ে শুরু করো।`
+                  : overallAccuracy < 70
+                    ? `তোমার নির্ভুলতা ${overallAccuracy}%। ভালো চলছে! দুর্বল টপিকগুলোতে আরো বেশি প্র্যাকটিস করো।`
+                    : `তোমার নির্ভুলতা ${overallAccuracy}%! দুর্দান্ত! কঠিন প্রশ্ন সলভ করে নিজেকে আরো এগিয়ে নাও।`}
             </p>
           </div>
         </div>

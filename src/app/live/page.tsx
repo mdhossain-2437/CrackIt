@@ -1,6 +1,6 @@
 "use client";
 
-import { liveExams } from "@/data/mock";
+import { scheduledExams } from "@/data/questionBank";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -11,18 +11,18 @@ export default function LiveExamsPage() {
   const now = new Date();
 
   const categorized = {
-    upcoming: liveExams.filter((e) => new Date(e.scheduledAt) > now),
-    live: liveExams.filter(
+    upcoming: scheduledExams.filter((e) => new Date(e.scheduledAt) > now),
+    live: scheduledExams.filter(
       (e) =>
         new Date(e.scheduledAt) <= now &&
         new Date(e.scheduledAt).getTime() + e.duration * 1000 > now.getTime(),
     ),
-    past: [] as typeof liveExams,
+    past: [] as typeof scheduledExams,
   };
 
-  // For demo, show all in upcoming if none match
+  // Show empty state when no exams match the current category
   if (categorized.upcoming.length === 0 && categorized.live.length === 0) {
-    categorized.upcoming = liveExams;
+    categorized.upcoming = scheduledExams;
   }
 
   const tabs = [

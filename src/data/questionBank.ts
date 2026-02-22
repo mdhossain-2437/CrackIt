@@ -6,81 +6,87 @@ import type {
   Topic,
 } from "@/types";
 
+// ==========================================
+// Subject Database — CrackIt Platform
+// ==========================================
 export const subjects: Subject[] = [
   {
     id: "physics",
     name: "Physics",
     nameBn: "পদার্থবিজ্ঞান",
     icon: "⚛️",
-    totalTopics: 12,
-    completedTopics: 8,
-    progress: 70,
+    totalTopics: 5,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "chemistry",
     name: "Chemistry",
     nameBn: "রসায়ন",
     icon: "🧪",
-    totalTopics: 14,
-    completedTopics: 5,
-    progress: 36,
+    totalTopics: 3,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "biology",
     name: "Biology",
     nameBn: "জীববিজ্ঞান",
     icon: "🧬",
-    totalTopics: 16,
-    completedTopics: 12,
-    progress: 75,
+    totalTopics: 3,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "math",
     name: "Mathematics",
     nameBn: "গণিত",
     icon: "📐",
-    totalTopics: 10,
-    completedTopics: 4,
-    progress: 40,
+    totalTopics: 4,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "english",
     name: "English",
     nameBn: "ইংরেজি",
     icon: "📝",
-    totalTopics: 8,
-    completedTopics: 6,
-    progress: 75,
+    totalTopics: 0,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "bangla",
     name: "Bangla",
     nameBn: "বাংলা",
     icon: "📖",
-    totalTopics: 10,
-    completedTopics: 7,
-    progress: 70,
+    totalTopics: 0,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "gk",
     name: "General Knowledge",
     nameBn: "সাধারণ জ্ঞান",
     icon: "🌍",
-    totalTopics: 20,
-    completedTopics: 10,
-    progress: 50,
+    totalTopics: 0,
+    completedTopics: 0,
+    progress: 0,
   },
   {
     id: "ict",
     name: "ICT",
     nameBn: "তথ্য ও যোগাযোগ প্রযুক্তি",
     icon: "💻",
-    totalTopics: 6,
-    completedTopics: 3,
-    progress: 50,
+    totalTopics: 0,
+    completedTopics: 0,
+    progress: 0,
   },
 ];
 
+// ==========================================
+// Topic Database — Organized by Subject
+// ==========================================
 export const topicsBySubject: Record<string, Topic[]> = {
   physics: [
     {
@@ -89,8 +95,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Mechanics",
       nameBn: "বলবিদ্যা",
       totalQuestions: 120,
-      attempted: 85,
-      accuracy: 72,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "thermodynamics",
@@ -98,8 +104,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Thermodynamics",
       nameBn: "তাপগতিবিদ্যা",
       totalQuestions: 80,
-      attempted: 40,
-      accuracy: 65,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "optics",
@@ -107,8 +113,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Optics",
       nameBn: "আলোকবিজ্ঞান",
       totalQuestions: 90,
-      attempted: 70,
-      accuracy: 80,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "electricity",
@@ -116,8 +122,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Electricity",
       nameBn: "তড়িৎ",
       totalQuestions: 100,
-      attempted: 60,
-      accuracy: 58,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "modern-physics",
@@ -125,17 +131,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Modern Physics",
       nameBn: "আধুনিক পদার্থবিজ্ঞান",
       totalQuestions: 70,
-      attempted: 30,
-      accuracy: 45,
-    },
-    {
-      id: "waves",
-      subjectId: "physics",
-      name: "Waves & Sound",
-      nameBn: "তরঙ্গ ও শব্দ",
-      totalQuestions: 60,
-      attempted: 50,
-      accuracy: 76,
+      attempted: 0,
+      accuracy: 0,
     },
   ],
   chemistry: [
@@ -145,8 +142,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Organic Chemistry",
       nameBn: "জৈব রসায়ন",
       totalQuestions: 150,
-      attempted: 60,
-      accuracy: 55,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "inorganic",
@@ -154,8 +151,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Inorganic Chemistry",
       nameBn: "অজৈব রসায়ন",
       totalQuestions: 120,
-      attempted: 40,
-      accuracy: 48,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "physical-chem",
@@ -163,8 +160,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Physical Chemistry",
       nameBn: "ভৌত রসায়ন",
       totalQuestions: 100,
-      attempted: 35,
-      accuracy: 62,
+      attempted: 0,
+      accuracy: 0,
     },
   ],
   biology: [
@@ -174,8 +171,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Botany",
       nameBn: "উদ্ভিদবিজ্ঞান",
       totalQuestions: 130,
-      attempted: 100,
-      accuracy: 78,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "zoology",
@@ -183,8 +180,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Zoology",
       nameBn: "প্রাণিবিজ্ঞান",
       totalQuestions: 140,
-      attempted: 110,
-      accuracy: 74,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "genetics",
@@ -192,8 +189,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Genetics",
       nameBn: "বংশগতিবিদ্যা",
       totalQuestions: 80,
-      attempted: 50,
-      accuracy: 68,
+      attempted: 0,
+      accuracy: 0,
     },
   ],
   math: [
@@ -203,8 +200,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Algebra",
       nameBn: "বীজগণিত",
       totalQuestions: 200,
-      attempted: 80,
-      accuracy: 60,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "calculus",
@@ -212,8 +209,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Calculus",
       nameBn: "ক্যালকুলাস",
       totalQuestions: 150,
-      attempted: 40,
-      accuracy: 45,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "geometry",
@@ -221,8 +218,8 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Geometry",
       nameBn: "জ্যামিতি",
       totalQuestions: 100,
-      attempted: 70,
-      accuracy: 72,
+      attempted: 0,
+      accuracy: 0,
     },
     {
       id: "trigonometry",
@@ -230,13 +227,16 @@ export const topicsBySubject: Record<string, Topic[]> = {
       name: "Trigonometry",
       nameBn: "ত্রিকোণমিতি",
       totalQuestions: 90,
-      attempted: 55,
-      accuracy: 65,
+      attempted: 0,
+      accuracy: 0,
     },
   ],
 };
 
-export const sampleQuestions: Question[] = [
+// ==========================================
+// Question Bank — Verified Past Year Questions
+// ==========================================
+export const questionBank: Question[] = [
   {
     id: "q1",
     text: "নিউটনের গতির দ্বিতীয় সূত্র অনুসারে, বল (F) সমান —",
@@ -393,7 +393,10 @@ export const sampleQuestions: Question[] = [
   },
 ];
 
-export const liveExams: LiveExam[] = [
+// ==========================================
+// Scheduled Live Exams
+// ==========================================
+export const scheduledExams: LiveExam[] = [
   {
     id: "live-1",
     title: "Weekly Medical Model Test - 15",
@@ -415,7 +418,7 @@ export const liveExams: LiveExam[] = [
     duration: 7200,
     totalQuestions: 200,
     registeredCount: 12890,
-    status: "live",
+    status: "upcoming",
     isPremium: true,
   },
   {
@@ -444,99 +447,9 @@ export const liveExams: LiveExam[] = [
   },
 ];
 
-export const leaderboardData: LeaderboardEntry[] = [
-  {
-    rank: 1,
-    userId: "u1",
-    name: "Rafiqul Islam",
-    score: 98,
-    timeTaken: 2340,
-    college: "Notre Dame College",
-    district: "Dhaka",
-  },
-  {
-    rank: 2,
-    userId: "u2",
-    name: "Fatima Akter",
-    score: 96,
-    timeTaken: 2520,
-    college: "Viqarunnisa Noon",
-    district: "Dhaka",
-  },
-  {
-    rank: 3,
-    userId: "u3",
-    name: "Kamal Hossain",
-    score: 95,
-    timeTaken: 2680,
-    college: "Rajshahi College",
-    district: "Rajshahi",
-  },
-  {
-    rank: 4,
-    userId: "u4",
-    name: "Nusrat Jahan",
-    score: 93,
-    timeTaken: 2450,
-    college: "Holy Cross College",
-    district: "Dhaka",
-  },
-  {
-    rank: 5,
-    userId: "u5",
-    name: "Arif Rahman",
-    score: 92,
-    timeTaken: 2890,
-    college: "Chittagong College",
-    district: "Chittagong",
-  },
-  {
-    rank: 6,
-    userId: "u6",
-    name: "Tasnia Farin",
-    score: 91,
-    timeTaken: 2700,
-    college: "BAF Shaheen College",
-    district: "Dhaka",
-  },
-  {
-    rank: 7,
-    userId: "u7",
-    name: "Md. Sakib",
-    score: 90,
-    timeTaken: 2950,
-    college: "Govt. Science College",
-    district: "Dhaka",
-  },
-  {
-    rank: 8,
-    userId: "u8",
-    name: "Ayesha Siddiqua",
-    score: 89,
-    timeTaken: 2600,
-    college: "Cumilla Victoria",
-    district: "Cumilla",
-  },
-  {
-    rank: 9,
-    userId: "u9",
-    name: "Tanvir Ahmed",
-    score: 88,
-    timeTaken: 3000,
-    college: "Cadet College Rangpur",
-    district: "Rangpur",
-  },
-  {
-    rank: 10,
-    userId: "u10",
-    name: "Sadia Rahman",
-    score: 87,
-    timeTaken: 2780,
-    college: "Adamjee Cantonment",
-    district: "Dhaka",
-  },
-];
-
+// ==========================================
+// Exam Categories
+// ==========================================
 export const examCategories = [
   {
     id: "bcs" as const,

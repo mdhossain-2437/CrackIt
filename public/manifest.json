@@ -1,7 +1,7 @@
 {
-  "name": "পরীক্ষা প্রস্তুতি - Exam Prep BD",
-  "short_name": "ExamPrepBD",
-  "description": "Bangladesh er shokol competitive exam er jonno AI-powered preparation platform",
+  "name": "CrackIt - AI Exam Preparation Platform",
+  "short_name": "CrackIt",
+  "description": "AI-powered competitive exam preparation platform for Bangladesh",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

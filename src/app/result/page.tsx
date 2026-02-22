@@ -1,6 +1,6 @@
 "use client";
 
-import { sampleQuestions } from "@/data/mock";
+import { questionBank } from "@/data/questionBank";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
@@ -28,7 +28,7 @@ function ResultContent() {
     }
   }, [searchParams]);
 
-  const questions = sampleQuestions;
+  const questions = questionBank;
 
   const stats = useMemo(() => {
     if (!resultData)

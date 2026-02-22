@@ -3,17 +3,45 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 // ==========================================
+// Progress Tracking Types
+// ==========================================
+interface TopicProgress {
+  attempted: number;
+  correct: number;
+  accuracy: number;
+}
+
+interface ExamHistoryEntry {
+  id: string;
+  date: string;
+  totalQuestions: number;
+  correct: number;
+  wrong: number;
+  skipped: number;
+  score: number;
+  timeTaken: number;
+  subjectId?: string;
+}
+
+// ==========================================
 // User Store
 // ==========================================
 interface UserState {
   user: User | null;
   isOnboarded: boolean;
+  topicProgress: Record<string, TopicProgress>;
+  examHistory: ExamHistoryEntry[];
+  totalExamsTaken: number;
+  totalQuestionsAttempted: number;
+  totalCorrectAnswers: number;
   setUser: (user: User) => void;
   setExamCategory: (category: ExamCategory) => void;
   setOnboarded: (value: boolean) => void;
   addXP: (amount: number) => void;
   addCoins: (amount: number) => void;
   incrementStreak: () => void;
+  recordExamResult: (entry: ExamHistoryEntry) => void;
+  updateTopicProgress: (topicId: string, attempted: number, correct: number) => void;
   logout: () => void;
 }
 
@@ -22,6 +50,11 @@ export const useUserStore = create<UserState>()(
     (set) => ({
       user: null,
       isOnboarded: false,
+      topicProgress: {},
+      examHistory: [],
+      totalExamsTaken: 0,
+      totalQuestionsAttempted: 0,
+      totalCorrectAnswers: 0,
       setUser: (user) => set({ user }),
       setExamCategory: (category) =>
         set((state) => ({
@@ -46,9 +79,37 @@ export const useUserStore = create<UserState>()(
             ? { ...state.user, streak: state.user.streak + 1 }
             : null,
         })),
-      logout: () => set({ user: null, isOnboarded: false }),
+      recordExamResult: (entry) =>
+        set((state) => ({
+          examHistory: [entry, ...state.examHistory].slice(0, 50),
+          totalExamsTaken: state.totalExamsTaken + 1,
+          totalQuestionsAttempted: state.totalQuestionsAttempted + entry.totalQuestions,
+          totalCorrectAnswers: state.totalCorrectAnswers + entry.correct,
+        })),
+      updateTopicProgress: (topicId, attempted, correct) =>
+        set((state) => {
+          const existing = state.topicProgress[topicId] || { attempted: 0, correct: 0, accuracy: 0 };
+          const newAttempted = existing.attempted + attempted;
+          const newCorrect = existing.correct + correct;
+          const accuracy = newAttempted > 0 ? Math.round((newCorrect / newAttempted) * 100) : 0;
+          return {
+            topicProgress: {
+              ...state.topicProgress,
+              [topicId]: { attempted: newAttempted, correct: newCorrect, accuracy },
+            },
+          };
+        }),
+      logout: () => set({
+        user: null,
+        isOnboarded: false,
+        topicProgress: {},
+        examHistory: [],
+        totalExamsTaken: 0,
+        totalQuestionsAttempted: 0,
+        totalCorrectAnswers: 0,
+      }),
     }),
-    { name: "exam-prep-user" },
+    { name: "crackit-user" },
   ),
 );
 
@@ -211,6 +272,6 @@ export const useSettingsStore = create<SettingsState>()(
           settings: { ...state.settings, language: lang },
         })),
     }),
-    { name: "exam-prep-settings" },
+    { name: "crackit-settings" },
   ),
 );

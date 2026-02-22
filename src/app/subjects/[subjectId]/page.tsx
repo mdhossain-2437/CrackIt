@@ -1,6 +1,6 @@
 "use client";
 
-import { subjects, topicsBySubject } from "@/data/mock";
+import { subjects, topicsBySubject } from "@/data/questionBank";
 import Link from "next/link";
 import { use } from "react";
 

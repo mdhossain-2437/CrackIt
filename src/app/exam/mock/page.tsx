@@ -1,6 +1,6 @@
 "use client";
 
-import { subjects } from "@/data/mock";
+import { subjects } from "@/data/questionBank";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

@@ -45,7 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn" suppressHydrationWarning>
-      <body className={`${inter.variable} ${notoBengali.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${notoBengali.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <ThemeProvider>
           <ServiceWorkerRegister />
           <div className="mx-auto min-h-screen max-w-lg pb-16">{children}</div>

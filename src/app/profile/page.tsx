@@ -2,12 +2,15 @@
 
 import { useSettingsStore, useUserStore } from "@/store";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 export default function ProfilePage() {
   const router = useRouter();
   const user = useUserStore((s) => s.user);
   const logout = useUserStore((s) => s.logout);
+  const totalExamsTaken = useUserStore((s) => s.totalExamsTaken);
+  const totalQuestionsAttempted = useUserStore((s) => s.totalQuestionsAttempted);
+  const totalCorrectAnswers = useUserStore((s) => s.totalCorrectAnswers);
   const settings = useSettingsStore((s) => s.settings);
   const updateTheme = useSettingsStore((s) => s.updateTheme);
   const setLanguage = useSettingsStore((s) => s.setLanguage);
@@ -131,11 +134,11 @@ export default function ProfilePage() {
         </h3>
         <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
           {[
-            { icon: "🌟", name: "প্রথম পরীক্ষা", earned: true },
-            { icon: "🔥", name: "৭ দিন স্ট্রিক", earned: true },
-            { icon: "🎯", name: "৮০%+ নির্ভুল", earned: false },
-            { icon: "📚", name: "১০০ প্রশ্ন", earned: false },
-            { icon: "🏆", name: "TOP ১০", earned: false },
+            { icon: "🌟", name: "প্রথম পরীক্ষা", earned: totalExamsTaken >= 1 },
+            { icon: "🔥", name: "৭ দিন স্ট্রিক", earned: (user?.streak || 0) >= 7 },
+            { icon: "🎯", name: "৮০%+ নির্ভুল", earned: totalQuestionsAttempted > 0 && (totalCorrectAnswers / totalQuestionsAttempted) * 100 >= 80 },
+            { icon: "📚", name: "১০০ প্রশ্ন", earned: totalQuestionsAttempted >= 100 },
+            { icon: "🏆", name: "৫০ পরীক্ষা", earned: totalExamsTaken >= 50 },
           ].map((badge) => (
             <div
               key={badge.name}
@@ -348,7 +351,7 @@ export default function ProfilePage() {
         className="mt-6 text-center text-[10px]"
         style={{ color: "var(--color-text-muted)" }}
       >
-        BD Exam Prep v1.0 - Made with ❤️ in Bangladesh
+        CrackIt v1.0 - Made with ❤️ in Bangladesh
       </p>
 
       {/* Logout Modal */}

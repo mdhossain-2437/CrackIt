@@ -1,6 +1,6 @@
 "use client";
 
-import { sampleQuestions } from "@/data/mock";
+import { questionBank } from "@/data/questionBank";
 import { useExamStore, useUserStore } from "@/store";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
@@ -32,18 +32,18 @@ function PracticeExamContent() {
     endExam,
     resetExam,
   } = useExamStore();
-  const { user } = useUserStore();
+  const { user, recordExamResult, addXP, addCoins } = useUserStore();
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [showConfirmEnd, setShowConfirmEnd] = useState(false);
-  const [examQuestions, setExamQuestions] = useState(sampleQuestions);
+  const [examQuestions, setExamQuestions] = useState(questionBank);
 
   // Initialize exam
   useEffect(() => {
     const subjectFilter = searchParams.get("subject");
-    let filtered = sampleQuestions;
+    let filtered = questionBank;
     if (subjectFilter) {
-      filtered = sampleQuestions.filter((q) => q.subjectId === subjectFilter);
-      if (filtered.length === 0) filtered = sampleQuestions;
+      filtered = questionBank.filter((q) => q.subjectId === subjectFilter);
+      if (filtered.length === 0) filtered = questionBank;
     }
     setExamQuestions(filtered);
     initExam(filtered.length, filtered.length * 60); // 1 minute per question
@@ -116,6 +116,26 @@ function PracticeExamContent() {
       else if (ans === examQuestions[i]?.correctIndex) correct++;
       else wrong++;
     });
+
+    // Record result in user store
+    const timeTaken = examQuestions.length * 60 - (useExamStore.getState().remainingTime || 0);
+    const score = Math.max(0, correct * 1 - wrong * 0.25);
+    recordExamResult({
+      id: `exam-${Date.now()}`,
+      date: new Date().toISOString(),
+      totalQuestions: examQuestions.length,
+      correct,
+      wrong,
+      skipped,
+      score,
+      timeTaken,
+      subjectId: searchParams.get("subject") || undefined,
+    });
+
+    // Award XP & coins
+    addXP(correct * 10 + (correct === examQuestions.length ? 50 : 0));
+    addCoins(Math.floor(correct * 2));
+
     // Navigate to result
     const resultData = encodeURIComponent(
       JSON.stringify({
@@ -124,10 +144,11 @@ function PracticeExamContent() {
         skipped,
         total: examQuestions.length,
         answers,
+        timeTaken,
       }),
     );
     router.push(`/result?data=${resultData}`);
-  }, [answers, examQuestions, endExam, router]);
+  }, [answers, examQuestions, endExam, router, recordExamResult, addXP, addCoins, searchParams]);
 
   if (!isExamActive && answers.length === 0) {
     return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { examCategories } from "@/data/mock";
+import { examCategories } from "@/data/questionBank";
 import { useUserStore } from "@/store";
 import type { ExamCategory } from "@/types";
 import { useRouter } from "next/navigation";
