@@ -2,14 +2,16 @@
 
 import { useSettingsStore, useUserStore } from "@/store";
 import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 export default function ProfilePage() {
   const router = useRouter();
   const user = useUserStore((s) => s.user);
   const logout = useUserStore((s) => s.logout);
   const totalExamsTaken = useUserStore((s) => s.totalExamsTaken);
-  const totalQuestionsAttempted = useUserStore((s) => s.totalQuestionsAttempted);
+  const totalQuestionsAttempted = useUserStore(
+    (s) => s.totalQuestionsAttempted,
+  );
   const totalCorrectAnswers = useUserStore((s) => s.totalCorrectAnswers);
   const settings = useSettingsStore((s) => s.settings);
   const updateTheme = useSettingsStore((s) => s.updateTheme);
@@ -135,9 +137,23 @@ export default function ProfilePage() {
         <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
           {[
             { icon: "🌟", name: "প্রথম পরীক্ষা", earned: totalExamsTaken >= 1 },
-            { icon: "🔥", name: "৭ দিন স্ট্রিক", earned: (user?.streak || 0) >= 7 },
-            { icon: "🎯", name: "৮০%+ নির্ভুল", earned: totalQuestionsAttempted > 0 && (totalCorrectAnswers / totalQuestionsAttempted) * 100 >= 80 },
-            { icon: "📚", name: "১০০ প্রশ্ন", earned: totalQuestionsAttempted >= 100 },
+            {
+              icon: "🔥",
+              name: "৭ দিন স্ট্রিক",
+              earned: (user?.streak || 0) >= 7,
+            },
+            {
+              icon: "🎯",
+              name: "৮০%+ নির্ভুল",
+              earned:
+                totalQuestionsAttempted > 0 &&
+                (totalCorrectAnswers / totalQuestionsAttempted) * 100 >= 80,
+            },
+            {
+              icon: "📚",
+              name: "১০০ প্রশ্ন",
+              earned: totalQuestionsAttempted >= 100,
+            },
             { icon: "🏆", name: "৫০ পরীক্ষা", earned: totalExamsTaken >= 50 },
           ].map((badge) => (
             <div

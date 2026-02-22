@@ -4,7 +4,7 @@ import { scheduledExams, subjects } from "@/data/questionBank";
 import { useUserStore } from "@/store";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 
 function formatTime(date: string) {
   const d = new Date(date);
@@ -19,7 +19,13 @@ function formatTime(date: string) {
 }
 
 export default function DashboardPage() {
-  const { user, isOnboarded, totalExamsTaken, totalQuestionsAttempted, totalCorrectAnswers } = useUserStore();
+  const {
+    user,
+    isOnboarded,
+    totalExamsTaken,
+    totalQuestionsAttempted,
+    totalCorrectAnswers,
+  } = useUserStore();
   const router = useRouter();
 
   useEffect(() => {
@@ -34,9 +40,10 @@ export default function DashboardPage() {
     .filter((e) => new Date(e.scheduledAt) > new Date())
     .slice(0, 2);
   const topSubjects = subjects.slice(0, 4);
-  const overallAccuracy = totalQuestionsAttempted > 0
-    ? Math.round((totalCorrectAnswers / totalQuestionsAttempted) * 100)
-    : 0;
+  const overallAccuracy =
+    totalQuestionsAttempted > 0
+      ? Math.round((totalCorrectAnswers / totalQuestionsAttempted) * 100)
+      : 0;
 
   return (
     <div className="px-4 pt-6 pb-4 safe-top">
@@ -133,11 +140,12 @@ export default function DashboardPage() {
           <span
             className="text-lg font-bold"
             style={{
-              color: overallAccuracy >= 70
-                ? "var(--color-success)"
-                : overallAccuracy >= 50
-                  ? "var(--color-warning)"
-                  : "var(--color-text-primary)",
+              color:
+                overallAccuracy >= 70
+                  ? "var(--color-success)"
+                  : overallAccuracy >= 50
+                    ? "var(--color-warning)"
+                    : "var(--color-text-primary)",
             }}
           >
             {overallAccuracy}%

@@ -4,18 +4,38 @@ import { useUserStore } from "@/store";
 import { useState } from "react";
 
 export default function LeaderboardPage() {
-  const { examHistory, totalExamsTaken, totalQuestionsAttempted, totalCorrectAnswers, user } = useUserStore();
+  const {
+    examHistory,
+    totalExamsTaken,
+    totalQuestionsAttempted,
+    totalCorrectAnswers,
+    user,
+  } = useUserStore();
   const [tab, setTab] = useState<"history" | "stats">("history");
 
-  const overallAccuracy = totalQuestionsAttempted > 0
-    ? Math.round((totalCorrectAnswers / totalQuestionsAttempted) * 100)
-    : 0;
+  const overallAccuracy =
+    totalQuestionsAttempted > 0
+      ? Math.round((totalCorrectAnswers / totalQuestionsAttempted) * 100)
+      : 0;
 
   const recentExams = [...examHistory].reverse().slice(0, 20);
 
   const formatDate = (dateStr: string) => {
     const d = new Date(dateStr);
-    const months = ["জানু", "ফেব", "মার্চ", "এপ্রিল", "মে", "জুন", "জুলাই", "আগ", "সেপ্ট", "অক্টো", "নভে", "ডিসে"];
+    const months = [
+      "জানু",
+      "ফেব",
+      "মার্চ",
+      "এপ্রিল",
+      "মে",
+      "জুন",
+      "জুলাই",
+      "আগ",
+      "সেপ্ট",
+      "অক্টো",
+      "নভে",
+      "ডিসে",
+    ];
     return `${d.getDate()} ${months[d.getMonth()]}`;
   };
 
@@ -77,11 +97,12 @@ export default function LeaderboardPage() {
           <span
             className="text-xl font-bold"
             style={{
-              color: overallAccuracy >= 70
-                ? "var(--color-success)"
-                : overallAccuracy >= 50
-                  ? "var(--color-warning)"
-                  : "var(--color-text-primary)",
+              color:
+                overallAccuracy >= 70
+                  ? "var(--color-success)"
+                  : overallAccuracy >= 50
+                    ? "var(--color-warning)"
+                    : "var(--color-text-primary)",
             }}
           >
             {overallAccuracy}%
@@ -158,8 +179,7 @@ export default function LeaderboardPage() {
                 tab === t.key
                   ? "var(--color-primary)"
                   : "var(--color-text-muted)",
-              boxShadow:
-                tab === t.key ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
+              boxShadow: tab === t.key ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
             }}
             onClick={() => setTab(t.key)}
           >
@@ -188,11 +208,15 @@ export default function LeaderboardPage() {
         ) : (
           <div className="space-y-2">
             {recentExams.map((entry) => {
-              const percentage = entry.totalQuestions > 0
-                ? Math.round((entry.correct / entry.totalQuestions) * 100)
-                : 0;
+              const percentage =
+                entry.totalQuestions > 0
+                  ? Math.round((entry.correct / entry.totalQuestions) * 100)
+                  : 0;
               return (
-                <div key={entry.id} className="card flex items-center gap-3 p-3">
+                <div
+                  key={entry.id}
+                  className="card flex items-center gap-3 p-3"
+                >
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold"
                     style={{
@@ -279,7 +303,8 @@ export default function LeaderboardPage() {
                   <div className="mb-1 flex items-center justify-between text-xs">
                     <span style={{ color: "#ef4444" }}>✗ ভুল</span>
                     <span style={{ color: "var(--color-text-muted)" }}>
-                      {totalQuestionsAttempted - totalCorrectAnswers} ({100 - overallAccuracy}%)
+                      {totalQuestionsAttempted - totalCorrectAnswers} (
+                      {100 - overallAccuracy}%)
                     </span>
                   </div>
                   <div className="progress-bar">
@@ -313,18 +338,27 @@ export default function LeaderboardPage() {
               📈 পারফরম্যান্স ট্রেন্ড
             </h3>
             {examHistory.length >= 2 ? (
-              <div className="flex items-end justify-between gap-1" style={{ height: 80 }}>
+              <div
+                className="flex items-end justify-between gap-1"
+                style={{ height: 80 }}
+              >
                 {examHistory.slice(-10).map((entry, i) => {
-                  const pct = entry.totalQuestions > 0
-                    ? (entry.correct / entry.totalQuestions) * 100
-                    : 0;
+                  const pct =
+                    entry.totalQuestions > 0
+                      ? (entry.correct / entry.totalQuestions) * 100
+                      : 0;
                   return (
                     <div
                       key={i}
                       className="flex-1 rounded-t"
                       style={{
                         height: `${Math.max(4, pct)}%`,
-                        backgroundColor: pct >= 70 ? "#22c55e" : pct >= 50 ? "#eab308" : "#ef4444",
+                        backgroundColor:
+                          pct >= 70
+                            ? "#22c55e"
+                            : pct >= 50
+                              ? "#eab308"
+                              : "#ef4444",
                         opacity: 0.7,
                       }}
                       title={`${Math.round(pct)}%`}

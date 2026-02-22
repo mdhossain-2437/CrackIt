@@ -1,10 +1,8 @@
-import type {
-  LeaderboardEntry,
-  LiveExam,
-  Question,
-  Subject,
-  Topic,
-} from "@/types";
+import type { LiveExam, Question, Subject, Topic } from "@/types";
+import { allQuestions, totalQuestionCount, getQuestionsBySubject, getQuestionsByTopic, getQuestionsBySubjectAndTopic, getRandomQuestions, getQuestionStats } from "./questions";
+
+// Re-export utilities from modular question bank
+export { getQuestionsBySubject, getQuestionsByTopic, getQuestionsBySubjectAndTopic, getRandomQuestions, getQuestionStats, totalQuestionCount };
 
 // ==========================================
 // Subject Database — CrackIt Platform
@@ -51,7 +49,7 @@ export const subjects: Subject[] = [
     name: "English",
     nameBn: "ইংরেজি",
     icon: "📝",
-    totalTopics: 0,
+    totalTopics: 3,
     completedTopics: 0,
     progress: 0,
   },
@@ -60,7 +58,7 @@ export const subjects: Subject[] = [
     name: "Bangla",
     nameBn: "বাংলা",
     icon: "📖",
-    totalTopics: 0,
+    totalTopics: 2,
     completedTopics: 0,
     progress: 0,
   },
@@ -69,7 +67,7 @@ export const subjects: Subject[] = [
     name: "General Knowledge",
     nameBn: "সাধারণ জ্ঞান",
     icon: "🌍",
-    totalTopics: 0,
+    totalTopics: 3,
     completedTopics: 0,
     progress: 0,
   },
@@ -78,7 +76,7 @@ export const subjects: Subject[] = [
     name: "ICT",
     nameBn: "তথ্য ও যোগাযোগ প্রযুক্তি",
     icon: "💻",
-    totalTopics: 0,
+    totalTopics: 3,
     completedTopics: 0,
     progress: 0,
   },
@@ -231,167 +229,120 @@ export const topicsBySubject: Record<string, Topic[]> = {
       accuracy: 0,
     },
   ],
+  english: [
+    {
+      id: "grammar",
+      subjectId: "english",
+      name: "Grammar",
+      nameBn: "ব্যাকরণ",
+      totalQuestions: 150,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "vocabulary",
+      subjectId: "english",
+      name: "Vocabulary",
+      nameBn: "শব্দভাণ্ডার",
+      totalQuestions: 120,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "comprehension",
+      subjectId: "english",
+      name: "Comprehension",
+      nameBn: "পাঠ বোধগম্যতা",
+      totalQuestions: 80,
+      attempted: 0,
+      accuracy: 0,
+    },
+  ],
+  bangla: [
+    {
+      id: "grammar-bn",
+      subjectId: "bangla",
+      name: "Bangla Grammar",
+      nameBn: "বাংলা ব্যাকরণ",
+      totalQuestions: 180,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "literature",
+      subjectId: "bangla",
+      name: "Bangla Literature",
+      nameBn: "বাংলা সাহিত্য",
+      totalQuestions: 150,
+      attempted: 0,
+      accuracy: 0,
+    },
+  ],
+  gk: [
+    {
+      id: "bangladesh",
+      subjectId: "gk",
+      name: "Bangladesh Affairs",
+      nameBn: "বাংলাদেশ বিষয়াবলী",
+      totalQuestions: 200,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "international",
+      subjectId: "gk",
+      name: "International Affairs",
+      nameBn: "আন্তর্জাতিক বিষয়াবলী",
+      totalQuestions: 150,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "science-gk",
+      subjectId: "gk",
+      name: "Science & Technology GK",
+      nameBn: "বিজ্ঞান ও প্রযুক্তি",
+      totalQuestions: 100,
+      attempted: 0,
+      accuracy: 0,
+    },
+  ],
+  ict: [
+    {
+      id: "computer-basics",
+      subjectId: "ict",
+      name: "Computer Basics",
+      nameBn: "কম্পিউটার মৌলিক",
+      totalQuestions: 120,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "networking",
+      subjectId: "ict",
+      name: "Networking",
+      nameBn: "নেটওয়ার্কিং",
+      totalQuestions: 80,
+      attempted: 0,
+      accuracy: 0,
+    },
+    {
+      id: "programming",
+      subjectId: "ict",
+      name: "Programming & Digital Tech",
+      nameBn: "প্রোগ্রামিং ও ডিজিটাল প্রযুক্তি",
+      totalQuestions: 100,
+      attempted: 0,
+      accuracy: 0,
+    },
+  ],
 };
 
 // ==========================================
-// Question Bank — Verified Past Year Questions
+// Question Bank — Massive Verified Question Database
+// Imported from modular subject-wise files
 // ==========================================
-export const questionBank: Question[] = [
-  {
-    id: "q1",
-    text: "নিউটনের গতির দ্বিতীয় সূত্র অনুসারে, বল (F) সমান —",
-    options: ["m × v", "m × a", "m × g", "m / a"],
-    correctIndex: 1,
-    explanation:
-      "নিউটনের গতির দ্বিতীয় সূত্র অনুসারে, বস্তুর ভরবেগের পরিবর্তনের হার প্রযুক্ত বলের সমানুপাতিক। সুতরাং F = ma, যেখানে m = ভর এবং a = ত্বরণ।",
-    subjectId: "physics",
-    topicId: "mechanics",
-    difficulty: "easy",
-    year: "2023",
-    examSource: "Medical Admission",
-    tags: ["newton", "force", "mechanics"],
-  },
-  {
-    id: "q2",
-    text: "তাপগতিবিদ্যার প্রথম সূত্রটি কোন নীতির উপর ভিত্তি করে প্রতিষ্ঠিত?",
-    options: [
-      "ভরের নিত্যতা",
-      "শক্তির নিত্যতা",
-      "ভরবেগের নিত্যতা",
-      "চার্জের নিত্যতা",
-    ],
-    correctIndex: 1,
-    explanation:
-      "তাপগতিবিদ্যার প্রথম সূত্র মূলত শক্তির নিত্যতা সূত্রের একটি বিশেষ রূপ। এটি বলে যে শক্তি সৃষ্টি বা ধ্বংস করা যায় না, কেবল এক রূপ থেকে অন্য রূপে রূপান্তরিত হয়।",
-    subjectId: "physics",
-    topicId: "thermodynamics",
-    difficulty: "medium",
-    year: "2022",
-    examSource: "BUET Admission",
-    tags: ["thermodynamics", "energy"],
-  },
-  {
-    id: "q3",
-    text: "DNA এর পূর্ণরূপ কী?",
-    options: [
-      "Deoxyribonucleic Acid",
-      "Dinitrogen Acid",
-      "Deoxyribose Nucleotide Acid",
-      "Dinucleotide Acid",
-    ],
-    correctIndex: 0,
-    explanation:
-      "DNA এর পূর্ণরূপ হলো Deoxyribonucleic Acid। এটি জীবের বংশগতি তথ্য বহন করে এবং ডাবল হেলিক্স গঠন ধারণ করে।",
-    subjectId: "biology",
-    topicId: "genetics",
-    difficulty: "easy",
-    year: "2024",
-    examSource: "Medical Admission",
-    tags: ["dna", "genetics", "biology"],
-  },
-  {
-    id: "q4",
-    text: "বেনজিনের আণবিক সংকেত কোনটি?",
-    options: ["C₅H₆", "C₆H₆", "C₆H₁₂", "C₇H₈"],
-    correctIndex: 1,
-    explanation:
-      "বেনজিনের আণবিক সংকেত C₆H₆। এটি একটি সুষম ষড়ভুজাকৃতির (hexagonal) সুগন্ধি যৌগ যেখানে ৬টি কার্বন পরমাণু এবং ৬টি হাইড্রোজেন পরমাণু আছে।",
-    subjectId: "chemistry",
-    topicId: "organic",
-    difficulty: "easy",
-    year: "2023",
-    examSource: "Medical Admission",
-    tags: ["benzene", "organic"],
-  },
-  {
-    id: "q5",
-    text: "x² + 5x + 6 = 0 সমীকরণের মূলদ্বয়ের গুণফল কত?",
-    options: ["5", "6", "-5", "-6"],
-    correctIndex: 1,
-    explanation:
-      "ax² + bx + c = 0 সমীকরণে মূলদ্বয়ের গুণফল = c/a। এখানে a=1, c=6, তাই গুণফল = 6/1 = 6।",
-    subjectId: "math",
-    topicId: "algebra",
-    difficulty: "easy",
-    year: "2024",
-    examSource: "Varsity Admission",
-    tags: ["quadratic", "algebra"],
-  },
-  {
-    id: "q6",
-    text: "আলোর বেগ শূন্য মাধ্যমে প্রায় কত?",
-    options: ["3 × 10⁶ m/s", "3 × 10⁷ m/s", "3 × 10⁸ m/s", "3 × 10⁹ m/s"],
-    correctIndex: 2,
-    explanation:
-      "শূন্য মাধ্যমে আলোর বেগ প্রায় 3 × 10⁸ m/s বা 300,000 km/s। এটি মহাবিশ্বের সর্বোচ্চ গতিবেগ।",
-    subjectId: "physics",
-    topicId: "optics",
-    difficulty: "easy",
-    year: "2023",
-    examSource: "BCS",
-    tags: ["light", "speed", "optics"],
-  },
-  {
-    id: "q7",
-    text: "সালোকসংশ্লেষণে কোন গ্যাস নির্গত হয়?",
-    options: ["CO₂", "N₂", "O₂", "H₂"],
-    correctIndex: 2,
-    explanation:
-      "সালোকসংশ্লেষণ প্রক্রিয়ায় উদ্ভিদ CO₂ এবং H₂O গ্রহণ করে সূর্যালোকের উপস্থিতিতে গ্লুকোজ (C₆H₁₂O₆) তৈরি করে এবং O₂ (অক্সিজেন) নির্গত করে।",
-    subjectId: "biology",
-    topicId: "botany",
-    difficulty: "easy",
-    year: "2024",
-    examSource: "Medical Admission",
-    tags: ["photosynthesis", "botany"],
-  },
-  {
-    id: "q8",
-    text: "বাংলাদেশের সংবিধান কত সালে গৃহীত হয়?",
-    options: ["১৯৭১", "১৯৭২", "১৯৭৩", "১৯৭৫"],
-    correctIndex: 1,
-    explanation:
-      "বাংলাদেশের সংবিধান ১৯৭২ সালের ৪ নভেম্বর গণপরিষদে গৃহীত হয় এবং ১৯৭২ সালের ১৬ ডিসেম্বর থেকে কার্যকর হয়।",
-    subjectId: "gk",
-    topicId: "bd-constitution",
-    difficulty: "easy",
-    year: "2024",
-    examSource: "BCS",
-    tags: ["bangladesh", "constitution", "gk"],
-  },
-  {
-    id: "q9",
-    text: "প্রতিসরণের সময় আলোকরশ্মি ঘন মাধ্যম থেকে হালকা মাধ্যমে প্রবেশ করলে —",
-    options: [
-      "অভিলম্বের দিকে বেঁকে যায়",
-      "অভিলম্ব থেকে দূরে সরে যায়",
-      "সরলরেখায় চলে",
-      "প্রতিফলিত হয়",
-    ],
-    correctIndex: 1,
-    explanation:
-      "স্নেলের সূত্র অনুসারে, আলোকরশ্মি ঘন মাধ্যম থেকে হালকা মাধ্যমে প্রবেশ করলে অভিলম্ব থেকে দূরে সরে যায়, অর্থাৎ প্রতিসরণ কোণ আপতন কোণের চেয়ে বড় হয়।",
-    subjectId: "physics",
-    topicId: "optics",
-    difficulty: "medium",
-    year: "2022",
-    examSource: "Medical Admission",
-    tags: ["refraction", "optics"],
-  },
-  {
-    id: "q10",
-    text: "log₂(8) এর মান কত?",
-    options: ["2", "3", "4", "8"],
-    correctIndex: 1,
-    explanation: "log₂(8) = log₂(2³) = 3 × log₂(2) = 3 × 1 = 3। কারণ 2³ = 8।",
-    subjectId: "math",
-    topicId: "algebra",
-    difficulty: "easy",
-    year: "2024",
-    examSource: "Varsity Admission",
-    tags: ["logarithm", "algebra"],
-  },
-];
+export const questionBank: Question[] = allQuestions;
 
 // ==========================================
 // Scheduled Live Exams

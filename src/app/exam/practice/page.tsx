@@ -118,7 +118,8 @@ function PracticeExamContent() {
     });
 
     // Record result in user store
-    const timeTaken = examQuestions.length * 60 - (useExamStore.getState().remainingTime || 0);
+    const timeTaken =
+      examQuestions.length * 60 - (useExamStore.getState().remainingTime || 0);
     const score = Math.max(0, correct * 1 - wrong * 0.25);
     recordExamResult({
       id: `exam-${Date.now()}`,
@@ -148,7 +149,16 @@ function PracticeExamContent() {
       }),
     );
     router.push(`/result?data=${resultData}`);
-  }, [answers, examQuestions, endExam, router, recordExamResult, addXP, addCoins, searchParams]);
+  }, [
+    answers,
+    examQuestions,
+    endExam,
+    router,
+    recordExamResult,
+    addXP,
+    addCoins,
+    searchParams,
+  ]);
 
   if (!isExamActive && answers.length === 0) {
     return (
