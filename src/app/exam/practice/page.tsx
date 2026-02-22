@@ -1,7 +1,10 @@
 "use client";
 
-import { questionBank } from "@/data/questionBank";
+import { questionBank as staticQuestionBank } from "@/data/questionBank";
+import { apiGetQuestions, apiSubmitExam } from "@/lib/api";
+import { cacheQuestions, getCachedQuestions } from "@/lib/offline";
 import { useExamStore, useUserStore } from "@/store";
+import type { Question } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 
@@ -35,18 +38,59 @@ function PracticeExamContent() {
   const { user, recordExamResult, addXP, addCoins } = useUserStore();
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [showConfirmEnd, setShowConfirmEnd] = useState(false);
-  const [examQuestions, setExamQuestions] = useState(questionBank);
+  const [examQuestions, setExamQuestions] = useState<Question[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Initialize exam
+  // Initialize exam - fetch questions from API with fallback
   useEffect(() => {
     const subjectFilter = searchParams.get("subject");
-    let filtered = questionBank;
-    if (subjectFilter) {
-      filtered = questionBank.filter((q) => q.subjectId === subjectFilter);
-      if (filtered.length === 0) filtered = questionBank;
-    }
-    setExamQuestions(filtered);
-    initExam(filtered.length, filtered.length * 60); // 1 minute per question
+    const topicFilter = searchParams.get("topic");
+
+    (async () => {
+      let questions: Question[] = [];
+      try {
+        const res = await apiGetQuestions({
+          subjectId: subjectFilter || undefined,
+          topicId: topicFilter || undefined,
+          limit: 50,
+          random: true,
+        });
+        const fetched = (res as any).questions || res;
+        if (Array.isArray(fetched) && fetched.length > 0) {
+          questions = fetched;
+          cacheQuestions(questions).catch(() => {});
+        }
+      } catch {
+        // Try IndexedDB cache
+        try {
+          const cached = await getCachedQuestions({
+            subjectId: subjectFilter || undefined,
+            topicId: topicFilter || undefined,
+            limit: 50,
+          });
+          if (cached && cached.length > 0) questions = cached;
+        } catch {
+          /* ignore */
+        }
+      }
+
+      // Final fallback to static data
+      if (questions.length === 0) {
+        let filtered = staticQuestionBank;
+        if (subjectFilter) {
+          filtered = staticQuestionBank.filter(
+            (q) => q.subjectId === subjectFilter,
+          );
+          if (filtered.length === 0) filtered = staticQuestionBank;
+        }
+        questions = filtered;
+      }
+
+      setExamQuestions(questions);
+      initExam(questions.length, questions.length * 60);
+      setIsLoading(false);
+    })();
+
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
@@ -137,6 +181,19 @@ function PracticeExamContent() {
     addXP(correct * 10 + (correct === examQuestions.length ? 50 : 0));
     addCoins(Math.floor(correct * 2));
 
+    // Submit to API (fire and forget)
+    const questionIds = examQuestions.map((q) => q.id);
+    apiSubmitExam({
+      examType: "practice",
+      subjectId: searchParams.get("subject") || "",
+      topicId: searchParams.get("topic") || undefined,
+      title: `Practice - ${new Date().toLocaleDateString("bn-BD")}`,
+      questionIds,
+      answers: answers as (number | null)[],
+      timeTaken,
+      duration: examQuestions.length * 60,
+    }).catch(() => {});
+
     // Navigate to result
     const resultData = encodeURIComponent(
       JSON.stringify({
@@ -146,6 +203,7 @@ function PracticeExamContent() {
         total: examQuestions.length,
         answers,
         timeTaken,
+        questionIds: examQuestions.map((q) => q.id),
       }),
     );
     router.push(`/result?data=${resultData}`);
@@ -160,10 +218,15 @@ function PracticeExamContent() {
     searchParams,
   ]);
 
-  if (!isExamActive && answers.length === 0) {
+  if (isLoading || (!isExamActive && answers.length === 0)) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-3">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-[var(--color-border)] border-t-[var(--color-primary)]" />
+        {isLoading && (
+          <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+            প্রশ্ন লোড হচ্ছে...
+          </p>
+        )}
       </div>
     );
   }

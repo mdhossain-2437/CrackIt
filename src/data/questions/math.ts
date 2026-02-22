@@ -7,7 +7,8 @@ const mathQuestions: Question[] = [
     text: "x² - 5x + 6 = 0 সমীকরণের মূলদ্বয় কত?",
     options: ["1, 6", "2, 3", "-2, -3", "1, 5"],
     correctIndex: 1,
-    explanation: "x² - 5x + 6 = 0 → (x-2)(x-3) = 0 → x = 2 বা x = 3। উৎপাদক বিশ্লেষণ বা সূত্র ব্যবহার করে মূল নির্ণয় করা যায়।",
+    explanation:
+      "x² - 5x + 6 = 0 → (x-2)(x-3) = 0 → x = 2 বা x = 3। উৎপাদক বিশ্লেষণ বা সূত্র ব্যবহার করে মূল নির্ণয় করা যায়।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -20,7 +21,8 @@ const mathQuestions: Question[] = [
     text: "log₂(8) = ?",
     options: ["2", "3", "4", "8"],
     correctIndex: 1,
-    explanation: "log₂(8) = log₂(2³) = 3। কারণ 2³ = 8। লগারিদমের সংজ্ঞা: logₐ(b) = c মানে aᶜ = b।",
+    explanation:
+      "log₂(8) = log₂(2³) = 3। কারণ 2³ = 8। লগারিদমের সংজ্ঞা: logₐ(b) = c মানে aᶜ = b।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -46,7 +48,8 @@ const mathQuestions: Question[] = [
     text: "সমান্তর ধারা: 3, 7, 11, 15, ... এর 20তম পদ কত?",
     options: ["79", "83", "77", "81"],
     correctIndex: 0,
-    explanation: "সমান্তর ধারার n-তম পদ: aₙ = a₁ + (n-1)d। a = 3, d = 4, n = 20। a₂₀ = 3 + 19×4 = 3 + 76 = 79।",
+    explanation:
+      "সমান্তর ধারার n-তম পদ: aₙ = a₁ + (n-1)d। a = 3, d = 4, n = 20। a₂₀ = 3 + 19×4 = 3 + 76 = 79।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -72,7 +75,8 @@ const mathQuestions: Question[] = [
     text: "⁵C₃ = ?",
     options: ["10", "20", "60", "15"],
     correctIndex: 0,
-    explanation: "⁵C₃ = 5! / (3! × 2!) = (5×4) / (2×1) = 10। সমবায়ে ক্রম গুরুত্বপূর্ণ নয়।",
+    explanation:
+      "⁵C₃ = 5! / (3! × 2!) = (5×4) / (2×1) = 10। সমবায়ে ক্রম গুরুত্বপূর্ণ নয়।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -85,7 +89,8 @@ const mathQuestions: Question[] = [
     text: "⁵P₃ = ?",
     options: ["10", "20", "60", "120"],
     correctIndex: 2,
-    explanation: "⁵P₃ = 5! / (5-3)! = 5! / 2! = 120/2 = 60। বিন্যাসে ক্রম গুরুত্বপূর্ণ।",
+    explanation:
+      "⁵P₃ = 5! / (5-3)! = 5! / 2! = 120/2 = 60। বিন্যাসে ক্রম গুরুত্বপূর্ণ।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -111,7 +116,8 @@ const mathQuestions: Question[] = [
     text: "2x + 3y = 12, x - y = 1 হলে x = ?",
     options: ["2", "3", "4", "5"],
     correctIndex: 1,
-    explanation: "x - y = 1 → x = y + 1। 2(y+1) + 3y = 12 → 5y + 2 = 12 → y = 2, x = 3।",
+    explanation:
+      "x - y = 1 → x = y + 1। 2(y+1) + 3y = 12 → 5y + 2 = 12 → y = 2, x = 3।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -150,7 +156,8 @@ const mathQuestions: Question[] = [
     text: "|A| = {1,2,3}, B = {a,b} হলে A × B এর উপাদান সংখ্যা কত?",
     options: ["5", "6", "9", "8"],
     correctIndex: 1,
-    explanation: "|A × B| = |A| × |B| = 3 × 2 = 6। কার্তেসীয় গুণফলে প্রতিটি জোড়া (a_i, b_j) একটি উপাদান।",
+    explanation:
+      "|A × B| = |A| × |B| = 3 × 2 = 6। কার্তেসীয় গুণফলে প্রতিটি জোড়া (a_i, b_j) একটি উপাদান।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -163,7 +170,8 @@ const mathQuestions: Question[] = [
     text: "দ্বিপদী উপপাদ্যে (a+b)⁴ এর বিস্তৃতিতে কতটি পদ আছে?",
     options: ["4", "5", "6", "3"],
     correctIndex: 1,
-    explanation: "(a+b)ⁿ এর বিস্তৃতিতে (n+1)টি পদ থাকে। n = 4 হলে পদ সংখ্যা = 5।",
+    explanation:
+      "(a+b)ⁿ এর বিস্তৃতিতে (n+1)টি পদ থাকে। n = 4 হলে পদ সংখ্যা = 5।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "medium",
@@ -189,7 +197,8 @@ const mathQuestions: Question[] = [
     text: "∑(k=1 to 100) k = ?",
     options: ["5050", "5000", "5100", "4950"],
     correctIndex: 0,
-    explanation: "1 থেকে n পর্যন্ত প্রাকৃতিক সংখ্যার যোগফল = n(n+1)/2 = 100×101/2 = 5050।",
+    explanation:
+      "1 থেকে n পর্যন্ত প্রাকৃতিক সংখ্যার যোগফল = n(n+1)/2 = 100×101/2 = 5050।",
     subjectId: "math",
     topicId: "algebra",
     difficulty: "easy",
@@ -216,7 +225,8 @@ const mathQuestions: Question[] = [
     text: "d/dx (sin x) = ?",
     options: ["-sin x", "cos x", "-cos x", "tan x"],
     correctIndex: 1,
-    explanation: "d/dx (sin x) = cos x। ত্রিকোণমিতিক ফাংশনের অন্তরকলনের মৌলিক সূত্র।",
+    explanation:
+      "d/dx (sin x) = cos x। ত্রিকোণমিতিক ফাংশনের অন্তরকলনের মৌলিক সূত্র।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "easy",
@@ -229,7 +239,8 @@ const mathQuestions: Question[] = [
     text: "∫ x² dx = ?",
     options: ["x³ + C", "x³/3 + C", "2x + C", "x²/2 + C"],
     correctIndex: 1,
-    explanation: "∫ xⁿ dx = xⁿ⁺¹/(n+1) + C। ∫ x² dx = x³/3 + C (Power Rule for Integration)।",
+    explanation:
+      "∫ xⁿ dx = xⁿ⁺¹/(n+1) + C। ∫ x² dx = x³/3 + C (Power Rule for Integration)।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "easy",
@@ -242,7 +253,8 @@ const mathQuestions: Question[] = [
     text: "d/dx (eˣ) = ?",
     options: ["xeˣ⁻¹", "eˣ", "eˣ/x", "ln(x)"],
     correctIndex: 1,
-    explanation: "eˣ এর অন্তরকলন নিজেই: d/dx (eˣ) = eˣ। এটি e^x ফাংশনের বিশেষ বৈশিষ্ট্য।",
+    explanation:
+      "eˣ এর অন্তরকলন নিজেই: d/dx (eˣ) = eˣ। এটি e^x ফাংশনের বিশেষ বৈশিষ্ট্য।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "easy",
@@ -255,7 +267,8 @@ const mathQuestions: Question[] = [
     text: "d/dx (ln x) = ?",
     options: ["1/x", "x", "ln x", "eˣ"],
     correctIndex: 0,
-    explanation: "d/dx (ln x) = 1/x (x > 0)। প্রাকৃতিক লগারিদমের অন্তরকলনের মৌলিক সূত্র।",
+    explanation:
+      "d/dx (ln x) = 1/x (x > 0)। প্রাকৃতিক লগারিদমের অন্তরকলনের মৌলিক সূত্র।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "easy",
@@ -268,7 +281,8 @@ const mathQuestions: Question[] = [
     text: "lim(x→0) (sin x)/x = ?",
     options: ["0", "1", "∞", "অসংজ্ঞায়িত"],
     correctIndex: 1,
-    explanation: "lim(x→0) (sin x)/x = 1। এটি ক্যালকুলাসের একটি মৌলিক ও গুরুত্বপূর্ণ সীমা (Standard Limit)।",
+    explanation:
+      "lim(x→0) (sin x)/x = 1। এটি ক্যালকুলাসের একটি মৌলিক ও গুরুত্বপূর্ণ সীমা (Standard Limit)।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "medium",
@@ -281,7 +295,8 @@ const mathQuestions: Question[] = [
     text: "∫₀¹ 2x dx = ?",
     options: ["0", "1", "2", "1/2"],
     correctIndex: 1,
-    explanation: "∫₀¹ 2x dx = [x²]₀¹ = 1² - 0² = 1। নির্দিষ্ট যোগজীকরণে উপরীসীমা ও নিম্নসীমায় মান বসিয়ে বিয়োগ করতে হয়।",
+    explanation:
+      "∫₀¹ 2x dx = [x²]₀¹ = 1² - 0² = 1। নির্দিষ্ট যোগজীকরণে উপরীসীমা ও নিম্নসীমায় মান বসিয়ে বিয়োগ করতে হয়।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "easy",
@@ -307,7 +322,8 @@ const mathQuestions: Question[] = [
     text: "d/dx (x²eˣ) = ?",
     options: ["2xeˣ", "x²eˣ", "eˣ(x² + 2x)", "2xeˣ + x²"],
     correctIndex: 2,
-    explanation: "গুণফল সূত্র: d/dx(uv) = u'v + uv'। u = x², v = eˣ → 2xeˣ + x²eˣ = eˣ(x² + 2x)।",
+    explanation:
+      "গুণফল সূত্র: d/dx(uv) = u'v + uv'। u = x², v = eˣ → 2xeˣ + x²eˣ = eˣ(x² + 2x)।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "medium",
@@ -320,7 +336,8 @@ const mathQuestions: Question[] = [
     text: "∫ cos x dx = ?",
     options: ["sin x + C", "-sin x + C", "cos x + C", "tan x + C"],
     correctIndex: 0,
-    explanation: "∫ cos x dx = sin x + C। d/dx(sin x) = cos x তাই বিপরীত প্রক্রিয়ায় ∫ cos x dx = sin x + C।",
+    explanation:
+      "∫ cos x dx = sin x + C। d/dx(sin x) = cos x তাই বিপরীত প্রক্রিয়ায় ∫ cos x dx = sin x + C।",
     subjectId: "math",
     topicId: "calculus",
     difficulty: "easy",
@@ -334,7 +351,8 @@ const mathQuestions: Question[] = [
     text: "(3, 4) ও (0, 0) বিন্দু দুটির মধ্যকার দূরত্ব কত?",
     options: ["3", "4", "5", "7"],
     correctIndex: 2,
-    explanation: "দূরত্ব = √((3-0)² + (4-0)²) = √(9+16) = √25 = 5। (3, 4, 5) পিথাগোরীয় ত্রয়ী।",
+    explanation:
+      "দূরত্ব = √((3-0)² + (4-0)²) = √(9+16) = √25 = 5। (3, 4, 5) পিথাগোরীয় ত্রয়ী।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -360,7 +378,8 @@ const mathQuestions: Question[] = [
     text: "x² + y² = 25 বৃত্তের ব্যাসার্ধ কত?",
     options: ["5", "25", "√5", "12.5"],
     correctIndex: 0,
-    explanation: "x² + y² = r² বৃত্তের সমীকরণে r² = 25 → r = 5। কেন্দ্র (0, 0)।",
+    explanation:
+      "x² + y² = r² বৃত্তের সমীকরণে r² = 25 → r = 5। কেন্দ্র (0, 0)।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -373,7 +392,8 @@ const mathQuestions: Question[] = [
     text: "ত্রিভুজের তিন কোণের সমষ্টি কত?",
     options: ["90°", "180°", "270°", "360°"],
     correctIndex: 1,
-    explanation: "যেকোনো ত্রিভুজের তিনটি অন্তঃকোণের সমষ্টি সর্বদা 180° (π রেডিয়ান)।",
+    explanation:
+      "যেকোনো ত্রিভুজের তিনটি অন্তঃকোণের সমষ্টি সর্বদা 180° (π রেডিয়ান)।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -386,7 +406,8 @@ const mathQuestions: Question[] = [
     text: "ভূমি 6 cm এবং উচ্চতা 8 cm হলে ত্রিভুজের ক্ষেত্রফল কত?",
     options: ["48 cm²", "24 cm²", "14 cm²", "36 cm²"],
     correctIndex: 1,
-    explanation: "ত্রিভুজের ক্ষেত্রফল = ½ × ভূমি × উচ্চতা = ½ × 6 × 8 = 24 cm²।",
+    explanation:
+      "ত্রিভুজের ক্ষেত্রফল = ½ × ভূমি × উচ্চতা = ½ × 6 × 8 = 24 cm²।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -399,7 +420,8 @@ const mathQuestions: Question[] = [
     text: "বৃত্তের ক্ষেত্রফল = 154 cm² হলে ব্যাসার্ধ কত? (π = 22/7)",
     options: ["7 cm", "14 cm", "49 cm", "21 cm"],
     correctIndex: 0,
-    explanation: "πr² = 154 → (22/7)r² = 154 → r² = 154 × 7/22 = 49 → r = 7 cm।",
+    explanation:
+      "πr² = 154 → (22/7)r² = 154 → r² = 154 × 7/22 = 49 → r = 7 cm।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -412,7 +434,8 @@ const mathQuestions: Question[] = [
     text: "দুটি সমান্তরাল সরলরেখার ঢালের সম্পর্ক কী?",
     options: ["m₁ = -m₂", "m₁ × m₂ = -1", "m₁ = m₂", "m₁ + m₂ = 0"],
     correctIndex: 2,
-    explanation: "দুটি সমান্তরাল সরলরেখার ঢাল সমান: m₁ = m₂। লম্ব হলে m₁ × m₂ = -1।",
+    explanation:
+      "দুটি সমান্তরাল সরলরেখার ঢাল সমান: m₁ = m₂। লম্ব হলে m₁ × m₂ = -1।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -425,7 +448,8 @@ const mathQuestions: Question[] = [
     text: "(2, 3) ও (6, 7) বিন্দু দুটির মধ্যবিন্দু কত?",
     options: ["(4, 5)", "(3, 4)", "(8, 10)", "(2, 2)"],
     correctIndex: 0,
-    explanation: "মধ্যবিন্দু = ((x₁+x₂)/2, (y₁+y₂)/2) = ((2+6)/2, (3+7)/2) = (4, 5)।",
+    explanation:
+      "মধ্যবিন্দু = ((x₁+x₂)/2, (y₁+y₂)/2) = ((2+6)/2, (3+7)/2) = (4, 5)।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -438,7 +462,8 @@ const mathQuestions: Question[] = [
     text: "একটি সমবাহু ত্রিভুজের প্রতিটি কোণ কত?",
     options: ["45°", "60°", "90°", "120°"],
     correctIndex: 1,
-    explanation: "সমবাহু ত্রিভুজের তিনটি বাহু ও কোণ সমান। 180°/3 = 60° প্রতিটি কোণ।",
+    explanation:
+      "সমবাহু ত্রিভুজের তিনটি বাহু ও কোণ সমান। 180°/3 = 60° প্রতিটি কোণ।",
     subjectId: "math",
     topicId: "geometry",
     difficulty: "easy",
@@ -465,7 +490,8 @@ const mathQuestions: Question[] = [
     text: "sin 30° = ?",
     options: ["1/√2", "1/2", "√3/2", "1"],
     correctIndex: 1,
-    explanation: "sin 30° = 1/2। ত্রিকোণমিতির মৌলিক মান। 30-60-90 ত্রিভুজ থেকে পাওয়া যায়।",
+    explanation:
+      "sin 30° = 1/2। ত্রিকোণমিতির মৌলিক মান। 30-60-90 ত্রিভুজ থেকে পাওয়া যায়।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "easy",
@@ -478,7 +504,8 @@ const mathQuestions: Question[] = [
     text: "cos 60° = ?",
     options: ["1", "1/2", "√3/2", "0"],
     correctIndex: 1,
-    explanation: "cos 60° = 1/2। sin 30° = cos 60° (পূরক কোণ সম্পর্ক: sin θ = cos(90°-θ))।",
+    explanation:
+      "cos 60° = 1/2। sin 30° = cos 60° (পূরক কোণ সম্পর্ক: sin θ = cos(90°-θ))।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "easy",
@@ -504,7 +531,8 @@ const mathQuestions: Question[] = [
     text: "sin²θ + cos²θ = ?",
     options: ["0", "1", "2", "sin 2θ"],
     correctIndex: 1,
-    explanation: "sin²θ + cos²θ = 1। পিথাগোরীয় অভেদ (Pythagorean Identity)। সর্বদা সত্য।",
+    explanation:
+      "sin²θ + cos²θ = 1। পিথাগোরীয় অভেদ (Pythagorean Identity)। সর্বদা সত্য।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "easy",
@@ -543,7 +571,8 @@ const mathQuestions: Question[] = [
     text: "cosec θ = ?",
     options: ["1/sin θ", "1/cos θ", "1/tan θ", "sin θ/cos θ"],
     correctIndex: 0,
-    explanation: "cosec θ = 1/sin θ (ব্যত্যয় অনুপাত)। sec θ = 1/cos θ, cot θ = 1/tan θ।",
+    explanation:
+      "cosec θ = 1/sin θ (ব্যত্যয় অনুপাত)। sec θ = 1/cos θ, cot θ = 1/tan θ।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "easy",
@@ -556,7 +585,8 @@ const mathQuestions: Question[] = [
     text: "cos 2θ = ? (কোনটি সঠিক?)",
     options: ["2cos²θ - 1", "1 - 2sin²θ", "cos²θ - sin²θ", "সবগুলো সঠিক"],
     correctIndex: 3,
-    explanation: "cos 2θ = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ। তিনটি রূপই সমতুল্য।",
+    explanation:
+      "cos 2θ = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ। তিনটি রূপই সমতুল্য।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "medium",
@@ -569,7 +599,8 @@ const mathQuestions: Question[] = [
     text: "tan θ = sin θ / cos θ হলে sin 90° / cos 90° = ?",
     options: ["0", "1", "∞ (অসংজ্ঞায়িত)", "-1"],
     correctIndex: 2,
-    explanation: "tan 90° = sin 90°/cos 90° = 1/0 = অসংজ্ঞায়িত (undefined)। cos 90° = 0 তাই ভাগ করা যায় না।",
+    explanation:
+      "tan 90° = sin 90°/cos 90° = 1/0 = অসংজ্ঞায়িত (undefined)। cos 90° = 0 তাই ভাগ করা যায় না।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "easy",
@@ -582,7 +613,8 @@ const mathQuestions: Question[] = [
     text: "sin(-θ) = ?",
     options: ["sin θ", "-sin θ", "cos θ", "-cos θ"],
     correctIndex: 1,
-    explanation: "sin(-θ) = -sin θ (sin বিজোড় ফাংশন)। cos(-θ) = cos θ (cos জোড় ফাংশন)।",
+    explanation:
+      "sin(-θ) = -sin θ (sin বিজোড় ফাংশন)। cos(-θ) = cos θ (cos জোড় ফাংশন)।",
     subjectId: "math",
     topicId: "trigonometry",
     difficulty: "easy",

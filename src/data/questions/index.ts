@@ -1,13 +1,13 @@
 import type { Question } from "@/types";
 
-import physicsQuestions from "./physics";
-import chemistryQuestions from "./chemistry";
-import biologyQuestions from "./biology";
-import mathQuestions from "./math";
-import englishQuestions from "./english";
 import banglaQuestions from "./bangla";
+import biologyQuestions from "./biology";
+import chemistryQuestions from "./chemistry";
+import englishQuestions from "./english";
 import gkQuestions from "./gk";
 import ictQuestions from "./ict";
+import mathQuestions from "./math";
+import physicsQuestions from "./physics";
 
 /** All questions from every subject combined into a single array */
 export const allQuestions: Question[] = [
@@ -33,7 +33,7 @@ export function getQuestionsByTopic(topicId: string): Question[] {
 
 /** Get questions filtered by difficulty */
 export function getQuestionsByDifficulty(
-  difficulty: "easy" | "medium" | "hard"
+  difficulty: "easy" | "medium" | "hard",
 ): Question[] {
   return allQuestions.filter((q) => q.difficulty === difficulty);
 }
@@ -41,15 +41,18 @@ export function getQuestionsByDifficulty(
 /** Get questions filtered by subject and topic */
 export function getQuestionsBySubjectAndTopic(
   subjectId: string,
-  topicId: string
+  topicId: string,
 ): Question[] {
   return allQuestions.filter(
-    (q) => q.subjectId === subjectId && q.topicId === topicId
+    (q) => q.subjectId === subjectId && q.topicId === topicId,
   );
 }
 
 /** Get random questions for an exam */
-export function getRandomQuestions(count: number, subjectId?: string): Question[] {
+export function getRandomQuestions(
+  count: number,
+  subjectId?: string,
+): Question[] {
   let pool = subjectId ? getQuestionsBySubject(subjectId) : allQuestions;
   const shuffled = [...pool].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, Math.min(count, shuffled.length));
@@ -69,12 +72,12 @@ export const totalQuestionCount = allQuestions.length;
 
 // Re-export individual subject arrays for direct access
 export {
-  physicsQuestions,
-  chemistryQuestions,
-  biologyQuestions,
-  mathQuestions,
-  englishQuestions,
   banglaQuestions,
+  biologyQuestions,
+  chemistryQuestions,
+  englishQuestions,
   gkQuestions,
   ictQuestions,
+  mathQuestions,
+  physicsQuestions,
 };

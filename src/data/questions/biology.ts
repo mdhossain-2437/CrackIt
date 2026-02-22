@@ -7,7 +7,8 @@ const biologyQuestions: Question[] = [
     text: "সালোকসংশ্লেষণে কোন গ্যাস নির্গত হয়?",
     options: ["CO₂", "N₂", "O₂", "H₂"],
     correctIndex: 2,
-    explanation: "সালোকসংশ্লেষণ: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂। প্রক্রিয়ায় CO₂ ও H₂O থেকে গ্লুকোজ ও O₂ উৎপন্ন হয়।",
+    explanation:
+      "সালোকসংশ্লেষণ: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂। প্রক্রিয়ায় CO₂ ও H₂O থেকে গ্লুকোজ ও O₂ উৎপন্ন হয়।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -20,7 +21,8 @@ const biologyQuestions: Question[] = [
     text: "সালোকসংশ্লেষণের আলোক পর্যায় কোথায় ঘটে?",
     options: ["স্ট্রোমা", "থাইলাকয়েড ঝিল্লি", "মাইটোকন্ড্রিয়া", "রাইবোজোম"],
     correctIndex: 1,
-    explanation: "সালোকসংশ্লেষণের আলোক পর্যায় (Light Reaction) ক্লোরোপ্লাস্টের থাইলাকয়েড ঝিল্লিতে ঘটে। এখানে ATP ও NADPH তৈরি হয় এবং পানির আলোক বিশ্লেষণ হয়।",
+    explanation:
+      "সালোকসংশ্লেষণের আলোক পর্যায় (Light Reaction) ক্লোরোপ্লাস্টের থাইলাকয়েড ঝিল্লিতে ঘটে। এখানে ATP ও NADPH তৈরি হয় এবং পানির আলোক বিশ্লেষণ হয়।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -33,7 +35,8 @@ const biologyQuestions: Question[] = [
     text: "ক্লোরোফিল কোন রঙের আলো সবচেয়ে বেশি শোষণ করে?",
     options: ["সবুজ", "লাল ও নীল-বেগুনি", "হলুদ", "কমলা"],
     correctIndex: 1,
-    explanation: "ক্লোরোফিল লাল (650-680 nm) ও নীল-বেগুনি (430-450 nm) আলো সবচেয়ে বেশি শোষণ করে। সবুজ আলো প্রতিফলিত হয়, তাই পাতা সবুজ দেখায়।",
+    explanation:
+      "ক্লোরোফিল লাল (650-680 nm) ও নীল-বেগুনি (430-450 nm) আলো সবচেয়ে বেশি শোষণ করে। সবুজ আলো প্রতিফলিত হয়, তাই পাতা সবুজ দেখায়।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -46,7 +49,8 @@ const biologyQuestions: Question[] = [
     text: "উদ্ভিদের প্রস্বেদন (Transpiration) কোন অঙ্গের মাধ্যমে প্রধানত ঘটে?",
     options: ["মূল", "কাণ্ড", "পত্ররন্ধ্র (Stomata)", "ফুল"],
     correctIndex: 2,
-    explanation: "উদ্ভিদের প্রস্বেদনের প্রায় 90% পত্ররন্ধ্র (Stomata) দিয়ে ঘটে। পত্ররন্ধ্রের রক্ষী কোষ (Guard Cells) এটি নিয়ন্ত্রণ করে।",
+    explanation:
+      "উদ্ভিদের প্রস্বেদনের প্রায় 90% পত্ররন্ধ্র (Stomata) দিয়ে ঘটে। পত্ররন্ধ্রের রক্ষী কোষ (Guard Cells) এটি নিয়ন্ত্রণ করে।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -64,7 +68,8 @@ const biologyQuestions: Question[] = [
       "গ্যাসের বিনিময়",
     ],
     correctIndex: 1,
-    explanation: "অভিস্রবণ: আধা-ভেদ্য পর্দার মধ্য দিয়ে দ্রাবক (পানি) কম ঘনমাত্রার দ্রবণ থেকে বেশি ঘনমাত্রার দ্রবণের দিকে প্রবাহিত হয়।",
+    explanation:
+      "অভিস্রবণ: আধা-ভেদ্য পর্দার মধ্য দিয়ে দ্রাবক (পানি) কম ঘনমাত্রার দ্রবণ থেকে বেশি ঘনমাত্রার দ্রবণের দিকে প্রবাহিত হয়।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -77,7 +82,8 @@ const biologyQuestions: Question[] = [
     text: "কোষের শক্তিঘর (Powerhouse) কোনটি?",
     options: ["নিউক্লিয়াস", "মাইটোকন্ড্রিয়া", "রাইবোজোম", "গলগি বস্তু"],
     correctIndex: 1,
-    explanation: "মাইটোকন্ড্রিয়াকে কোষের শক্তিঘর বলা হয় কারণ এখানে শ্বসন প্রক্রিয়ায় ATP (শক্তি মুদ্রা) উৎপন্ন হয়। অক্সিডেটিভ ফসফোরাইলেশন ঘটে।",
+    explanation:
+      "মাইটোকন্ড্রিয়াকে কোষের শক্তিঘর বলা হয় কারণ এখানে শ্বসন প্রক্রিয়ায় ATP (শক্তি মুদ্রা) উৎপন্ন হয়। অক্সিডেটিভ ফসফোরাইলেশন ঘটে।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -95,7 +101,8 @@ const biologyQuestions: Question[] = [
       "কোষ বিভাজন",
     ],
     correctIndex: 1,
-    explanation: "উদ্ভিদ কোষের কেন্দ্রীয় শূন্যস্থান কোষ রস (পানি, খনিজ, বর্জ্য) সংরক্ষণ করে এবং টারগর চাপ বজায় রেখে কোষকে দৃঢ় রাখে।",
+    explanation:
+      "উদ্ভিদ কোষের কেন্দ্রীয় শূন্যস্থান কোষ রস (পানি, খনিজ, বর্জ্য) সংরক্ষণ করে এবং টারগর চাপ বজায় রেখে কোষকে দৃঢ় রাখে।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -106,9 +113,15 @@ const biologyQuestions: Question[] = [
   {
     id: "bio-bot-008",
     text: "ক্রেবস চক্র কোথায় ঘটে?",
-    options: ["সাইটোপ্লাজম", "মাইটোকন্ড্রিয়ার ম্যাট্রিক্স", "নিউক্লিয়াস", "এন্ডোপ্লাজমিক জালিকা"],
+    options: [
+      "সাইটোপ্লাজম",
+      "মাইটোকন্ড্রিয়ার ম্যাট্রিক্স",
+      "নিউক্লিয়াস",
+      "এন্ডোপ্লাজমিক জালিকা",
+    ],
     correctIndex: 1,
-    explanation: "ক্রেবস চক্র (TCA cycle / Citric acid cycle) মাইটোকন্ড্রিয়ার ম্যাট্রিক্সে ঘটে। এটি সেলুলার শ্বসনের দ্বিতীয় ধাপ।",
+    explanation:
+      "ক্রেবস চক্র (TCA cycle / Citric acid cycle) মাইটোকন্ড্রিয়ার ম্যাট্রিক্সে ঘটে। এটি সেলুলার শ্বসনের দ্বিতীয় ধাপ।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -121,7 +134,8 @@ const biologyQuestions: Question[] = [
     text: "গ্লাইকোলাইসিসে ১ অণু গ্লুকোজ থেকে কয়টি পাইরুভেট তৈরি হয়?",
     options: ["1", "2", "3", "4"],
     correctIndex: 1,
-    explanation: "গ্লাইকোলাইসিসে 1 অণু গ্লুকোজ (C₆) ভেঙে 2 অণু পাইরুভেট (C₃) তৈরি হয়। এতে 2 ATP ও 2 NADH উৎপন্ন হয়।",
+    explanation:
+      "গ্লাইকোলাইসিসে 1 অণু গ্লুকোজ (C₆) ভেঙে 2 অণু পাইরুভেট (C₃) তৈরি হয়। এতে 2 ATP ও 2 NADH উৎপন্ন হয়।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -134,7 +148,8 @@ const biologyQuestions: Question[] = [
     text: "ফ্লোয়েম টিস্যু কী পরিবহন করে?",
     options: ["পানি ও খনিজ", "খাদ্যরস (শর্করা)", "গ্যাস", "হরমোন"],
     correctIndex: 1,
-    explanation: "ফ্লোয়েম টিস্যু সালোকসংশ্লেষণে তৈরি খাদ্যরস (প্রধানত সুক্রোজ) পাতা থেকে উদ্ভিদের অন্যান্য অংশে পরিবহন করে (Translocation)।",
+    explanation:
+      "ফ্লোয়েম টিস্যু সালোকসংশ্লেষণে তৈরি খাদ্যরস (প্রধানত সুক্রোজ) পাতা থেকে উদ্ভিদের অন্যান্য অংশে পরিবহন করে (Translocation)।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -147,7 +162,8 @@ const biologyQuestions: Question[] = [
     text: "জাইলেম টিস্যুর প্রধান কাজ কী?",
     options: ["খাদ্য পরিবহন", "পানি ও খনিজ পরিবহন", "সালোকসংশ্লেষণ", "শ্বসন"],
     correctIndex: 1,
-    explanation: "জাইলেম টিস্যু মূল থেকে শোষিত পানি ও দ্রবীভূত খনিজ লবণ উদ্ভিদের উপরের দিকে পরিবহন করে। ট্র্যাকিড ও ভেসেল এই কাজ করে।",
+    explanation:
+      "জাইলেম টিস্যু মূল থেকে শোষিত পানি ও দ্রবীভূত খনিজ লবণ উদ্ভিদের উপরের দিকে পরিবহন করে। ট্র্যাকিড ও ভেসেল এই কাজ করে।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -158,9 +174,15 @@ const biologyQuestions: Question[] = [
   {
     id: "bio-bot-012",
     text: "উদ্ভিদ হরমোন অক্সিন (Auxin) এর প্রধান কাজ কী?",
-    options: ["ফল পাকানো", "কোষ দৈর্ঘ্য বৃদ্ধি", "পত্রঝরা ঘটানো", "বীজের সুপ্তি ভাঙা"],
+    options: [
+      "ফল পাকানো",
+      "কোষ দৈর্ঘ্য বৃদ্ধি",
+      "পত্রঝরা ঘটানো",
+      "বীজের সুপ্তি ভাঙা",
+    ],
     correctIndex: 1,
-    explanation: "অক্সিন (IAA) উদ্ভিদের কোষ দৈর্ঘ্য বৃদ্ধিতে (Cell Elongation) সাহায্য করে। এটি ফটোট্রপিজম ও জিওট্রপিজমেও ভূমিকা রাখে।",
+    explanation:
+      "অক্সিন (IAA) উদ্ভিদের কোষ দৈর্ঘ্য বৃদ্ধিতে (Cell Elongation) সাহায্য করে। এটি ফটোট্রপিজম ও জিওট্রপিজমেও ভূমিকা রাখে।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -173,7 +195,8 @@ const biologyQuestions: Question[] = [
     text: "C₄ উদ্ভিদের উদাহরণ কোনটি?",
     options: ["ধান", "ভুট্টা", "গম", "সরিষা"],
     correctIndex: 1,
-    explanation: "ভুট্টা (Maize), আখ, ঘাস ইত্যাদি C₄ উদ্ভিদ। এদের প্রাথমিক CO₂ গ্রাহক PEP এবং প্রথম স্থায়ী পণ্য অক্সালোঅ্যাসিটিক এসিড (4C)।",
+    explanation:
+      "ভুট্টা (Maize), আখ, ঘাস ইত্যাদি C₄ উদ্ভিদ। এদের প্রাথমিক CO₂ গ্রাহক PEP এবং প্রথম স্থায়ী পণ্য অক্সালোঅ্যাসিটিক এসিড (4C)।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -186,7 +209,8 @@ const biologyQuestions: Question[] = [
     text: "সালোকসংশ্লেষণের অন্ধকার পর্যায় (Calvin Cycle) কোথায় ঘটে?",
     options: ["থাইলাকয়েড", "স্ট্রোমা", "সাইটোপ্লাজম", "নিউক্লিয়াস"],
     correctIndex: 1,
-    explanation: "ক্যালভিন চক্র (অন্ধকার পর্যায়/আলো-নিরপেক্ষ পর্যায়) ক্লোরোপ্লাস্টের স্ট্রোমায় ঘটে। এখানে CO₂ বিজারিত হয়ে গ্লুকোজ তৈরি হয়।",
+    explanation:
+      "ক্যালভিন চক্র (অন্ধকার পর্যায়/আলো-নিরপেক্ষ পর্যায়) ক্লোরোপ্লাস্টের স্ট্রোমায় ঘটে। এখানে CO₂ বিজারিত হয়ে গ্লুকোজ তৈরি হয়।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "medium",
@@ -199,7 +223,8 @@ const biologyQuestions: Question[] = [
     text: "কোষ প্রাচীর (Cell Wall) কোন পদার্থ দিয়ে তৈরি?",
     options: ["প্রোটিন", "সেলুলোজ", "লিপিড", "স্টার্চ"],
     correctIndex: 1,
-    explanation: "উদ্ভিদ কোষ প্রাচীর প্রধানত সেলুলোজ (Cellulose) দিয়ে তৈরি। এটি কোষকে দৃঢ়তা ও সুরক্ষা প্রদান করে।",
+    explanation:
+      "উদ্ভিদ কোষ প্রাচীর প্রধানত সেলুলোজ (Cellulose) দিয়ে তৈরি। এটি কোষকে দৃঢ়তা ও সুরক্ষা প্রদান করে।",
     subjectId: "biology",
     topicId: "botany",
     difficulty: "easy",
@@ -213,7 +238,8 @@ const biologyQuestions: Question[] = [
     text: "মানবদেহে সবচেয়ে বড় অঙ্গ কোনটি?",
     options: ["যকৃত", "ফুসফুস", "ত্বক", "মস্তিষ্ক"],
     correctIndex: 2,
-    explanation: "ত্বক (Skin) মানবদেহের সবচেয়ে বড় অঙ্গ। একজন প্রাপ্তবয়স্ক মানুষের ত্বকের ক্ষেত্রফল প্রায় 1.5-2 m² এবং ওজন 3-4 kg।",
+    explanation:
+      "ত্বক (Skin) মানবদেহের সবচেয়ে বড় অঙ্গ। একজন প্রাপ্তবয়স্ক মানুষের ত্বকের ক্ষেত্রফল প্রায় 1.5-2 m² এবং ওজন 3-4 kg।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -226,7 +252,8 @@ const biologyQuestions: Question[] = [
     text: "হৃদপিণ্ডে কয়টি প্রকোষ্ঠ আছে?",
     options: ["2", "3", "4", "5"],
     correctIndex: 2,
-    explanation: "মানব হৃদপিণ্ডে 4টি প্রকোষ্ঠ আছে: 2টি অলিন্দ (Atrium) ও 2টি নিলয় (Ventricle)। বাম অংশ O₂-সমৃদ্ধ ও ডান অংশ CO₂-সমৃদ্ধ রক্ত বহন করে।",
+    explanation:
+      "মানব হৃদপিণ্ডে 4টি প্রকোষ্ঠ আছে: 2টি অলিন্দ (Atrium) ও 2টি নিলয় (Ventricle)। বাম অংশ O₂-সমৃদ্ধ ও ডান অংশ CO₂-সমৃদ্ধ রক্ত বহন করে।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -239,7 +266,8 @@ const biologyQuestions: Question[] = [
     text: "রক্তের pH কত?",
     options: ["6.4", "7.0", "7.4", "8.0"],
     correctIndex: 2,
-    explanation: "সুস্থ মানুষের রক্তের pH 7.35-7.45, গড়ে 7.4 (সামান্য ক্ষারীয়)। এই pH এর বাইরে চলে গেলে অ্যাসিডোসিস বা অ্যালকালোসিস হয়।",
+    explanation:
+      "সুস্থ মানুষের রক্তের pH 7.35-7.45, গড়ে 7.4 (সামান্য ক্ষারীয়)। এই pH এর বাইরে চলে গেলে অ্যাসিডোসিস বা অ্যালকালোসিস হয়।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -252,7 +280,8 @@ const biologyQuestions: Question[] = [
     text: "হিমোগ্লোবিন কোন ধাতুর আয়ন ধারণ করে?",
     options: ["তামা (Cu)", "লোহা (Fe)", "দস্তা (Zn)", "ম্যাগনেসিয়াম (Mg)"],
     correctIndex: 1,
-    explanation: "হিমোগ্লোবিন একটি আয়রন (Fe²⁺) যুক্ত প্রোটিন। প্রতিটি হিমোগ্লোবিন অণুতে 4টি হিম গ্রুপ থাকে, প্রতিটিতে একটি করে Fe²⁺ আয়ন থাকে যা O₂ বহন করে।",
+    explanation:
+      "হিমোগ্লোবিন একটি আয়রন (Fe²⁺) যুক্ত প্রোটিন। প্রতিটি হিমোগ্লোবিন অণুতে 4টি হিম গ্রুপ থাকে, প্রতিটিতে একটি করে Fe²⁺ আয়ন থাকে যা O₂ বহন করে।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -265,7 +294,8 @@ const biologyQuestions: Question[] = [
     text: "কোন রক্তকণিকা রোগ প্রতিরোধে অংশ নেয়?",
     options: ["লোহিত রক্তকণিকা", "শ্বেত রক্তকণিকা", "অণুচক্রিকা", "প্লাজমা"],
     correctIndex: 1,
-    explanation: "শ্বেত রক্তকণিকা (WBC / Leukocyte) দেহের রোগ প্রতিরোধ ব্যবস্থার (Immune System) অংশ। এরা রোগজীবাণু ধ্বংস করে এবং অ্যান্টিবডি তৈরি করে।",
+    explanation:
+      "শ্বেত রক্তকণিকা (WBC / Leukocyte) দেহের রোগ প্রতিরোধ ব্যবস্থার (Immune System) অংশ। এরা রোগজীবাণু ধ্বংস করে এবং অ্যান্টিবডি তৈরি করে।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -278,7 +308,8 @@ const biologyQuestions: Question[] = [
     text: "মানবদেহে সবচেয়ে বড় গ্রন্থি কোনটি?",
     options: ["প্যানক্রিয়াস", "থাইরয়েড", "যকৃত (Liver)", "পিটুইটারি"],
     correctIndex: 2,
-    explanation: "যকৃত (Liver) মানবদেহের সবচেয়ে বড় গ্রন্থি। ওজন প্রায় 1.5 kg। এটি পিত্ত রস তৈরি, বিপাক, ডিটক্সিফিকেশন সহ ৫০০+ কাজ করে।",
+    explanation:
+      "যকৃত (Liver) মানবদেহের সবচেয়ে বড় গ্রন্থি। ওজন প্রায় 1.5 kg। এটি পিত্ত রস তৈরি, বিপাক, ডিটক্সিফিকেশন সহ ৫০০+ কাজ করে।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -289,9 +320,15 @@ const biologyQuestions: Question[] = [
   {
     id: "bio-zoo-007",
     text: "ইনসুলিন কোথা থেকে নিঃসৃত হয়?",
-    options: ["থাইরয়েড", "অ্যাড্রেনাল গ্রন্থি", "অগ্ন্যাশয়ের β-কোষ", "পিটুইটারি গ্রন্থি"],
+    options: [
+      "থাইরয়েড",
+      "অ্যাড্রেনাল গ্রন্থি",
+      "অগ্ন্যাশয়ের β-কোষ",
+      "পিটুইটারি গ্রন্থি",
+    ],
     correctIndex: 2,
-    explanation: "ইনসুলিন অগ্ন্যাশয়ের (Pancreas) ল্যাংগারহ্যান্সের দ্বীপের β-কোষ (Beta cells) থেকে নিঃসৃত হয়। এটি রক্তে গ্লুকোজের মাত্রা কমায়।",
+    explanation:
+      "ইনসুলিন অগ্ন্যাশয়ের (Pancreas) ল্যাংগারহ্যান্সের দ্বীপের β-কোষ (Beta cells) থেকে নিঃসৃত হয়। এটি রক্তে গ্লুকোজের মাত্রা কমায়।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "medium",
@@ -304,7 +341,8 @@ const biologyQuestions: Question[] = [
     text: "নিউরনের কোন অংশ তড়িৎ সংকেত পরিবহন করে?",
     options: ["ডেনড্রাইট", "কোষদেহ", "অ্যাক্সন", "সাইন্যাপস"],
     correctIndex: 2,
-    explanation: "অ্যাক্সন (Axon) নিউরনের দীর্ঘ সূত্রাকার অংশ যা কোষদেহ থেকে তড়িৎ সংকেত (Action Potential) দূরবর্তী স্থানে পরিবহন করে।",
+    explanation:
+      "অ্যাক্সন (Axon) নিউরনের দীর্ঘ সূত্রাকার অংশ যা কোষদেহ থেকে তড়িৎ সংকেত (Action Potential) দূরবর্তী স্থানে পরিবহন করে।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -317,7 +355,8 @@ const biologyQuestions: Question[] = [
     text: "মানবদেহে কয় জোড়া ক্রোমোজোম আছে?",
     options: ["21 জোড়া", "22 জোড়া", "23 জোড়া", "24 জোড়া"],
     correctIndex: 2,
-    explanation: "মানবদেহে 23 জোড়া (মোট 46টি) ক্রোমোজোম আছে। 22 জোড়া অটোজোম এবং 1 জোড়া সেক্স ক্রোমোজোম (XX মহিলা, XY পুরুষ)।",
+    explanation:
+      "মানবদেহে 23 জোড়া (মোট 46টি) ক্রোমোজোম আছে। 22 জোড়া অটোজোম এবং 1 জোড়া সেক্স ক্রোমোজোম (XX মহিলা, XY পুরুষ)।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -330,7 +369,8 @@ const biologyQuestions: Question[] = [
     text: "দেহের সবচেয়ে শক্ত পদার্থ কোনটি?",
     options: ["হাড়", "দাঁতের এনামেল", "নখ", "চুল"],
     correctIndex: 1,
-    explanation: "দাঁতের এনামেল (Enamel) মানবদেহের সবচেয়ে শক্ত পদার্থ। এটি প্রধানত হাইড্রক্সিঅ্যাপাটাইট (ক্যালসিয়াম ফসফেট) দিয়ে তৈরি।",
+    explanation:
+      "দাঁতের এনামেল (Enamel) মানবদেহের সবচেয়ে শক্ত পদার্থ। এটি প্রধানত হাইড্রক্সিঅ্যাপাটাইট (ক্যালসিয়াম ফসফেট) দিয়ে তৈরি।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -343,7 +383,8 @@ const biologyQuestions: Question[] = [
     text: "বৃক্কের (Kidney) গঠনগত ও কার্যগত একক কী?",
     options: ["নিউরন", "নেফ্রন", "অ্যালভিওলাস", "সারকোমিয়ার"],
     correctIndex: 1,
-    explanation: "নেফ্রন (Nephron) বৃক্কের গঠনগত ও কার্যগত একক। প্রতিটি বৃক্কে প্রায় 10 লক্ষ নেফ্রন থাকে যা রক্ত পরিশ্রুত করে মূত্র তৈরি করে।",
+    explanation:
+      "নেফ্রন (Nephron) বৃক্কের গঠনগত ও কার্যগত একক। প্রতিটি বৃক্কে প্রায় 10 লক্ষ নেফ্রন থাকে যা রক্ত পরিশ্রুত করে মূত্র তৈরি করে।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -356,7 +397,8 @@ const biologyQuestions: Question[] = [
     text: "পেপসিন কোন ধরনের খাদ্য পরিপাক করে?",
     options: ["শর্করা", "চর্বি", "প্রোটিন", "ভিটামিন"],
     correctIndex: 2,
-    explanation: "পেপসিন পাকস্থলীতে নিঃসৃত একটি প্রোটিওলাইটিক এনজাইম যা HCl এসিডীয় পরিবেশে (pH 1.5-2) প্রোটিনকে পেপটাইডে ভেঙে দেয়।",
+    explanation:
+      "পেপসিন পাকস্থলীতে নিঃসৃত একটি প্রোটিওলাইটিক এনজাইম যা HCl এসিডীয় পরিবেশে (pH 1.5-2) প্রোটিনকে পেপটাইডে ভেঙে দেয়।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -369,7 +411,8 @@ const biologyQuestions: Question[] = [
     text: "মানবদেহে মোট কয়টি হাড় আছে?",
     options: ["196", "206", "216", "226"],
     correctIndex: 1,
-    explanation: "প্রাপ্তবয়স্ক মানবদেহে মোট 206টি হাড় আছে। জন্মের সময় প্রায় 270টি থাকে, পরে কিছু জোড়া লেগে যায়।",
+    explanation:
+      "প্রাপ্তবয়স্ক মানবদেহে মোট 206টি হাড় আছে। জন্মের সময় প্রায় 270টি থাকে, পরে কিছু জোড়া লেগে যায়।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -382,7 +425,8 @@ const biologyQuestions: Question[] = [
     text: "সার্বজনীন রক্তদাতা কোন রক্তের গ্রুপ?",
     options: ["A", "B", "AB", "O"],
     correctIndex: 3,
-    explanation: "O গ্রুপের রক্তকে সার্বজনীন রক্তদাতা (Universal Donor) বলা হয় কারণ O গ্রুপের RBC তে কোনো অ্যান্টিজেন (A বা B) থাকে না।",
+    explanation:
+      "O গ্রুপের রক্তকে সার্বজনীন রক্তদাতা (Universal Donor) বলা হয় কারণ O গ্রুপের RBC তে কোনো অ্যান্টিজেন (A বা B) থাকে না।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -395,7 +439,8 @@ const biologyQuestions: Question[] = [
     text: "সার্বজনীন রক্তগ্রহীতা কোন রক্তের গ্রুপ?",
     options: ["A", "B", "AB", "O"],
     correctIndex: 2,
-    explanation: "AB গ্রুপের রক্তকে সার্বজনীন রক্তগ্রহীতা (Universal Recipient) বলা হয় কারণ AB গ্রুপের প্লাজমায় কোনো অ্যান্টিবডি (anti-A বা anti-B) থাকে না।",
+    explanation:
+      "AB গ্রুপের রক্তকে সার্বজনীন রক্তগ্রহীতা (Universal Recipient) বলা হয় কারণ AB গ্রুপের প্লাজমায় কোনো অ্যান্টিবডি (anti-A বা anti-B) থাকে না।",
     subjectId: "biology",
     topicId: "zoology",
     difficulty: "easy",
@@ -407,9 +452,15 @@ const biologyQuestions: Question[] = [
   {
     id: "bio-gen-001",
     text: "DNA এর পূর্ণরূপ কী?",
-    options: ["Deoxyribonucleic Acid", "Dinitrogen Acid", "Deoxyribose Nucleotide Acid", "Dinucleotide Acid"],
+    options: [
+      "Deoxyribonucleic Acid",
+      "Dinitrogen Acid",
+      "Deoxyribose Nucleotide Acid",
+      "Dinucleotide Acid",
+    ],
     correctIndex: 0,
-    explanation: "DNA = Deoxyribonucleic Acid। এটি জীবের বংশগতি তথ্য বহন করে। ডাবল হেলিক্স গঠন ওয়াটসন ও ক্রিক আবিষ্কার করেন (1953)।",
+    explanation:
+      "DNA = Deoxyribonucleic Acid। এটি জীবের বংশগতি তথ্য বহন করে। ডাবল হেলিক্স গঠন ওয়াটসন ও ক্রিক আবিষ্কার করেন (1953)।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -422,7 +473,8 @@ const biologyQuestions: Question[] = [
     text: "DNA তে অ্যাডিনিন (A) কার সাথে জোড়া বাঁধে?",
     options: ["গুয়ানিন (G)", "সাইটোসিন (C)", "থাইমিন (T)", "ইউরাসিল (U)"],
     correctIndex: 2,
-    explanation: "চার্গাফের নিয়ম অনুযায়ী, DNA তে A = T (2টি H-বন্ধন) এবং G ≡ C (3টি H-বন্ধন)। RNA তে A = U।",
+    explanation:
+      "চার্গাফের নিয়ম অনুযায়ী, DNA তে A = T (2টি H-বন্ধন) এবং G ≡ C (3টি H-বন্ধন)। RNA তে A = U।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -435,7 +487,8 @@ const biologyQuestions: Question[] = [
     text: "মাইটোসিস কোষ বিভাজনে কয়টি অপত্য কোষ তৈরি হয়?",
     options: ["1", "2", "3", "4"],
     correctIndex: 1,
-    explanation: "মাইটোসিসে একটি মাতৃকোষ বিভাজিত হয়ে 2টি অভিন্ন (identical) অপত্য কোষ তৈরি করে। প্রতিটিতে মাতৃকোষের সমান সংখ্যক ক্রোমোজোম (2n) থাকে।",
+    explanation:
+      "মাইটোসিসে একটি মাতৃকোষ বিভাজিত হয়ে 2টি অভিন্ন (identical) অপত্য কোষ তৈরি করে। প্রতিটিতে মাতৃকোষের সমান সংখ্যক ক্রোমোজোম (2n) থাকে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -448,7 +501,8 @@ const biologyQuestions: Question[] = [
     text: "মিয়োসিস কোষ বিভাজনে কয়টি অপত্য কোষ তৈরি হয়?",
     options: ["1", "2", "3", "4"],
     correctIndex: 3,
-    explanation: "মিয়োসিসে একটি মাতৃকোষ (2n) বিভাজিত হয়ে 4টি হ্যাপ্লয়েড (n) অপত্য কোষ তৈরি করে। এটি গ্যামেট (শুক্রাণু/ডিম্বাণু) তৈরিতে ঘটে।",
+    explanation:
+      "মিয়োসিসে একটি মাতৃকোষ (2n) বিভাজিত হয়ে 4টি হ্যাপ্লয়েড (n) অপত্য কোষ তৈরি করে। এটি গ্যামেট (শুক্রাণু/ডিম্বাণু) তৈরিতে ঘটে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -461,7 +515,8 @@ const biologyQuestions: Question[] = [
     text: "RNA তে থাইমিনের পরিবর্তে কোন ক্ষার থাকে?",
     options: ["অ্যাডিনিন", "গুয়ানিন", "সাইটোসিন", "ইউরাসিল"],
     correctIndex: 3,
-    explanation: "RNA তে DNA এর থাইমিন (T) এর পরিবর্তে ইউরাসিল (U) থাকে। RNA তে ক্ষারগুলো: A, U, G, C।",
+    explanation:
+      "RNA তে DNA এর থাইমিন (T) এর পরিবর্তে ইউরাসিল (U) থাকে। RNA তে ক্ষারগুলো: A, U, G, C।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -479,7 +534,8 @@ const biologyQuestions: Question[] = [
       "কোষ বিভাজনের একটি পর্যায়",
     ],
     correctIndex: 1,
-    explanation: "জিন হলো DNA এর একটি নির্দিষ্ট অংশ (সিকোয়েন্স) যা একটি নির্দিষ্ট প্রোটিন বা কার্যকরী RNA এর কোড ধারণ করে। এটি বংশগতির মৌলিক একক।",
+    explanation:
+      "জিন হলো DNA এর একটি নির্দিষ্ট অংশ (সিকোয়েন্স) যা একটি নির্দিষ্ট প্রোটিন বা কার্যকরী RNA এর কোড ধারণ করে। এটি বংশগতির মৌলিক একক।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -497,7 +553,8 @@ const biologyQuestions: Question[] = [
       "সকল অ্যালিল সমান",
     ],
     correctIndex: 1,
-    explanation: "মেন্ডেলের পৃথকীকরণ সূত্র (Law of Segregation): গ্যামেট গঠনের সময় (মিয়োসিসে) প্রতিটি বৈশিষ্ট্যের জন্য দায়ী অ্যালিল জোড়া পৃথক হয়ে যায়, প্রতিটি গ্যামেটে একটি করে অ্যালিল যায়।",
+    explanation:
+      "মেন্ডেলের পৃথকীকরণ সূত্র (Law of Segregation): গ্যামেট গঠনের সময় (মিয়োসিসে) প্রতিটি বৈশিষ্ট্যের জন্য দায়ী অ্যালিল জোড়া পৃথক হয়ে যায়, প্রতিটি গ্যামেটে একটি করে অ্যালিল যায়।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "medium",
@@ -510,7 +567,8 @@ const biologyQuestions: Question[] = [
     text: "ট্রান্সক্রিপশন (Transcription) কোথায় ঘটে?",
     options: ["সাইটোপ্লাজম", "রাইবোজোম", "নিউক্লিয়াস", "মাইটোকন্ড্রিয়া"],
     correctIndex: 2,
-    explanation: "ট্রান্সক্রিপশন (DNA → mRNA) নিউক্লিয়াসে ঘটে। RNA পলিমারেজ এনজাইম DNA টেমপ্লেট থেকে mRNA অনুলিপি তৈরি করে।",
+    explanation:
+      "ট্রান্সক্রিপশন (DNA → mRNA) নিউক্লিয়াসে ঘটে। RNA পলিমারেজ এনজাইম DNA টেমপ্লেট থেকে mRNA অনুলিপি তৈরি করে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "medium",
@@ -523,7 +581,8 @@ const biologyQuestions: Question[] = [
     text: "ট্রান্সলেশন (Translation) কোথায় ঘটে?",
     options: ["নিউক্লিয়াস", "রাইবোজোম", "গলগি বস্তু", "লাইসোজোম"],
     correctIndex: 1,
-    explanation: "ট্রান্সলেশন (mRNA → প্রোটিন) রাইবোজোমে ঘটে। mRNA এর কোডন অনুযায়ী tRNA অ্যামিনো এসিড এনে পলিপেপটাইড চেইন তৈরি করে।",
+    explanation:
+      "ট্রান্সলেশন (mRNA → প্রোটিন) রাইবোজোমে ঘটে। mRNA এর কোডন অনুযায়ী tRNA অ্যামিনো এসিড এনে পলিপেপটাইড চেইন তৈরি করে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "medium",
@@ -536,7 +595,8 @@ const biologyQuestions: Question[] = [
     text: "একটি কোডন কয়টি নিউক্লিওটাইড দিয়ে গঠিত?",
     options: ["1", "2", "3", "4"],
     correctIndex: 2,
-    explanation: "একটি কোডন 3টি পরপর নিউক্লিওটাইড (ত্রয়ী সংকেত) দিয়ে গঠিত। প্রতিটি কোডন একটি নির্দিষ্ট অ্যামিনো এসিড নির্দেশ করে। 4³ = 64 টি কোডন সম্ভব।",
+    explanation:
+      "একটি কোডন 3টি পরপর নিউক্লিওটাইড (ত্রয়ী সংকেত) দিয়ে গঠিত। প্রতিটি কোডন একটি নির্দিষ্ট অ্যামিনো এসিড নির্দেশ করে। 4³ = 64 টি কোডন সম্ভব।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -549,7 +609,8 @@ const biologyQuestions: Question[] = [
     text: "ডাউন সিনড্রোমে কোন ক্রোমোজোমে ত্রিসোমি (Trisomy) দেখা যায়?",
     options: ["ক্রোমোজোম 13", "ক্রোমোজোম 18", "ক্রোমোজোম 21", "ক্রোমোজোম X"],
     correctIndex: 2,
-    explanation: "ডাউন সিনড্রোম ক্রোমোজোম 21 এর ত্রিসোমির (Trisomy 21) কারণে হয়। রোগীর 46 টির বদলে 47 টি ক্রোমোজোম থাকে।",
+    explanation:
+      "ডাউন সিনড্রোম ক্রোমোজোম 21 এর ত্রিসোমির (Trisomy 21) কারণে হয়। রোগীর 46 টির বদলে 47 টি ক্রোমোজোম থাকে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "medium",
@@ -567,7 +628,8 @@ const biologyQuestions: Question[] = [
       "ক্রোমোজোম পৃথক করা",
     ],
     correctIndex: 1,
-    explanation: "PCR একটি কৌশল যা DNA এর একটি নির্দিষ্ট অংশকে অল্প সময়ে বহুগুণে (কোটি কোটি কপি) বৃদ্ধি করতে পারে। এটি কারি মুলিস আবিষ্কার করেন।",
+    explanation:
+      "PCR একটি কৌশল যা DNA এর একটি নির্দিষ্ট অংশকে অল্প সময়ে বহুগুণে (কোটি কোটি কপি) বৃদ্ধি করতে পারে। এটি কারি মুলিস আবিষ্কার করেন।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "medium",
@@ -580,7 +642,8 @@ const biologyQuestions: Question[] = [
     text: "প্রাকৃতিক নির্বাচন তত্ত্ব কে প্রদান করেন?",
     options: ["মেন্ডেল", "ল্যামার্ক", "ডারউইন", "ওয়ালেস"],
     correctIndex: 2,
-    explanation: "চার্লস ডারউইন (Charles Darwin) প্রাকৃতিক নির্বাচন (Natural Selection) তত্ত্ব প্রদান করেন। তাঁর বই 'On the Origin of Species' (1859) এ এই তত্ত্ব প্রকাশিত হয়।",
+    explanation:
+      "চার্লস ডারউইন (Charles Darwin) প্রাকৃতিক নির্বাচন (Natural Selection) তত্ত্ব প্রদান করেন। তাঁর বই 'On the Origin of Species' (1859) এ এই তত্ত্ব প্রকাশিত হয়।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",
@@ -598,7 +661,8 @@ const biologyQuestions: Question[] = [
       "সব জীবে একই ক্রোমোজোম থাকে",
     ],
     correctIndex: 1,
-    explanation: "জেনেটিক কোডের সর্বজনীনতা: একই কোডন (যেমন AUG) প্রায় সব জীবে (ব্যাকটেরিয়া থেকে মানুষ) একই অ্যামিনো এসিড (মিথিওনিন) নির্দেশ করে।",
+    explanation:
+      "জেনেটিক কোডের সর্বজনীনতা: একই কোডন (যেমন AUG) প্রায় সব জীবে (ব্যাকটেরিয়া থেকে মানুষ) একই অ্যামিনো এসিড (মিথিওনিন) নির্দেশ করে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "medium",
@@ -616,7 +680,8 @@ const biologyQuestions: Question[] = [
       "কোষ বিভাজন",
     ],
     correctIndex: 1,
-    explanation: "মিউটেশন হলো DNA এর নিউক্লিওটাইড ক্রমে স্থায়ী পরিবর্তন। এটি বিবর্তনের কাঁচামাল সরবরাহ করে। মিউটেশন ক্ষতিকর, উপকারী বা নিরপেক্ষ হতে পারে।",
+    explanation:
+      "মিউটেশন হলো DNA এর নিউক্লিওটাইড ক্রমে স্থায়ী পরিবর্তন। এটি বিবর্তনের কাঁচামাল সরবরাহ করে। মিউটেশন ক্ষতিকর, উপকারী বা নিরপেক্ষ হতে পারে।",
     subjectId: "biology",
     topicId: "genetics",
     difficulty: "easy",

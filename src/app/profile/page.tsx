@@ -1,11 +1,13 @@
 "use client";
 
+import { useAuth } from "@/components/AuthProvider";
 import { useSettingsStore, useUserStore } from "@/store";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function ProfilePage() {
   const router = useRouter();
+  const { signOut: firebaseSignOut } = useAuth();
   const user = useUserStore((s) => s.user);
   const logout = useUserStore((s) => s.logout);
   const totalExamsTaken = useUserStore((s) => s.totalExamsTaken);
@@ -32,9 +34,12 @@ export default function ProfilePage() {
     { label: "কয়েন", value: user?.coins || 0, icon: "🪙" },
   ];
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await firebaseSignOut();
+    } catch { /* ignore */ }
     logout();
-    router.push("/");
+    router.push("/login");
   };
 
   return (

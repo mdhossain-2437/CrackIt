@@ -7,7 +7,8 @@ const physicsQuestions: Question[] = [
     text: "নিউটনের গতির দ্বিতীয় সূত্র অনুসারে, বল (F) সমান —",
     options: ["m × v", "m × a", "m × g", "m / a"],
     correctIndex: 1,
-    explanation: "নিউটনের গতির দ্বিতীয় সূত্র অনুসারে F = ma, যেখানে m = ভর এবং a = ত্বরণ।",
+    explanation:
+      "নিউটনের গতির দ্বিতীয় সূত্র অনুসারে F = ma, যেখানে m = ভর এবং a = ত্বরণ।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "easy",
@@ -33,7 +34,8 @@ const physicsQuestions: Question[] = [
     text: "মহাকর্ষীয় ত্বরণ g এর মান পৃথিবীপৃষ্ঠে প্রায় কত?",
     options: ["8.9 m/s²", "9.8 m/s²", "10.8 m/s²", "11.2 m/s²"],
     correctIndex: 1,
-    explanation: "পৃথিবীপৃষ্ঠে অভিকর্ষজ ত্বরণ g ≈ 9.8 m/s²। হিসাবের সুবিধার্থে অনেক সময় 10 m/s² ধরা হয়।",
+    explanation:
+      "পৃথিবীপৃষ্ঠে অভিকর্ষজ ত্বরণ g ≈ 9.8 m/s²। হিসাবের সুবিধার্থে অনেক সময় 10 m/s² ধরা হয়।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "easy",
@@ -44,9 +46,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-mech-004",
     text: "ভরবেগের সংরক্ষণ সূত্র কোন ক্ষেত্রে প্রযোজ্য?",
-    options: ["বাহ্যিক বল শূন্য হলে", "বাহ্যিক বল সর্বোচ্চ হলে", "ঘর্ষণ বল প্রযুক্ত হলে", "সবসময়"],
+    options: [
+      "বাহ্যিক বল শূন্য হলে",
+      "বাহ্যিক বল সর্বোচ্চ হলে",
+      "ঘর্ষণ বল প্রযুক্ত হলে",
+      "সবসময়",
+    ],
     correctIndex: 0,
-    explanation: "যখন কোনো সিস্টেমে বাহ্যিক বল কাজ করে না (বাহ্যিক বল শূন্য), তখন সিস্টেমের মোট ভরবেগ সংরক্ষিত থাকে।",
+    explanation:
+      "যখন কোনো সিস্টেমে বাহ্যিক বল কাজ করে না (বাহ্যিক বল শূন্য), তখন সিস্টেমের মোট ভরবেগ সংরক্ষিত থাকে।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -59,7 +67,8 @@ const physicsQuestions: Question[] = [
     text: "একটি বস্তুকে খাড়া উপরের দিকে নিক্ষেপ করলে সর্বোচ্চ উচ্চতায় এর বেগ কত?",
     options: ["সর্বোচ্চ", "শূন্য", "9.8 m/s", "অনির্দিষ্ট"],
     correctIndex: 1,
-    explanation: "সর্বোচ্চ উচ্চতায় বস্তুর ঊর্ধ্বমুখী বেগ শূন্য হয়। এরপর মহাকর্ষ বলের প্রভাবে বস্তু নিচের দিকে পড়তে শুরু করে।",
+    explanation:
+      "সর্বোচ্চ উচ্চতায় বস্তুর ঊর্ধ্বমুখী বেগ শূন্য হয়। এরপর মহাকর্ষ বলের প্রভাবে বস্তু নিচের দিকে পড়তে শুরু করে।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "easy",
@@ -98,7 +107,8 @@ const physicsQuestions: Question[] = [
     text: "বৃত্তাকার গতিতে কেন্দ্রমুখী ত্বরণের সূত্র কোনটি?",
     options: ["v/r", "v²/r", "vr", "v²r"],
     correctIndex: 1,
-    explanation: "কেন্দ্রমুখী ত্বরণ a = v²/r, যেখানে v হলো রৈখিক বেগ এবং r হলো ব্যাসার্ধ।",
+    explanation:
+      "কেন্দ্রমুখী ত্বরণ a = v²/r, যেখানে v হলো রৈখিক বেগ এবং r হলো ব্যাসার্ধ।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -116,7 +126,8 @@ const physicsQuestions: Question[] = [
       "ভরবেগ সর্বদা সংরক্ষিত",
     ],
     correctIndex: 0,
-    explanation: "নিউটনের তৃতীয় সূত্র: প্রতিটি ক্রিয়ার একটি সমান ও বিপরীত প্রতিক্রিয়া আছে। ক্রিয়া ও প্রতিক্রিয়া দুটি ভিন্ন বস্তুতে কাজ করে।",
+    explanation:
+      "নিউটনের তৃতীয় সূত্র: প্রতিটি ক্রিয়ার একটি সমান ও বিপরীত প্রতিক্রিয়া আছে। ক্রিয়া ও প্রতিক্রিয়া দুটি ভিন্ন বস্তুতে কাজ করে।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "easy",
@@ -142,7 +153,8 @@ const physicsQuestions: Question[] = [
     text: "কোন বলের প্রভাবে সকল বস্তু পৃথিবীর কেন্দ্রের দিকে আকৃষ্ট হয়?",
     options: ["চৌম্বক বল", "তড়িৎ বল", "মহাকর্ষ বল", "কেন্দ্রমুখী বল"],
     correctIndex: 2,
-    explanation: "মহাকর্ষ বল (Gravitational Force) এর প্রভাবে সকল বস্তু পৃথিবীর কেন্দ্রের দিকে আকৃষ্ট হয়। নিউটনের মহাকর্ষ সূত্র: F = Gm₁m₂/r²।",
+    explanation:
+      "মহাকর্ষ বল (Gravitational Force) এর প্রভাবে সকল বস্তু পৃথিবীর কেন্দ্রের দিকে আকৃষ্ট হয়। নিউটনের মহাকর্ষ সূত্র: F = Gm₁m₂/r²।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "easy",
@@ -168,7 +180,8 @@ const physicsQuestions: Question[] = [
     text: "স্থিতি ঘর্ষণ গুণাঙ্ক (μs) ও গতি ঘর্ষণ গুণাঙ্কের (μk) মধ্যে সম্পর্ক —",
     options: ["μs > μk", "μs < μk", "μs = μk", "কোনো সম্পর্ক নেই"],
     correctIndex: 0,
-    explanation: "স্থিতি ঘর্ষণ গুণাঙ্ক সবসময় গতি ঘর্ষণ গুণাঙ্কের চেয়ে বড়। অর্থাৎ μs > μk। একটি বস্তুকে চালু করতে বেশি বল লাগে, কিন্তু একবার চলতে শুরু করলে কম বল লাগে।",
+    explanation:
+      "স্থিতি ঘর্ষণ গুণাঙ্ক সবসময় গতি ঘর্ষণ গুণাঙ্কের চেয়ে বড়। অর্থাৎ μs > μk। একটি বস্তুকে চালু করতে বেশি বল লাগে, কিন্তু একবার চলতে শুরু করলে কম বল লাগে।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -181,7 +194,8 @@ const physicsQuestions: Question[] = [
     text: "মুক্তিবেগ (Escape Velocity) এর সূত্র কোনটি?",
     options: ["√(gR)", "√(2gR)", "√(gR/2)", "2gR"],
     correctIndex: 1,
-    explanation: "মুক্তিবেগ ve = √(2gR), যেখানে g হলো অভিকর্ষজ ত্বরণ এবং R হলো পৃথিবীর ব্যাসার্ধ। পৃথিবীর জন্য ve ≈ 11.2 km/s।",
+    explanation:
+      "মুক্তিবেগ ve = √(2gR), যেখানে g হলো অভিকর্ষজ ত্বরণ এবং R হলো পৃথিবীর ব্যাসার্ধ। পৃথিবীর জন্য ve ≈ 11.2 km/s।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "hard",
@@ -194,7 +208,8 @@ const physicsQuestions: Question[] = [
     text: "সরল দোলকের দোলনকাল কিসের উপর নির্ভর করে?",
     options: ["ভরের উপর", "বিস্তারের উপর", "দৈর্ঘ্যের উপর", "তাপমাত্রার উপর"],
     correctIndex: 2,
-    explanation: "সরল দোলকের দোলনকাল T = 2π√(L/g)। এটি শুধু দোলকের দৈর্ঘ্য (L) এবং g এর উপর নির্ভর করে, ভর বা বিস্তারের উপর নয়।",
+    explanation:
+      "সরল দোলকের দোলনকাল T = 2π√(L/g)। এটি শুধু দোলকের দৈর্ঘ্য (L) এবং g এর উপর নির্ভর করে, ভর বা বিস্তারের উপর নয়।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -233,7 +248,8 @@ const physicsQuestions: Question[] = [
     text: "তির্যক নিক্ষেপে (Projectile Motion) সর্বোচ্চ পাল্লা পাওয়া যায় কত ডিগ্রি কোণে?",
     options: ["30°", "45°", "60°", "90°"],
     correctIndex: 1,
-    explanation: "তির্যক নিক্ষেপে পাল্লা R = u²sin2θ/g। R সর্বোচ্চ হয় যখন sin2θ = 1, অর্থাৎ 2θ = 90°, তাই θ = 45°।",
+    explanation:
+      "তির্যক নিক্ষেপে পাল্লা R = u²sin2θ/g। R সর্বোচ্চ হয় যখন sin2θ = 1, অর্থাৎ 2θ = 90°, তাই θ = 45°।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -246,7 +262,8 @@ const physicsQuestions: Question[] = [
     text: "কাজের মাত্রা সমীকরণ কোনটি?",
     options: ["MLT⁻¹", "MLT⁻²", "ML²T⁻²", "ML²T⁻³"],
     correctIndex: 2,
-    explanation: "কাজ = বল × সরণ = (MLT⁻²)(L) = ML²T⁻²। একে শক্তির মাত্রা সমীকরণও বলা হয়।",
+    explanation:
+      "কাজ = বল × সরণ = (MLT⁻²)(L) = ML²T⁻²। একে শক্তির মাত্রা সমীকরণও বলা হয়।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -257,9 +274,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-mech-020",
     text: "স্থিতিস্থাপক সংঘর্ষে কোনটি সংরক্ষিত থাকে?",
-    options: ["শুধু ভরবেগ", "শুধু গতিশক্তি", "ভরবেগ ও গতিশক্তি উভয়ই", "কোনোটিই না"],
+    options: [
+      "শুধু ভরবেগ",
+      "শুধু গতিশক্তি",
+      "ভরবেগ ও গতিশক্তি উভয়ই",
+      "কোনোটিই না",
+    ],
     correctIndex: 2,
-    explanation: "স্থিতিস্থাপক সংঘর্ষে (Elastic Collision) ভরবেগ ও গতিশক্তি উভয়ই সংরক্ষিত থাকে।",
+    explanation:
+      "স্থিতিস্থাপক সংঘর্ষে (Elastic Collision) ভরবেগ ও গতিশক্তি উভয়ই সংরক্ষিত থাকে।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -272,7 +295,8 @@ const physicsQuestions: Question[] = [
     text: "পৃথিবীর কেন্দ্রে g এর মান কত?",
     options: ["9.8 m/s²", "0", "19.6 m/s²", "অসীম"],
     correctIndex: 1,
-    explanation: "পৃথিবীর কেন্দ্রে g = 0। কারণ কেন্দ্রে সব দিক থেকে সমান মহাকর্ষ বল কাজ করে, ফলে নেট বল শূন্য।",
+    explanation:
+      "পৃথিবীর কেন্দ্রে g = 0। কারণ কেন্দ্রে সব দিক থেকে সমান মহাকর্ষ বল কাজ করে, ফলে নেট বল শূন্য।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -285,7 +309,8 @@ const physicsQuestions: Question[] = [
     text: "কেপলারের তৃতীয় সূত্র অনুসারে গ্রহের পর্যায়কাল T এবং কক্ষপথের অর্ধ-প্রধান অক্ষ a এর সম্পর্ক —",
     options: ["T ∝ a", "T² ∝ a²", "T² ∝ a³", "T³ ∝ a²"],
     correctIndex: 2,
-    explanation: "কেপলারের তৃতীয় সূত্র: T² ∝ a³। গ্রহের পর্যায়কালের বর্গ কক্ষপথের অর্ধ-প্রধান অক্ষের ঘনের সমানুপাতিক।",
+    explanation:
+      "কেপলারের তৃতীয় সূত্র: T² ∝ a³। গ্রহের পর্যায়কালের বর্গ কক্ষপথের অর্ধ-প্রধান অক্ষের ঘনের সমানুপাতিক।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "hard",
@@ -298,7 +323,8 @@ const physicsQuestions: Question[] = [
     text: "ক্ষমতার SI একক কোনটি?",
     options: ["জুল", "ওয়াট", "নিউটন", "প্যাসকেল"],
     correctIndex: 1,
-    explanation: "ক্ষমতার SI একক ওয়াট (W)। ক্ষমতা = কাজ/সময় = জুল/সেকেন্ড = ওয়াট।",
+    explanation:
+      "ক্ষমতার SI একক ওয়াট (W)। ক্ষমতা = কাজ/সময় = জুল/সেকেন্ড = ওয়াট।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "easy",
@@ -309,9 +335,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-mech-024",
     text: "হুকের সূত্র অনুসারে পীড়ন ও বিকৃতির সম্পর্ক কী?",
-    options: ["পীড়ন ∝ বিকৃতি²", "পীড়ন ∝ বিকৃতি", "পীড়ন ∝ 1/বিকৃতি", "কোনো সম্পর্ক নেই"],
+    options: [
+      "পীড়ন ∝ বিকৃতি²",
+      "পীড়ন ∝ বিকৃতি",
+      "পীড়ন ∝ 1/বিকৃতি",
+      "কোনো সম্পর্ক নেই",
+    ],
     correctIndex: 1,
-    explanation: "হুকের সূত্র: স্থিতিস্থাপক সীমার মধ্যে পীড়ন বিকৃতির সমানুপাতিক। Stress ∝ Strain → Stress = Y × Strain, যেখানে Y হলো ইয়ংয়ের গুণাঙ্ক।",
+    explanation:
+      "হুকের সূত্র: স্থিতিস্থাপক সীমার মধ্যে পীড়ন বিকৃতির সমানুপাতিক। Stress ∝ Strain → Stress = Y × Strain, যেখানে Y হলো ইয়ংয়ের গুণাঙ্ক।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -335,9 +367,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-mech-026",
     text: "বার্নুলির উপপাদ্য কোন ধরনের প্রবাহের জন্য প্রযোজ্য?",
-    options: ["অশান্ত প্রবাহ", "সুষম বা স্তরীয় প্রবাহ", "সমস্ত প্রবাহ", "ঘূর্ণায়মান প্রবাহ"],
+    options: [
+      "অশান্ত প্রবাহ",
+      "সুষম বা স্তরীয় প্রবাহ",
+      "সমস্ত প্রবাহ",
+      "ঘূর্ণায়মান প্রবাহ",
+    ],
     correctIndex: 1,
-    explanation: "বার্নুলির উপপাদ্য আদর্শ তরল (অসংকোচ্য ও সান্দ্রতাবিহীন) এর সুষম বা স্তরীয় প্রবাহের (Streamline flow) ক্ষেত্রে প্রযোজ্য।",
+    explanation:
+      "বার্নুলির উপপাদ্য আদর্শ তরল (অসংকোচ্য ও সান্দ্রতাবিহীন) এর সুষম বা স্তরীয় প্রবাহের (Streamline flow) ক্ষেত্রে প্রযোজ্য।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "hard",
@@ -355,7 +393,8 @@ const physicsQuestions: Question[] = [
       "উর্ধ্বমুখী বল = 0",
     ],
     correctIndex: 0,
-    explanation: "ভাসমান বস্তুর ক্ষেত্রে প্লাবতা বল (উর্ধ্বমুখী বল) = বস্তুর ওজন। এটি আর্কিমিডিসের নীতি।",
+    explanation:
+      "ভাসমান বস্তুর ক্ষেত্রে প্লাবতা বল (উর্ধ্বমুখী বল) = বস্তুর ওজন। এটি আর্কিমিডিসের নীতি।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -368,7 +407,8 @@ const physicsQuestions: Question[] = [
     text: "সান্দ্রতা গুণাঙ্কের SI একক কোনটি?",
     options: ["Pa⋅s", "N⋅m", "kg/m", "J/s"],
     correctIndex: 0,
-    explanation: "সান্দ্রতা গুণাঙ্কের SI একক Pa⋅s (Pascal-second) বা kg/(m⋅s)। CGS এককে এটি Poise।",
+    explanation:
+      "সান্দ্রতা গুণাঙ্কের SI একক Pa⋅s (Pascal-second) বা kg/(m⋅s)। CGS এককে এটি Poise।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "hard",
@@ -379,9 +419,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-mech-029",
     text: "সরল ছন্দিত গতিতে পুনরুদ্ধার বলের দিক কোন দিকে?",
-    options: ["সরণের দিকে", "সরণের বিপরীত দিকে", "বেগের দিকে", "ত্বরণের লম্বদিকে"],
+    options: [
+      "সরণের দিকে",
+      "সরণের বিপরীত দিকে",
+      "বেগের দিকে",
+      "ত্বরণের লম্বদিকে",
+    ],
     correctIndex: 1,
-    explanation: "SHM এ পুনরুদ্ধার বল F = -kx, যেখানে ঋণাত্মক চিহ্ন নির্দেশ করে যে বল সর্বদা সরণের বিপরীত দিকে কাজ করে।",
+    explanation:
+      "SHM এ পুনরুদ্ধার বল F = -kx, যেখানে ঋণাত্মক চিহ্ন নির্দেশ করে যে বল সর্বদা সরণের বিপরীত দিকে কাজ করে।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "medium",
@@ -394,7 +440,8 @@ const physicsQuestions: Question[] = [
     text: "মহাকর্ষ ধ্রুবক G এর মাত্রা সমীকরণ কোনটি?",
     options: ["M⁻¹L³T⁻²", "MLT⁻²", "ML²T⁻²", "M⁻¹L²T⁻²"],
     correctIndex: 0,
-    explanation: "F = Gm₁m₂/r² থেকে, G = Fr²/(m₁m₂)। G এর মাত্রা = [MLT⁻²][L²]/[M²] = M⁻¹L³T⁻²।",
+    explanation:
+      "F = Gm₁m₂/r² থেকে, G = Fr²/(m₁m₂)। G এর মাত্রা = [MLT⁻²][L²]/[M²] = M⁻¹L³T⁻²।",
     subjectId: "physics",
     topicId: "mechanics",
     difficulty: "hard",
@@ -406,9 +453,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-thermo-001",
     text: "তাপগতিবিদ্যার প্রথম সূত্রটি কোন নীতির উপর ভিত্তি করে প্রতিষ্ঠিত?",
-    options: ["ভরের নিত্যতা", "শক্তির নিত্যতা", "ভরবেগের নিত্যতা", "চার্জের নিত্যতা"],
+    options: [
+      "ভরের নিত্যতা",
+      "শক্তির নিত্যতা",
+      "ভরবেগের নিত্যতা",
+      "চার্জের নিত্যতা",
+    ],
     correctIndex: 1,
-    explanation: "তাপগতিবিদ্যার প্রথম সূত্র মূলত শক্তির নিত্যতা সূত্রের একটি বিশেষ রূপ।",
+    explanation:
+      "তাপগতিবিদ্যার প্রথম সূত্র মূলত শক্তির নিত্যতা সূত্রের একটি বিশেষ রূপ।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "medium",
@@ -419,9 +472,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-thermo-002",
     text: "কার্নো ইঞ্জিনের দক্ষতা কিসের উপর নির্ভর করে?",
-    options: ["জ্বালানির পরিমাণ", "উৎস ও গ্রাহকের তাপমাত্রা", "ইঞ্জিনের আকার", "কার্যকারী পদার্থের ধরন"],
+    options: [
+      "জ্বালানির পরিমাণ",
+      "উৎস ও গ্রাহকের তাপমাত্রা",
+      "ইঞ্জিনের আকার",
+      "কার্যকারী পদার্থের ধরন",
+    ],
     correctIndex: 1,
-    explanation: "কার্নো ইঞ্জিনের দক্ষতা η = 1 - T₂/T₁, যেখানে T₁ উৎসের তাপমাত্রা এবং T₂ গ্রাহকের তাপমাত্রা (কেলভিনে)। এটি কেবল তাপমাত্রার উপর নির্ভরশীল।",
+    explanation:
+      "কার্নো ইঞ্জিনের দক্ষতা η = 1 - T₂/T₁, যেখানে T₁ উৎসের তাপমাত্রা এবং T₂ গ্রাহকের তাপমাত্রা (কেলভিনে)। এটি কেবল তাপমাত্রার উপর নির্ভরশীল।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "medium",
@@ -434,7 +493,8 @@ const physicsQuestions: Question[] = [
     text: "পরম শূন্য তাপমাত্রা কত?",
     options: ["0°C", "-100°C", "-273.15°C", "-373°C"],
     correctIndex: 2,
-    explanation: "পরম শূন্য তাপমাত্রা = 0 K = -273.15°C। এটি তাত্ত্বিকভাবে সম্ভব সর্বনিম্ন তাপমাত্রা।",
+    explanation:
+      "পরম শূন্য তাপমাত্রা = 0 K = -273.15°C। এটি তাত্ত্বিকভাবে সম্ভব সর্বনিম্ন তাপমাত্রা।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -447,7 +507,8 @@ const physicsQuestions: Question[] = [
     text: "তাপ সঞ্চালনের কোন পদ্ধতিতে মাধ্যমের প্রয়োজন হয় না?",
     options: ["পরিবহন", "পরিচলন", "বিকিরণ", "সবকটিতে"],
     correctIndex: 2,
-    explanation: "বিকিরণ (Radiation) পদ্ধতিতে তাপ তড়িৎচুম্বকীয় তরঙ্গের আকারে সঞ্চালিত হয়, তাই কোনো মাধ্যমের প্রয়োজন হয় না। সূর্য থেকে পৃথিবীতে তাপ বিকিরণ পদ্ধতিতে আসে।",
+    explanation:
+      "বিকিরণ (Radiation) পদ্ধতিতে তাপ তড়িৎচুম্বকীয় তরঙ্গের আকারে সঞ্চালিত হয়, তাই কোনো মাধ্যমের প্রয়োজন হয় না। সূর্য থেকে পৃথিবীতে তাপ বিকিরণ পদ্ধতিতে আসে।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -460,7 +521,8 @@ const physicsQuestions: Question[] = [
     text: "আদর্শ গ্যাসের অবস্থার সমীকরণ কোনটি?",
     options: ["PV = nRT", "PV = mRT", "PT = nRV", "P/V = nRT"],
     correctIndex: 0,
-    explanation: "আদর্শ গ্যাসের অবস্থার সমীকরণ PV = nRT, যেখানে P = চাপ, V = আয়তন, n = মোল সংখ্যা, R = সর্বজনীন গ্যাস ধ্রুবক, T = তাপমাত্রা (K)।",
+    explanation:
+      "আদর্শ গ্যাসের অবস্থার সমীকরণ PV = nRT, যেখানে P = চাপ, V = আয়তন, n = মোল সংখ্যা, R = সর্বজনীন গ্যাস ধ্রুবক, T = তাপমাত্রা (K)।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -478,7 +540,8 @@ const physicsQuestions: Question[] = [
       "এনট্রপি সর্বদা হ্রাস পায়",
     ],
     correctIndex: 1,
-    explanation: "তাপগতিবিদ্যার দ্বিতীয় সূত্রের ক্লসিয়াস বিবৃতি: তাপ স্বতঃস্ফূর্তভাবে ঠান্ডা বস্তু থেকে গরম বস্তুতে যেতে পারে না — বাইরে থেকে কাজ করতে হবে।",
+    explanation:
+      "তাপগতিবিদ্যার দ্বিতীয় সূত্রের ক্লসিয়াস বিবৃতি: তাপ স্বতঃস্ফূর্তভাবে ঠান্ডা বস্তু থেকে গরম বস্তুতে যেতে পারে না — বাইরে থেকে কাজ করতে হবে।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "medium",
@@ -491,7 +554,8 @@ const physicsQuestions: Question[] = [
     text: "সমচাপ প্রক্রিয়ায় (Isobaric) কোনটি স্থির থাকে?",
     options: ["আয়তন", "তাপমাত্রা", "চাপ", "এনট্রপি"],
     correctIndex: 2,
-    explanation: "সমচাপ প্রক্রিয়ায় (Isobaric Process) চাপ স্থির থাকে। এই প্রক্রিয়ায় W = PΔV।",
+    explanation:
+      "সমচাপ প্রক্রিয়ায় (Isobaric Process) চাপ স্থির থাকে। এই প্রক্রিয়ায় W = PΔV।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -504,7 +568,8 @@ const physicsQuestions: Question[] = [
     text: "পানির আপেক্ষিক তাপ ক্ষমতা কত?",
     options: ["2090 J/(kg⋅K)", "4186 J/(kg⋅K)", "900 J/(kg⋅K)", "334 J/(kg⋅K)"],
     correctIndex: 1,
-    explanation: "পানির আপেক্ষিক তাপ ক্ষমতা 4186 J/(kg⋅K) বা 1 cal/(g⋅°C)। অন্য সকল সাধারণ পদার্থের চেয়ে এটি বেশি।",
+    explanation:
+      "পানির আপেক্ষিক তাপ ক্ষমতা 4186 J/(kg⋅K) বা 1 cal/(g⋅°C)। অন্য সকল সাধারণ পদার্থের চেয়ে এটি বেশি।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -515,9 +580,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-thermo-009",
     text: "রুদ্ধতাপীয় প্রক্রিয়ায় (Adiabatic) কোনটি ঘটে?",
-    options: ["তাপের আদান-প্রদান হয়", "তাপের আদান-প্রদান হয় না", "চাপ স্থির থাকে", "আয়তন স্থির থাকে"],
+    options: [
+      "তাপের আদান-প্রদান হয়",
+      "তাপের আদান-প্রদান হয় না",
+      "চাপ স্থির থাকে",
+      "আয়তন স্থির থাকে",
+    ],
     correctIndex: 1,
-    explanation: "রুদ্ধতাপীয় প্রক্রিয়ায় সিস্টেম ও পরিবেশের মধ্যে কোনো তাপের আদান-প্রদান হয় না (Q = 0)। PVᵞ = ধ্রুবক।",
+    explanation:
+      "রুদ্ধতাপীয় প্রক্রিয়ায় সিস্টেম ও পরিবেশের মধ্যে কোনো তাপের আদান-প্রদান হয় না (Q = 0)। PVᵞ = ধ্রুবক।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "medium",
@@ -530,7 +601,8 @@ const physicsQuestions: Question[] = [
     text: "সমোষ্ণ প্রক্রিয়ায় (Isothermal) আদর্শ গ্যাসের অভ্যন্তরীণ শক্তির পরিবর্তন কত?",
     options: ["ধনাত্মক", "ঋণাত্মক", "শূন্য", "অসীম"],
     correctIndex: 2,
-    explanation: "সমোষ্ণ প্রক্রিয়ায় তাপমাত্রা স্থির থাকে। আদর্শ গ্যাসের অভ্যন্তরীণ শক্তি শুধু তাপমাত্রার উপর নির্ভর করে, তাই ΔU = 0।",
+    explanation:
+      "সমোষ্ণ প্রক্রিয়ায় তাপমাত্রা স্থির থাকে। আদর্শ গ্যাসের অভ্যন্তরীণ শক্তি শুধু তাপমাত্রার উপর নির্ভর করে, তাই ΔU = 0।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "medium",
@@ -541,9 +613,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-thermo-011",
     text: "এনট্রপি কী?",
-    options: ["শৃঙ্খলার পরিমাপ", "বিশৃঙ্খলার পরিমাপ", "শক্তির পরিমাপ", "ক্ষমতার পরিমাপ"],
+    options: [
+      "শৃঙ্খলার পরিমাপ",
+      "বিশৃঙ্খলার পরিমাপ",
+      "শক্তির পরিমাপ",
+      "ক্ষমতার পরিমাপ",
+    ],
     correctIndex: 1,
-    explanation: "এনট্রপি (Entropy) কোনো সিস্টেমের বিশৃঙ্খলা বা অনিয়মের পরিমাপ। তাপগতিবিদ্যার দ্বিতীয় সূত্র অনুসারে, বিচ্ছিন্ন সিস্টেমের এনট্রপি সর্বদা বাড়ে বা একই থাকে।",
+    explanation:
+      "এনট্রপি (Entropy) কোনো সিস্টেমের বিশৃঙ্খলা বা অনিয়মের পরিমাপ। তাপগতিবিদ্যার দ্বিতীয় সূত্র অনুসারে, বিচ্ছিন্ন সিস্টেমের এনট্রপি সর্বদা বাড়ে বা একই থাকে।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "medium",
@@ -556,7 +634,8 @@ const physicsQuestions: Question[] = [
     text: "বয়েলের সূত্র অনুযায়ী, স্থির তাপমাত্রায় —",
     options: ["PV = ধ্রুবক", "P/V = ধ্রুবক", "PT = ধ্রুবক", "VT = ধ্রুবক"],
     correctIndex: 0,
-    explanation: "বয়েলের সূত্র: নির্দিষ্ট ভরের গ্যাসের তাপমাত্রা স্থির থাকলে, চাপ ও আয়তন পরস্পর ব্যস্তানুপাতিক। PV = ধ্রুবক।",
+    explanation:
+      "বয়েলের সূত্র: নির্দিষ্ট ভরের গ্যাসের তাপমাত্রা স্থির থাকলে, চাপ ও আয়তন পরস্পর ব্যস্তানুপাতিক। PV = ধ্রুবক।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -574,7 +653,8 @@ const physicsQuestions: Question[] = [
       "তাপমাত্রার সাথে সম্পর্কহীন",
     ],
     correctIndex: 0,
-    explanation: "চার্লসের সূত্র: স্থির চাপে নির্দিষ্ট ভরের গ্যাসের আয়তন পরম তাপমাত্রার সমানুপাতিক। V/T = ধ্রুবক।",
+    explanation:
+      "চার্লসের সূত্র: স্থির চাপে নির্দিষ্ট ভরের গ্যাসের আয়তন পরম তাপমাত্রার সমানুপাতিক। V/T = ধ্রুবক।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -600,7 +680,8 @@ const physicsQuestions: Question[] = [
     text: "বরফের গলনের সুপ্ত তাপ কত?",
     options: ["80 cal/g", "100 cal/g", "540 cal/g", "334 cal/g"],
     correctIndex: 0,
-    explanation: "বরফের গলনের সুপ্ত তাপ 80 cal/g বা 334 kJ/kg। 0°C তাপমাত্রায় 1g বরফকে 1g পানিতে পরিণত করতে 80 cal তাপ লাগে।",
+    explanation:
+      "বরফের গলনের সুপ্ত তাপ 80 cal/g বা 334 kJ/kg। 0°C তাপমাত্রায় 1g বরফকে 1g পানিতে পরিণত করতে 80 cal তাপ লাগে।",
     subjectId: "physics",
     topicId: "thermodynamics",
     difficulty: "easy",
@@ -614,7 +695,8 @@ const physicsQuestions: Question[] = [
     text: "আলোর বেগ শূন্য মাধ্যমে প্রায় কত?",
     options: ["3 × 10⁶ m/s", "3 × 10⁷ m/s", "3 × 10⁸ m/s", "3 × 10⁹ m/s"],
     correctIndex: 2,
-    explanation: "শূন্য মাধ্যমে আলোর বেগ c ≈ 3 × 10⁸ m/s বা 300,000 km/s। আইনস্টাইনের আপেক্ষিকতা তত্ত্ব অনুসারে এটি মহাবিশ্বের সর্বোচ্চ গতিবেগ।",
+    explanation:
+      "শূন্য মাধ্যমে আলোর বেগ c ≈ 3 × 10⁸ m/s বা 300,000 km/s। আইনস্টাইনের আপেক্ষিকতা তত্ত্ব অনুসারে এটি মহাবিশ্বের সর্বোচ্চ গতিবেগ।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -632,7 +714,8 @@ const physicsQuestions: Question[] = [
       "প্রতিফলিত হয়",
     ],
     correctIndex: 1,
-    explanation: "স্নেলের সূত্র অনুসারে, আলো ঘন মাধ্যম থেকে হালকা মাধ্যমে গেলে অভিলম্ব থেকে দূরে সরে যায়। প্রতিসরণ কোণ > আপতন কোণ।",
+    explanation:
+      "স্নেলের সূত্র অনুসারে, আলো ঘন মাধ্যম থেকে হালকা মাধ্যমে গেলে অভিলম্ব থেকে দূরে সরে যায়। প্রতিসরণ কোণ > আপতন কোণ।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "medium",
@@ -645,7 +728,8 @@ const physicsQuestions: Question[] = [
     text: "উত্তল লেন্সের ফোকাস দূরত্ব কীরূপ?",
     options: ["ধনাত্মক", "ঋণাত্মক", "শূন্য", "অসীম"],
     correctIndex: 0,
-    explanation: "উত্তল লেন্স (Convex Lens) আলোকরশ্মিকে অভিসারী করে। এর ফোকাস দূরত্ব ধনাত্মক (+ve)। অবতল লেন্সের ফোকাস দূরত্ব ঋণাত্মক।",
+    explanation:
+      "উত্তল লেন্স (Convex Lens) আলোকরশ্মিকে অভিসারী করে। এর ফোকাস দূরত্ব ধনাত্মক (+ve)। অবতল লেন্সের ফোকাস দূরত্ব ঋণাত্মক।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -663,7 +747,8 @@ const physicsQuestions: Question[] = [
       "আলোর তরঙ্গদৈর্ঘ্য বেশি হতে হবে",
     ],
     correctIndex: 1,
-    explanation: "সম্পূর্ণ অভ্যন্তরীণ প্রতিফলনের দুটি শর্ত: (1) আলো ঘন মাধ্যম থেকে হালকা মাধ্যমে যেতে হবে। (2) আপতন কোণ সংকট কোণের চেয়ে বড় হতে হবে।",
+    explanation:
+      "সম্পূর্ণ অভ্যন্তরীণ প্রতিফলনের দুটি শর্ত: (1) আলো ঘন মাধ্যম থেকে হালকা মাধ্যমে যেতে হবে। (2) আপতন কোণ সংকট কোণের চেয়ে বড় হতে হবে।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "medium",
@@ -674,9 +759,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-opt-005",
     text: "দর্পণের সূত্র কোনটি?",
-    options: ["1/f = 1/u + 1/v", "1/f = 1/v - 1/u", "f = u + v", "f = uv/(u+v)"],
+    options: [
+      "1/f = 1/u + 1/v",
+      "1/f = 1/v - 1/u",
+      "f = u + v",
+      "f = uv/(u+v)",
+    ],
     correctIndex: 0,
-    explanation: "দর্পণের সূত্র: 1/f = 1/v + 1/u, যেখানে f = ফোকাস দূরত্ব, v = প্রতিবিম্ব দূরত্ব, u = বস্তুর দূরত্ব।",
+    explanation:
+      "দর্পণের সূত্র: 1/f = 1/v + 1/u, যেখানে f = ফোকাস দূরত্ব, v = প্রতিবিম্ব দূরত্ব, u = বস্তুর দূরত্ব।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -687,9 +778,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-opt-006",
     text: "ইয়ংয়ের দ্বিচিড় পরীক্ষায় কোন ঘটনা প্রমাণিত হয়?",
-    options: ["আলোর প্রতিফলন", "আলোর প্রতিসরণ", "আলোর ব্যতিচার", "আলোর পোলারায়ণ"],
+    options: [
+      "আলোর প্রতিফলন",
+      "আলোর প্রতিসরণ",
+      "আলোর ব্যতিচার",
+      "আলোর পোলারায়ণ",
+    ],
     correctIndex: 2,
-    explanation: "ইয়ংয়ের দ্বিচিড় পরীক্ষায় (Young's Double Slit Experiment) আলোর ব্যতিচার (Interference) প্রমাণিত হয়। এতে আলো ও অন্ধকার ডোরা দেখা যায়।",
+    explanation:
+      "ইয়ংয়ের দ্বিচিড় পরীক্ষায় (Young's Double Slit Experiment) আলোর ব্যতিচার (Interference) প্রমাণিত হয়। এতে আলো ও অন্ধকার ডোরা দেখা যায়।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "medium",
@@ -707,7 +804,8 @@ const physicsQuestions: Question[] = [
       "কেবল বিচ্ছুরণ",
     ],
     correctIndex: 2,
-    explanation: "রামধনু সৃষ্টিতে আলোর তিনটি ঘটনা জড়িত: (1) প্রতিসরণ (বৃষ্টির ফোঁটায় প্রবেশ), (2) সম্পূর্ণ অভ্যন্তরীণ প্রতিফলন, (3) বিচ্ছুরণ (বিভিন্ন রঙে বিভাজন)।",
+    explanation:
+      "রামধনু সৃষ্টিতে আলোর তিনটি ঘটনা জড়িত: (1) প্রতিসরণ (বৃষ্টির ফোঁটায় প্রবেশ), (2) সম্পূর্ণ অভ্যন্তরীণ প্রতিফলন, (3) বিচ্ছুরণ (বিভিন্ন রঙে বিভাজন)।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -720,7 +818,8 @@ const physicsQuestions: Question[] = [
     text: "অবতল দর্পণের ফোকাসে বস্তু রাখলে প্রতিবিম্ব কোথায় গঠিত হয়?",
     options: ["ফোকাসে", "বক্রতার কেন্দ্রে", "অসীমে", "মেরুতে"],
     correctIndex: 2,
-    explanation: "অবতল দর্পণের ফোকাসে বস্তু রাখলে প্রতিফলিত রশ্মি সমান্তরাল হয়ে যায়, ফলে প্রতিবিম্ব অসীমে গঠিত হয়।",
+    explanation:
+      "অবতল দর্পণের ফোকাসে বস্তু রাখলে প্রতিফলিত রশ্মি সমান্তরাল হয়ে যায়, ফলে প্রতিবিম্ব অসীমে গঠিত হয়।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "medium",
@@ -738,7 +837,8 @@ const physicsQuestions: Question[] = [
       "সবকটি সমান",
     ],
     correctIndex: 0,
-    explanation: "দৃশ্যমান আলোর তরঙ্গদৈর্ঘ্যের ক্রম: লাল (700nm) > কমলা > হলুদ > সবুজ > নীল > বেগুনি (400nm)।",
+    explanation:
+      "দৃশ্যমান আলোর তরঙ্গদৈর্ঘ্যের ক্রম: লাল (700nm) > কমলা > হলুদ > সবুজ > নীল > বেগুনি (400nm)।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -751,7 +851,8 @@ const physicsQuestions: Question[] = [
     text: "পোলারায়ণ (Polarization) প্রমাণ করে যে আলো —",
     options: ["অনুদৈর্ঘ্য তরঙ্গ", "আড় তরঙ্গ", "শব্দ তরঙ্গ", "যান্ত্রিক তরঙ্গ"],
     correctIndex: 1,
-    explanation: "পোলারায়ণ শুধুমাত্র আড় তরঙ্গে (Transverse Wave) সম্ভব। আলোর পোলারায়ণ প্রমাণ করে যে আলো একটি আড় তরঙ্গ।",
+    explanation:
+      "পোলারায়ণ শুধুমাত্র আড় তরঙ্গে (Transverse Wave) সম্ভব। আলোর পোলারায়ণ প্রমাণ করে যে আলো একটি আড় তরঙ্গ।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "medium",
@@ -764,7 +865,8 @@ const physicsQuestions: Question[] = [
     text: "লেন্সের ক্ষমতার একক কী?",
     options: ["মিটার", "ডায়অপ্টার", "ওয়াট", "ক্যান্ডেলা"],
     correctIndex: 1,
-    explanation: "লেন্সের ক্ষমতা P = 1/f (মিটারে)। এর একক ডায়অপ্টার (D)। ধনাত্মক ক্ষমতা = উত্তল লেন্স, ঋণাত্মক = অবতল লেন্স।",
+    explanation:
+      "লেন্সের ক্ষমতা P = 1/f (মিটারে)। এর একক ডায়অপ্টার (D)। ধনাত্মক ক্ষমতা = উত্তল লেন্স, ঋণাত্মক = অবতল লেন্স।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -777,7 +879,8 @@ const physicsQuestions: Question[] = [
     text: "কোন ধরনের দর্পণ গাড়ির রিয়ার-ভিউ মিরর হিসেবে ব্যবহৃত হয়?",
     options: ["সমতল দর্পণ", "অবতল দর্পণ", "উত্তল দর্পণ", "পরাবৃত্তীয় দর্পণ"],
     correctIndex: 2,
-    explanation: "উত্তল দর্পণ গাড়ির রিয়ার-ভিউ মিরর হিসেবে ব্যবহৃত হয় কারণ এটি সর্বদা ছোট, সোজা ও খর্বাকৃতির প্রতিবিম্ব তৈরি করে এবং বৃহত্তর দৃষ্টিক্ষেত্র দেয়।",
+    explanation:
+      "উত্তল দর্পণ গাড়ির রিয়ার-ভিউ মিরর হিসেবে ব্যবহৃত হয় কারণ এটি সর্বদা ছোট, সোজা ও খর্বাকৃতির প্রতিবিম্ব তৈরি করে এবং বৃহত্তর দৃষ্টিক্ষেত্র দেয়।",
     subjectId: "physics",
     topicId: "optics",
     difficulty: "easy",
@@ -791,7 +894,8 @@ const physicsQuestions: Question[] = [
     text: "ওহমের সূত্র কোনটি?",
     options: ["V = IR", "V = I/R", "V = R/I", "V = I²R"],
     correctIndex: 0,
-    explanation: "ওহমের সূত্র: V = IR, যেখানে V = বিভব পার্থক্য (ভোল্ট), I = তড়িৎ প্রবাহ (অ্যাম্পিয়ার), R = রোধ (ওহম)।",
+    explanation:
+      "ওহমের সূত্র: V = IR, যেখানে V = বিভব পার্থক্য (ভোল্ট), I = তড়িৎ প্রবাহ (অ্যাম্পিয়ার), R = রোধ (ওহম)।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -804,7 +908,8 @@ const physicsQuestions: Question[] = [
     text: "তড়িৎ প্রবাহের SI একক কোনটি?",
     options: ["ভোল্ট", "ওহম", "অ্যাম্পিয়ার", "কুলম্ব"],
     correctIndex: 2,
-    explanation: "তড়িৎ প্রবাহের SI একক অ্যাম্পিয়ার (A)। I = Q/t, অর্থাৎ প্রতি সেকেন্ডে 1 কুলম্ব চার্জ প্রবাহিত হলে তড়িৎ প্রবাহ 1 A।",
+    explanation:
+      "তড়িৎ প্রবাহের SI একক অ্যাম্পিয়ার (A)। I = Q/t, অর্থাৎ প্রতি সেকেন্ডে 1 কুলম্ব চার্জ প্রবাহিত হলে তড়িৎ প্রবাহ 1 A।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -817,7 +922,8 @@ const physicsQuestions: Question[] = [
     text: "সমান্তরাল সংযোগে সমতুল্য রোধ কোন সূত্র দ্বারা নির্ণয় করা যায়?",
     options: ["R = R₁ + R₂", "1/R = 1/R₁ + 1/R₂", "R = R₁ × R₂", "R = R₁ - R₂"],
     correctIndex: 1,
-    explanation: "সমান্তরাল সংযোগে: 1/R = 1/R₁ + 1/R₂ + ... সমতুল্য রোধ সর্বদা ক্ষুদ্রতম রোধের চেয়ে কম হয়।",
+    explanation:
+      "সমান্তরাল সংযোগে: 1/R = 1/R₁ + 1/R₂ + ... সমতুল্য রোধ সর্বদা ক্ষুদ্রতম রোধের চেয়ে কম হয়।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -835,7 +941,8 @@ const physicsQuestions: Question[] = [
       "রোধ তাপমাত্রার সমানুপাতিক",
     ],
     correctIndex: 1,
-    explanation: "কির্শফের দ্বিতীয় সূত্র (ভোল্টেজ সূত্র/KVL): যেকোনো বদ্ধ লুপে বিভব পার্থক্যের বীজগাণিতিক সমষ্টি শূন্য। ΣV = 0।",
+    explanation:
+      "কির্শফের দ্বিতীয় সূত্র (ভোল্টেজ সূত্র/KVL): যেকোনো বদ্ধ লুপে বিভব পার্থক্যের বীজগাণিতিক সমষ্টি শূন্য। ΣV = 0।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "medium",
@@ -846,9 +953,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-elec-005",
     text: "একটি সমান্তরাল প্লেট ধারকের ধারকত্ব কিসের উপর নির্ভর করে না?",
-    options: ["প্লেটের ক্ষেত্রফল", "প্লেটের মধ্যবর্তী দূরত্ব", "মাধ্যমের পরাবৈদ্যুতিক ধ্রুবক", "প্রযুক্ত বিভব পার্থক্য"],
+    options: [
+      "প্লেটের ক্ষেত্রফল",
+      "প্লেটের মধ্যবর্তী দূরত্ব",
+      "মাধ্যমের পরাবৈদ্যুতিক ধ্রুবক",
+      "প্রযুক্ত বিভব পার্থক্য",
+    ],
     correctIndex: 3,
-    explanation: "C = εA/d। ধারকত্ব প্লেটের ক্ষেত্রফল (A), মধ্যবর্তী দূরত্ব (d) ও মাধ্যমের পরাবৈদ্যুতিক ধ্রুবক (ε) এর উপর নির্ভর করে, কিন্তু প্রযুক্ত বিভব পার্থক্যের উপর নয়।",
+    explanation:
+      "C = εA/d। ধারকত্ব প্লেটের ক্ষেত্রফল (A), মধ্যবর্তী দূরত্ব (d) ও মাধ্যমের পরাবৈদ্যুতিক ধ্রুবক (ε) এর উপর নির্ভর করে, কিন্তু প্রযুক্ত বিভব পার্থক্যের উপর নয়।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "medium",
@@ -866,7 +979,8 @@ const physicsQuestions: Question[] = [
       "দূরত্বের ব্যস্তানুপাতিক",
     ],
     correctIndex: 2,
-    explanation: "কুলম্বের সূত্র: F = kq₁q₂/r²। বল দূরত্বের বর্গের ব্যস্তানুপাতিক।",
+    explanation:
+      "কুলম্বের সূত্র: F = kq₁q₂/r²। বল দূরত্বের বর্গের ব্যস্তানুপাতিক।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -897,7 +1011,8 @@ const physicsQuestions: Question[] = [
       "তারের দৈর্ঘ্যের সমানুপাতিক",
     ],
     correctIndex: 1,
-    explanation: "ফ্যারাডের সূত্র: e = -dΦ/dt। আবিষ্ট EMF চুম্বক ফ্লাক্সের পরিবর্তনের হারের সমানুপাতিক। ঋণাত্মক চিহ্ন লেঞ্জের সূত্র নির্দেশ করে।",
+    explanation:
+      "ফ্যারাডের সূত্র: e = -dΦ/dt। আবিষ্ট EMF চুম্বক ফ্লাক্সের পরিবর্তনের হারের সমানুপাতিক। ঋণাত্মক চিহ্ন লেঞ্জের সূত্র নির্দেশ করে।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "medium",
@@ -910,7 +1025,8 @@ const physicsQuestions: Question[] = [
     text: "বৈদ্যুতিক ক্ষমতার সূত্র কোনটি?",
     options: ["P = V/I", "P = VI", "P = V²/I", "P = I/V"],
     correctIndex: 1,
-    explanation: "বৈদ্যুতিক ক্ষমতা P = VI = I²R = V²/R। এখানে V = বিভব পার্থক্য, I = প্রবাহ।",
+    explanation:
+      "বৈদ্যুতিক ক্ষমতা P = VI = I²R = V²/R। এখানে V = বিভব পার্থক্য, I = প্রবাহ।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -921,9 +1037,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-elec-010",
     text: "ইলেকট্রনের আধান কত?",
-    options: ["1.6 × 10⁻¹⁹ C", "-1.6 × 10⁻¹⁹ C", "1.6 × 10⁻¹⁸ C", "9.1 × 10⁻³¹ C"],
+    options: [
+      "1.6 × 10⁻¹⁹ C",
+      "-1.6 × 10⁻¹⁹ C",
+      "1.6 × 10⁻¹⁸ C",
+      "9.1 × 10⁻³¹ C",
+    ],
     correctIndex: 1,
-    explanation: "ইলেকট্রনের আধান e = -1.6 × 10⁻¹⁹ C। ঋণাত্মক চিহ্ন ইলেকট্রনের ঋণাত্মক চার্জ নির্দেশ করে।",
+    explanation:
+      "ইলেকট্রনের আধান e = -1.6 × 10⁻¹⁹ C। ঋণাত্মক চিহ্ন ইলেকট্রনের ঋণাত্মক চার্জ নির্দেশ করে।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -936,7 +1058,8 @@ const physicsQuestions: Question[] = [
     text: "একটি 100W বাতি 10 ঘণ্টা জ্বললে কত কিলোওয়াট-ঘণ্টা বিদ্যুৎ খরচ হয়?",
     options: ["0.1 kWh", "1 kWh", "10 kWh", "100 kWh"],
     correctIndex: 1,
-    explanation: "বিদ্যুৎ খরচ = ক্ষমতা × সময় = 100W × 10h = 1000 Wh = 1 kWh। 1 kWh = 1 ইউনিট বিদ্যুৎ।",
+    explanation:
+      "বিদ্যুৎ খরচ = ক্ষমতা × সময় = 100W × 10h = 1000 Wh = 1 kWh। 1 kWh = 1 ইউনিট বিদ্যুৎ।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -947,9 +1070,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-elec-012",
     text: "ট্রান্সফরমারে তড়িৎচুম্বকীয় আবেশের কোন নীতি কাজ করে?",
-    options: ["কুলম্বের সূত্র", "ফ্যারাডের সূত্র", "ওহমের সূত্র", "অ্যাম্পিয়ারের সূত্র"],
+    options: [
+      "কুলম্বের সূত্র",
+      "ফ্যারাডের সূত্র",
+      "ওহমের সূত্র",
+      "অ্যাম্পিয়ারের সূত্র",
+    ],
     correctIndex: 1,
-    explanation: "ট্রান্সফরমার ফ্যারাডের তড়িৎচুম্বকীয় আবেশ সূত্রের উপর ভিত্তি করে কাজ করে। পারস্পরিক আবেশের মাধ্যমে এটি ভোল্টেজ বাড়ায় বা কমায়।",
+    explanation:
+      "ট্রান্সফরমার ফ্যারাডের তড়িৎচুম্বকীয় আবেশ সূত্রের উপর ভিত্তি করে কাজ করে। পারস্পরিক আবেশের মাধ্যমে এটি ভোল্টেজ বাড়ায় বা কমায়।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "medium",
@@ -962,7 +1091,8 @@ const physicsQuestions: Question[] = [
     text: "তড়িৎ ক্ষেত্রের প্রাবল্যের একক কী?",
     options: ["N/C বা V/m", "C/m", "N⋅m", "V⋅m"],
     correctIndex: 0,
-    explanation: "তড়িৎ ক্ষেত্রের প্রাবল্য E = F/q = V/d। একক N/C অথবা V/m — দুটি সমতুল্য।",
+    explanation:
+      "তড়িৎ ক্ষেত্রের প্রাবল্য E = F/q = V/d। একক N/C অথবা V/m — দুটি সমতুল্য।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -975,7 +1105,8 @@ const physicsQuestions: Question[] = [
     text: "হুইটস্টোন ব্রিজ সাম্যাবস্থায় থাকলে গ্যালভানোমিটারে প্রবাহ কত?",
     options: ["সর্বোচ্চ", "শূন্য", "1 A", "অসীম"],
     correctIndex: 1,
-    explanation: "হুইটস্টোন ব্রিজ সাম্যাবস্থায় P/Q = R/S হলে গ্যালভানোমিটারে প্রবাহ শূন্য হয়।",
+    explanation:
+      "হুইটস্টোন ব্রিজ সাম্যাবস্থায় P/Q = R/S হলে গ্যালভানোমিটারে প্রবাহ শূন্য হয়।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "medium",
@@ -988,7 +1119,8 @@ const physicsQuestions: Question[] = [
     text: "AC প্রবাহে কোন যন্ত্র ব্যবহৃত হয় ভোল্টেজ মাপতে?",
     options: ["অ্যামিটার", "ভোল্টমিটার", "গ্যালভানোমিটার", "পোটেনশিওমিটার"],
     correctIndex: 1,
-    explanation: "ভোল্টমিটার বিভব পার্থক্য (ভোল্টেজ) পরিমাপ করে। এটি সমান্তরালে সংযুক্ত হয় এবং এর রোধ অত্যন্ত বেশি।",
+    explanation:
+      "ভোল্টমিটার বিভব পার্থক্য (ভোল্টেজ) পরিমাপ করে। এটি সমান্তরালে সংযুক্ত হয় এবং এর রোধ অত্যন্ত বেশি।",
     subjectId: "physics",
     topicId: "electricity",
     difficulty: "easy",
@@ -1002,7 +1134,8 @@ const physicsQuestions: Question[] = [
     text: "আলোক-তড়িৎ ক্রিয়ায় (Photoelectric Effect) নির্গত ইলেকট্রনের গতিশক্তি কিসের উপর নির্ভর করে?",
     options: ["আলোর তীব্রতা", "আলোর কম্পাঙ্ক", "ইলেকট্রনের ভর", "ধাতুর আয়তন"],
     correctIndex: 1,
-    explanation: "আইনস্টাইনের আলোক-তড়িৎ সমীকরণ: KE = hf - φ। নির্গত ইলেকট্রনের সর্বোচ্চ গতিশক্তি আপতিত আলোর কম্পাঙ্কের উপর নির্ভর করে, তীব্রতার উপর নয়।",
+    explanation:
+      "আইনস্টাইনের আলোক-তড়িৎ সমীকরণ: KE = hf - φ। নির্গত ইলেকট্রনের সর্বোচ্চ গতিশক্তি আপতিত আলোর কম্পাঙ্কের উপর নির্ভর করে, তীব্রতার উপর নয়।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",
@@ -1013,9 +1146,15 @@ const physicsQuestions: Question[] = [
   {
     id: "phy-mod-002",
     text: "প্ল্যাঙ্কের ধ্রুবক h এর মান কত?",
-    options: ["6.626 × 10⁻³⁴ J⋅s", "6.626 × 10⁻²⁴ J⋅s", "1.6 × 10⁻¹⁹ J⋅s", "9.1 × 10⁻³¹ J⋅s"],
+    options: [
+      "6.626 × 10⁻³⁴ J⋅s",
+      "6.626 × 10⁻²⁴ J⋅s",
+      "1.6 × 10⁻¹⁹ J⋅s",
+      "9.1 × 10⁻³¹ J⋅s",
+    ],
     correctIndex: 0,
-    explanation: "প্ল্যাঙ্কের ধ্রুবক h = 6.626 × 10⁻³⁴ J⋅s। E = hf সমীকরণে ব্যবহৃত হয়।",
+    explanation:
+      "প্ল্যাঙ্কের ধ্রুবক h = 6.626 × 10⁻³⁴ J⋅s। E = hf সমীকরণে ব্যবহৃত হয়।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1033,7 +1172,8 @@ const physicsQuestions: Question[] = [
       "ভর সংখ্যা নির্ণয় করতে পারেনি",
     ],
     correctIndex: 1,
-    explanation: "রাদারফোর্ডের মডেল অনুযায়ী ঘূর্ণায়মান ইলেকট্রন ক্রমাগত শক্তি বিকিরণ করে নিউক্লিয়াসে পড়ে যাওয়ার কথা, কিন্তু বাস্তবে তা ঘটে না। বোর এই সমস্যার সমাধান দেন।",
+    explanation:
+      "রাদারফোর্ডের মডেল অনুযায়ী ঘূর্ণায়মান ইলেকট্রন ক্রমাগত শক্তি বিকিরণ করে নিউক্লিয়াসে পড়ে যাওয়ার কথা, কিন্তু বাস্তবে তা ঘটে না। বোর এই সমস্যার সমাধান দেন।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",
@@ -1046,7 +1186,8 @@ const physicsQuestions: Question[] = [
     text: "E = mc² সমীকরণটি কার?",
     options: ["নিউটন", "আইনস্টাইন", "বোর", "ম্যাক্স প্ল্যাঙ্ক"],
     correctIndex: 1,
-    explanation: "E = mc² আইনস্টাইনের ভর-শক্তি সমতা সমীকরণ। এটি বিশেষ আপেক্ষিকতা তত্ত্বের একটি ফলাফল, যেখানে E = শক্তি, m = ভর, c = আলোর বেগ।",
+    explanation:
+      "E = mc² আইনস্টাইনের ভর-শক্তি সমতা সমীকরণ। এটি বিশেষ আপেক্ষিকতা তত্ত্বের একটি ফলাফল, যেখানে E = শক্তি, m = ভর, c = আলোর বেগ।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1059,7 +1200,8 @@ const physicsQuestions: Question[] = [
     text: "β-ক্ষয়ে (Beta Decay) নিউক্লিয়াস থেকে কী নির্গত হয়?",
     options: ["α কণা", "ইলেকট্রন বা পজিট্রন", "γ রশ্মি", "নিউট্রন"],
     correctIndex: 1,
-    explanation: "β-ক্ষয়ে নিউক্লিয়াস থেকে ইলেকট্রন (β⁻) বা পজিট্রন (β⁺) নির্গত হয়। β⁻ ক্ষয়ে একটি নিউট্রন প্রোটনে রূপান্তরিত হয়।",
+    explanation:
+      "β-ক্ষয়ে নিউক্লিয়াস থেকে ইলেকট্রন (β⁻) বা পজিট্রন (β⁺) নির্গত হয়। β⁻ ক্ষয়ে একটি নিউট্রন প্রোটনে রূপান্তরিত হয়।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",
@@ -1077,7 +1219,8 @@ const physicsQuestions: Question[] = [
       "আলোর বেগ একটি ধ্রুবক",
     ],
     correctIndex: 1,
-    explanation: "হাইজেনবার্গের অনিশ্চয়তা নীতি: Δx⋅Δp ≥ ℏ/2। কোনো কণার অবস্থান ও ভরবেগ একই সাথে সুনির্দিষ্টভাবে নির্ণয় করা সম্ভব নয়।",
+    explanation:
+      "হাইজেনবার্গের অনিশ্চয়তা নীতি: Δx⋅Δp ≥ ℏ/2। কোনো কণার অবস্থান ও ভরবেগ একই সাথে সুনির্দিষ্টভাবে নির্ণয় করা সম্ভব নয়।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "hard",
@@ -1095,7 +1238,8 @@ const physicsQuestions: Question[] = [
       "যে সময়ে পদার্থ স্থিতিশীল হয়",
     ],
     correctIndex: 1,
-    explanation: "অর্ধ-জীবন হলো সেই সময় যাতে একটি তেজস্ক্রিয় পদার্থের মূল পরিমাণের ঠিক অর্ধেক ক্ষয়ে যায়। প্রতিটি পদার্থের অর্ধ-জীবন নির্দিষ্ট ও ধ্রুবক।",
+    explanation:
+      "অর্ধ-জীবন হলো সেই সময় যাতে একটি তেজস্ক্রিয় পদার্থের মূল পরিমাণের ঠিক অর্ধেক ক্ষয়ে যায়। প্রতিটি পদার্থের অর্ধ-জীবন নির্দিষ্ট ও ধ্রুবক।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1108,7 +1252,8 @@ const physicsQuestions: Question[] = [
     text: "ডি ব্রগলির তরঙ্গদৈর্ঘ্যের সূত্র কোনটি?",
     options: ["λ = h/mv", "λ = mv/h", "λ = mh/v", "λ = hv/m"],
     correctIndex: 0,
-    explanation: "ডি ব্রগলির তরঙ্গদৈর্ঘ্য λ = h/p = h/mv, যেখানে h = প্ল্যাঙ্কের ধ্রুবক, m = ভর, v = বেগ। এটি দ্রব্য তরঙ্গ ধারণার ভিত্তি।",
+    explanation:
+      "ডি ব্রগলির তরঙ্গদৈর্ঘ্য λ = h/p = h/mv, যেখানে h = প্ল্যাঙ্কের ধ্রুবক, m = ভর, v = বেগ। এটি দ্রব্য তরঙ্গ ধারণার ভিত্তি।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",
@@ -1126,7 +1271,8 @@ const physicsQuestions: Question[] = [
       "নিউক্লিয়াসে পড়ে যায়",
     ],
     correctIndex: 1,
-    explanation: "বোরের মডেল অনুযায়ী, ইলেকট্রন নির্দিষ্ট স্থায়ী কক্ষপথে ঘুরলে শক্তি বিকিরণ করে না। শুধুমাত্র এক কক্ষপথ থেকে অন্য কক্ষপথে লাফ দিলেই শক্তি শোষণ বা বিকিরণ হয়।",
+    explanation:
+      "বোরের মডেল অনুযায়ী, ইলেকট্রন নির্দিষ্ট স্থায়ী কক্ষপথে ঘুরলে শক্তি বিকিরণ করে না। শুধুমাত্র এক কক্ষপথ থেকে অন্য কক্ষপথে লাফ দিলেই শক্তি শোষণ বা বিকিরণ হয়।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",
@@ -1144,7 +1290,8 @@ const physicsQuestions: Question[] = [
       "γ রশ্মি শোষিত হয়",
     ],
     correctIndex: 1,
-    explanation: "নিউক্লিয় সংযোজনে দুই বা ততোধিক হালকা নিউক্লিয়াস মিলিত হয়ে একটি ভারী নিউক্লিয়াস তৈরি করে এবং বিপুল পরিমাণ শক্তি মুক্ত হয়। সূর্যে এই প্রক্রিয়া ঘটে।",
+    explanation:
+      "নিউক্লিয় সংযোজনে দুই বা ততোধিক হালকা নিউক্লিয়াস মিলিত হয়ে একটি ভারী নিউক্লিয়াস তৈরি করে এবং বিপুল পরিমাণ শক্তি মুক্ত হয়। সূর্যে এই প্রক্রিয়া ঘটে।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",
@@ -1157,7 +1304,8 @@ const physicsQuestions: Question[] = [
     text: "α কণা কী?",
     options: ["ইলেকট্রন", "প্রোটন", "হিলিয়াম-4 নিউক্লিয়াস", "নিউট্রন"],
     correctIndex: 2,
-    explanation: "α কণা হলো হিলিয়াম-4 এর নিউক্লিয়াস (₂He⁴), যাতে 2টি প্রোটন ও 2টি নিউট্রন থাকে। এর চার্জ +2e এবং ভর সংখ্যা 4।",
+    explanation:
+      "α কণা হলো হিলিয়াম-4 এর নিউক্লিয়াস (₂He⁴), যাতে 2টি প্রোটন ও 2টি নিউট্রন থাকে। এর চার্জ +2e এবং ভর সংখ্যা 4।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1175,7 +1323,8 @@ const physicsQuestions: Question[] = [
       "শুধু অবলাল অঞ্চলে",
     ],
     correctIndex: 1,
-    explanation: "LASER (Light Amplification by Stimulated Emission of Radiation) রশ্মি একবর্ণী (monochromatic), সুসংগত (coherent) ও সমান্তরাল (collimated)।",
+    explanation:
+      "LASER (Light Amplification by Stimulated Emission of Radiation) রশ্মি একবর্ণী (monochromatic), সুসংগত (coherent) ও সমান্তরাল (collimated)।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1188,7 +1337,8 @@ const physicsQuestions: Question[] = [
     text: "X-রশ্মি কে আবিষ্কার করেন?",
     options: ["মেরি কুরি", "রন্টজেন", "বেকেরেল", "চ্যাডউইক"],
     correctIndex: 1,
-    explanation: "উইলহেলম রন্টজেন (Wilhelm Röntgen) 1895 সালে X-রশ্মি আবিষ্কার করেন। এজন্য তিনি 1901 সালে প্রথম নোবেল পুরস্কার পান।",
+    explanation:
+      "উইলহেলম রন্টজেন (Wilhelm Röntgen) 1895 সালে X-রশ্মি আবিষ্কার করেন। এজন্য তিনি 1901 সালে প্রথম নোবেল পুরস্কার পান।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1201,7 +1351,8 @@ const physicsQuestions: Question[] = [
     text: "নিউক্লিয় বিভাজনে (Nuclear Fission) কোন মৌলটি সাধারণত ব্যবহৃত হয়?",
     options: ["হাইড্রোজেন", "কার্বন", "ইউরেনিয়াম-235", "অক্সিজেন"],
     correctIndex: 2,
-    explanation: "নিউক্লিয় বিভাজনে সাধারণত ইউরেনিয়াম-235 (U-235) বা প্লুটোনিয়াম-239 ব্যবহৃত হয়। নিউট্রন দ্বারা আঘাত করলে ভারী নিউক্লিয়াস ভেঙে শক্তি মুক্ত হয়।",
+    explanation:
+      "নিউক্লিয় বিভাজনে সাধারণত ইউরেনিয়াম-235 (U-235) বা প্লুটোনিয়াম-239 ব্যবহৃত হয়। নিউট্রন দ্বারা আঘাত করলে ভারী নিউক্লিয়াস ভেঙে শক্তি মুক্ত হয়।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "easy",
@@ -1214,7 +1365,8 @@ const physicsQuestions: Question[] = [
     text: "ফোটনের স্থিতি ভর (rest mass) কত?",
     options: ["9.1 × 10⁻³¹ kg", "1.67 × 10⁻²⁷ kg", "শূন্য", "অসীম"],
     correctIndex: 2,
-    explanation: "ফোটনের স্থিতি ভর শূন্য। ফোটন সর্বদা আলোর বেগে চলে। E = hf = pc এই সূত্র থেকে ফোটনের ভরবেগ p = E/c = hf/c।",
+    explanation:
+      "ফোটনের স্থিতি ভর শূন্য। ফোটন সর্বদা আলোর বেগে চলে। E = hf = pc এই সূত্র থেকে ফোটনের ভরবেগ p = E/c = hf/c।",
     subjectId: "physics",
     topicId: "modern-physics",
     difficulty: "medium",

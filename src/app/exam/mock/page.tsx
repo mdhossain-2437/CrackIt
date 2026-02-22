@@ -1,14 +1,31 @@
 "use client";
 
-import { subjects } from "@/data/questionBank";
+import { subjects as staticSubjects } from "@/data/questionBank";
+import { apiGetSubjects } from "@/lib/api";
+import { getCachedSubjects } from "@/lib/offline";
+import type { Subject } from "@/types";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MockExamSetupPage() {
   const router = useRouter();
+  const [subjects, setSubjects] = useState<Subject[]>(staticSubjects);
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
   const [questionCount, setQuestionCount] = useState(30);
   const [duration, setDuration] = useState(30);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await apiGetSubjects();
+        const data = (res as any).subjects || res;
+        if (Array.isArray(data) && data.length > 0) setSubjects(data);
+      } catch {
+        const cached = await getCachedSubjects().catch(() => null);
+        if (cached && cached.length > 0) setSubjects(cached);
+      }
+    })();
+  }, []);
 
   const toggleSubject = (id: string) => {
     setSelectedSubjects((prev) =>

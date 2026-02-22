@@ -102,6 +102,8 @@ export function BottomNav() {
   if (
     pathname === "/" ||
     pathname === "/onboarding" ||
+    pathname === "/login" ||
+    pathname === "/signup" ||
     pathname.startsWith("/exam/")
   ) {
     return null;

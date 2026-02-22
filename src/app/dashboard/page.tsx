@@ -1,10 +1,30 @@
 "use client";
 
-import { scheduledExams, subjects } from "@/data/questionBank";
+import { useAuth } from "@/components/AuthProvider";
+import {
+  scheduledExams as staticScheduledExams,
+  subjects as staticSubjects,
+} from "@/data/questionBank";
+import { apiGetLiveExams, apiGetSubjects } from "@/lib/api";
+import { cacheSubjects, getCachedSubjects } from "@/lib/offline";
 import { useUserStore } from "@/store";
+import type { Subject } from "@/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
+
+interface LiveExamItem {
+  id: string;
+  title: string;
+  titleBn: string;
+  category: string;
+  scheduledAt: string;
+  duration: number;
+  totalQuestions: number;
+  registeredCount: number;
+  status: string;
+  isPremium: boolean;
+}
 
 function formatTime(date: string) {
   const d = new Date(date);
@@ -19,6 +39,7 @@ function formatTime(date: string) {
 }
 
 export default function DashboardPage() {
+  const { isAuthenticated, loading: authLoading } = useAuth();
   const {
     user,
     isOnboarded,
@@ -28,15 +49,60 @@ export default function DashboardPage() {
   } = useUserStore();
   const router = useRouter();
 
+  const [subjects, setSubjects] = useState<Subject[]>(staticSubjects);
+  const [liveExams, setLiveExams] = useState<LiveExamItem[]>(
+    staticScheduledExams as unknown as LiveExamItem[],
+  );
+  const [dataLoaded, setDataLoaded] = useState(false);
+
   useEffect(() => {
+    if (!authLoading && !isAuthenticated) {
+      router.replace("/login");
+      return;
+    }
     if (!isOnboarded || !user) {
       router.replace("/onboarding");
     }
-  }, [isOnboarded, user, router]);
+  }, [isOnboarded, user, router, isAuthenticated, authLoading]);
+
+  const fetchData = useCallback(async () => {
+    try {
+      const [apiSubjects, apiLive] = await Promise.allSettled([
+        apiGetSubjects(),
+        apiGetLiveExams(),
+      ]);
+      if (apiSubjects.status === "fulfilled") {
+        const subs = (apiSubjects.value as any).subjects || apiSubjects.value;
+        if (Array.isArray(subs) && subs.length > 0) {
+          setSubjects(subs);
+          cacheSubjects(subs).catch(() => {});
+        }
+      } else {
+        // Try IndexedDB cache
+        const cached = await getCachedSubjects();
+        if (cached && cached.length > 0) setSubjects(cached);
+      }
+      if (apiLive.status === "fulfilled") {
+        const exams = (apiLive.value as any).exams || apiLive.value;
+        if (Array.isArray(exams)) setLiveExams(exams);
+      }
+    } catch {
+      // Fallback: use static data (already set as default)
+      const cached = await getCachedSubjects().catch(() => null);
+      if (cached && cached.length > 0) setSubjects(cached);
+    }
+    setDataLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (isAuthenticated && isOnboarded) {
+      fetchData();
+    }
+  }, [isAuthenticated, isOnboarded, fetchData]);
 
   if (!user) return null;
 
-  const upcomingLive = scheduledExams
+  const upcomingLive = liveExams
     .filter((e) => new Date(e.scheduledAt) > new Date())
     .slice(0, 2);
   const topSubjects = subjects.slice(0, 4);

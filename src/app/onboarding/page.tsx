@@ -1,26 +1,52 @@
 "use client";
 
+import { useAuth } from "@/components/AuthProvider";
 import { examCategories } from "@/data/questionBank";
+import { apiRegister } from "@/lib/api";
 import { useUserStore } from "@/store";
 import type { ExamCategory } from "@/types";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function OnboardingPage() {
   const router = useRouter();
+  const { firebaseUser, isAuthenticated, loading } = useAuth();
   const { setUser, setOnboarded } = useUserStore();
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [name, setName] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<ExamCategory | null>(
     null,
   );
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleFinish = () => {
+  useEffect(() => {
+    if (!loading && !isAuthenticated) {
+      router.replace("/login");
+    }
+  }, [isAuthenticated, loading, router]);
+
+  // Pre-fill name from Firebase profile
+  useEffect(() => {
+    if (firebaseUser?.displayName && !name) {
+      setName(firebaseUser.displayName);
+    }
+  }, [firebaseUser]);
+
+  const handleFinish = async () => {
     if (!name.trim() || !selectedCategory) return;
+    setIsSubmitting(true);
+
+    try {
+      // Register on the backend
+      await apiRegister(name.trim(), selectedCategory);
+    } catch {
+      // If backend is offline, proceed anyway with local data
+    }
+
     setUser({
-      id: "user-" + Date.now(),
+      id: firebaseUser?.uid || "user-" + Date.now(),
       name: name.trim(),
-      email: "",
+      email: firebaseUser?.email || "",
       examCategory: selectedCategory,
       streak: 0,
       xp: 0,
@@ -29,6 +55,7 @@ export default function OnboardingPage() {
       joinedAt: new Date().toISOString(),
     });
     setOnboarded(true);
+    setIsSubmitting(false);
     router.replace("/dashboard");
   };
 
@@ -185,11 +212,11 @@ export default function OnboardingPage() {
             </button>
             <button
               className="btn-primary flex-1 py-3"
-              disabled={!selectedCategory}
+              disabled={!selectedCategory || isSubmitting}
               onClick={handleFinish}
-              style={{ opacity: selectedCategory ? 1 : 0.5 }}
+              style={{ opacity: selectedCategory && !isSubmitting ? 1 : 0.5 }}
             >
-              শুরু করো! 🚀
+              {isSubmitting ? "অপেক্ষা করুন..." : "শুরু করো! 🚀"}
             </button>
           </div>
         </div>

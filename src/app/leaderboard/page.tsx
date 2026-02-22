@@ -1,7 +1,17 @@
 "use client";
 
+import { apiGetExamHistory, apiGetLeaderboard } from "@/lib/api";
 import { useUserStore } from "@/store";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+interface LeaderEntry {
+  rank: number;
+  name: string;
+  totalScore: number;
+  totalExams: number;
+  avgAccuracy: number;
+  isCurrentUser: boolean;
+}
 
 export default function LeaderboardPage() {
   const {
@@ -11,7 +21,18 @@ export default function LeaderboardPage() {
     totalCorrectAnswers,
     user,
   } = useUserStore();
-  const [tab, setTab] = useState<"history" | "stats">("history");
+  const [tab, setTab] = useState<"history" | "stats" | "ranking">("history");
+  const [leaderboard, setLeaderboard] = useState<LeaderEntry[]>([]);
+
+  useEffect(() => {
+    // Fetch leaderboard from API
+    apiGetLeaderboard().then((res) => {
+      const data = (res as any).leaderboard || res;
+      if (Array.isArray(data)) setLeaderboard(data);
+    }).catch(() => {});
+    // Optionally sync exam history from API
+    apiGetExamHistory().catch(() => {});
+  }, []);
 
   const overallAccuracy =
     totalQuestionsAttempted > 0
@@ -168,6 +189,7 @@ export default function LeaderboardPage() {
         {[
           { key: "history" as const, label: "পরীক্ষার ইতিহাস" },
           { key: "stats" as const, label: "বিশ্লেষণ" },
+          { key: "ranking" as const, label: "র‍্যাংকিং" },
         ].map((t) => (
           <button
             key={t.key}
@@ -375,6 +397,72 @@ export default function LeaderboardPage() {
               </p>
             )}
           </div>
+        </div>
+      )}
+
+      {/* Ranking Tab */}
+      {tab === "ranking" && (
+        <div className="space-y-3">
+          {leaderboard.length === 0 ? (
+            <div className="card flex flex-col items-center gap-3 p-8">
+              <span className="text-3xl">🏅</span>
+              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+                র‍্যাংকিং লোড হচ্ছে বা এখনো কোনো ডেটা নেই
+              </p>
+            </div>
+          ) : (
+            leaderboard.map((entry) => (
+              <div
+                key={entry.rank}
+                className="card flex items-center gap-3 p-3"
+                style={{
+                  border: entry.isCurrentUser ? "1.5px solid var(--color-primary)" : undefined,
+                  backgroundColor: entry.isCurrentUser ? "rgb(37 99 235 / 0.03)" : undefined,
+                }}
+              >
+                <div
+                  className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold"
+                  style={{
+                    backgroundColor:
+                      entry.rank === 1
+                        ? "rgb(245 158 11 / 0.15)"
+                        : entry.rank === 2
+                          ? "rgb(156 163 175 / 0.15)"
+                          : entry.rank === 3
+                            ? "rgb(180 83 9 / 0.15)"
+                            : "var(--color-surface-alt)",
+                    color:
+                      entry.rank === 1
+                        ? "#f59e0b"
+                        : entry.rank === 2
+                          ? "#6b7280"
+                          : entry.rank === 3
+                            ? "#b45309"
+                            : "var(--color-text-secondary)",
+                  }}
+                >
+                  {entry.rank <= 3 ? ["🥇", "🥈", "🥉"][entry.rank - 1] : `#${entry.rank}`}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p
+                    className="text-sm font-semibold truncate"
+                    style={{ color: "var(--color-text-primary)" }}
+                  >
+                    {entry.name} {entry.isCurrentUser && "(তুমি)"}
+                  </p>
+                  <p className="text-[10px]" style={{ color: "var(--color-text-muted)" }}>
+                    {entry.totalExams} পরীক্ষা • {entry.avgAccuracy}% নির্ভুলতা
+                  </p>
+                </div>
+                <span
+                  className="text-sm font-bold"
+                  style={{ color: "var(--color-primary)" }}
+                >
+                  {entry.totalScore}
+                </span>
+              </div>
+            ))
+          )}
         </div>
       )}
     </div>

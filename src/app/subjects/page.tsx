@@ -1,9 +1,32 @@
 "use client";
 
-import { subjects } from "@/data/questionBank";
+import { subjects as staticSubjects } from "@/data/questionBank";
+import { apiGetSubjects } from "@/lib/api";
+import { cacheSubjects, getCachedSubjects } from "@/lib/offline";
+import type { Subject } from "@/types";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function SubjectsPage() {
+  const [subjects, setSubjects] = useState<Subject[]>(staticSubjects);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await apiGetSubjects();
+        const data = (res as any).subjects || res;
+        if (Array.isArray(data) && data.length > 0) {
+          setSubjects(data);
+          cacheSubjects(data).catch(() => {});
+        }
+      } catch {
+        const cached = await getCachedSubjects().catch(() => null);
+        if (cached && cached.length > 0) setSubjects(cached);
+      }
+      setLoading(false);
+    })();
+  }, []);
   return (
     <div className="px-4 pt-6 pb-4 safe-top">
       <h1

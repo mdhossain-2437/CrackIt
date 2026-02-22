@@ -1,3 +1,4 @@
+import { AuthProvider } from "@/components/AuthProvider";
 import { BottomNav } from "@/components/BottomNav";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -50,9 +51,13 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-          <ServiceWorkerRegister />
-          <div className="mx-auto min-h-screen max-w-lg pb-16">{children}</div>
-          <BottomNav />
+          <AuthProvider>
+            <ServiceWorkerRegister />
+            <div className="mx-auto min-h-screen max-w-lg pb-16">
+              {children}
+            </div>
+            <BottomNav />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

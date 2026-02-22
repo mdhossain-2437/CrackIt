@@ -1,6 +1,8 @@
 "use client";
 
-import { questionBank } from "@/data/questionBank";
+import { questionBank as staticQuestionBank } from "@/data/questionBank";
+import { getCachedQuestionsByIds } from "@/lib/offline";
+import type { Question } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
 
@@ -9,6 +11,7 @@ interface ResultData {
   totalQuestions: number;
   timeTaken: number;
   totalTime: number;
+  questionIds?: string[];
 }
 
 function ResultContent() {
@@ -17,6 +20,7 @@ function ResultContent() {
   const [showExplanations, setShowExplanations] = useState(false);
   const [expandedQ, setExpandedQ] = useState<number | null>(null);
   const [animatedScore, setAnimatedScore] = useState(0);
+  const [questions, setQuestions] = useState<Question[]>(staticQuestionBank);
 
   const resultData: ResultData | null = useMemo(() => {
     const raw = searchParams.get("data");
@@ -28,7 +32,16 @@ function ResultContent() {
     }
   }, [searchParams]);
 
-  const questions = questionBank;
+  // Try to load specific questions from cache if questionIds available
+  useEffect(() => {
+    if (resultData?.questionIds && resultData.questionIds.length > 0) {
+      getCachedQuestionsByIds(resultData.questionIds)
+        .then((cached) => {
+          if (cached && cached.length > 0) setQuestions(cached);
+        })
+        .catch(() => {});
+    }
+  }, [resultData]);
 
   const stats = useMemo(() => {
     if (!resultData)

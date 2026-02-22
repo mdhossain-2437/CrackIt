@@ -7,7 +7,8 @@ const chemistryQuestions: Question[] = [
     text: "বেনজিনের আণবিক সংকেত কোনটি?",
     options: ["C₅H₆", "C₆H₆", "C₆H₁₂", "C₇H₈"],
     correctIndex: 1,
-    explanation: "বেনজিনের আণবিক সংকেত C₆H₆। এটি একটি সুগন্ধি (aromatic) যৌগ যেখানে ৬টি কার্বন ও ৬টি হাইড্রোজেন পরমাণু ষড়ভুজাকৃতি গঠনে সজ্জিত।",
+    explanation:
+      "বেনজিনের আণবিক সংকেত C₆H₆। এটি একটি সুগন্ধি (aromatic) যৌগ যেখানে ৬টি কার্বন ও ৬টি হাইড্রোজেন পরমাণু ষড়ভুজাকৃতি গঠনে সজ্জিত।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -20,7 +21,8 @@ const chemistryQuestions: Question[] = [
     text: "ইথানলের কার্যকরী মূলক কোনটি?",
     options: ["-CHO", "-COOH", "-OH", "-NH₂"],
     correctIndex: 2,
-    explanation: "ইথানল (C₂H₅OH) এর কার্যকরী মূলক হলো হাইড্রক্সিল মূলক (-OH)। এটি একটি অ্যালকোহল।",
+    explanation:
+      "ইথানল (C₂H₅OH) এর কার্যকরী মূলক হলো হাইড্রক্সিল মূলক (-OH)। এটি একটি অ্যালকোহল।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -31,9 +33,15 @@ const chemistryQuestions: Question[] = [
   {
     id: "chem-org-003",
     text: "অ্যাসিটিক এসিডের IUPAC নাম কী?",
-    options: ["মিথানয়িক এসিড", "ইথানয়িক এসিড", "প্রোপানয়িক এসিড", "বিউটানয়িক এসিড"],
+    options: [
+      "মিথানয়িক এসিড",
+      "ইথানয়িক এসিড",
+      "প্রোপানয়িক এসিড",
+      "বিউটানয়িক এসিড",
+    ],
     correctIndex: 1,
-    explanation: "অ্যাসিটিক এসিড (CH₃COOH) এর IUPAC নাম ইথানয়িক এসিড (Ethanoic acid)। এতে ২টি কার্বন আছে (ইথ-)।",
+    explanation:
+      "অ্যাসিটিক এসিড (CH₃COOH) এর IUPAC নাম ইথানয়িক এসিড (Ethanoic acid)। এতে ২টি কার্বন আছে (ইথ-)।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -46,7 +54,8 @@ const chemistryQuestions: Question[] = [
     text: "মিথেনে কার্বনের সংকরায়ন কোন ধরনের?",
     options: ["sp", "sp²", "sp³", "sp³d"],
     correctIndex: 2,
-    explanation: "মিথেন (CH₄) এ কার্বন sp³ সংকরায়িত। এতে ৪টি সমতুল্য sp³ সংকর অরবিটাল তৈরি হয় এবং চতুস্তলকীয় (tetrahedral) আকৃতি গঠিত হয়। বন্ধন কোণ 109.5°।",
+    explanation:
+      "মিথেন (CH₄) এ কার্বন sp³ সংকরায়িত। এতে ৪টি সমতুল্য sp³ সংকর অরবিটাল তৈরি হয় এবং চতুস্তলকীয় (tetrahedral) আকৃতি গঠিত হয়। বন্ধন কোণ 109.5°।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "medium",
@@ -59,7 +68,8 @@ const chemistryQuestions: Question[] = [
     text: "অ্যালকিন শ্রেণির সাধারণ সংকেত কোনটি?",
     options: ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙH₂ₙ₋₆"],
     correctIndex: 1,
-    explanation: "অ্যালকিন (Alkene) এ একটি C=C দ্বিবন্ধন থাকে। সাধারণ সংকেত CₙH₂ₙ। উদাহরণ: ইথিলিন C₂H₄।",
+    explanation:
+      "অ্যালকিন (Alkene) এ একটি C=C দ্বিবন্ধন থাকে। সাধারণ সংকেত CₙH₂ₙ। উদাহরণ: ইথিলিন C₂H₄।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -72,7 +82,8 @@ const chemistryQuestions: Question[] = [
     text: "ফরমালডিহাইডের সংকেত কোনটি?",
     options: ["CH₃OH", "HCHO", "CH₃CHO", "HCOOH"],
     correctIndex: 1,
-    explanation: "ফরমালডিহাইড (Formaldehyde) এর সংকেত HCHO। এটি সবচেয়ে সরল অ্যালডিহাইড। জলীয় দ্রবণকে ফরমালিন বলে।",
+    explanation:
+      "ফরমালডিহাইড (Formaldehyde) এর সংকেত HCHO। এটি সবচেয়ে সরল অ্যালডিহাইড। জলীয় দ্রবণকে ফরমালিন বলে।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -90,7 +101,8 @@ const chemistryQuestions: Question[] = [
       "পলিমারকরণ",
     ],
     correctIndex: 1,
-    explanation: "মার্কনিকফের সূত্র: অসম অ্যালকিনে HX যোগ বিক্রিয়ায় H পরমাণু বেশি H-যুক্ত কার্বনে এবং X কম H-যুক্ত কার্বনে যুক্ত হয়।",
+    explanation:
+      "মার্কনিকফের সূত্র: অসম অ্যালকিনে HX যোগ বিক্রিয়ায় H পরমাণু বেশি H-যুক্ত কার্বনে এবং X কম H-যুক্ত কার্বনে যুক্ত হয়।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "medium",
@@ -101,9 +113,15 @@ const chemistryQuestions: Question[] = [
   {
     id: "chem-org-008",
     text: "বেনজিনের কোন ধরনের বিক্রিয়া সবচেয়ে সাধারণ?",
-    options: ["যোগ বিক্রিয়া", "ইলেকট্রোফিলিক প্রতিস্থাপন", "বিযোজন", "পলিমারকরণ"],
+    options: [
+      "যোগ বিক্রিয়া",
+      "ইলেকট্রোফিলিক প্রতিস্থাপন",
+      "বিযোজন",
+      "পলিমারকরণ",
+    ],
     correctIndex: 1,
-    explanation: "বেনজিনের সবচেয়ে সাধারণ বিক্রিয়া ইলেকট্রোফিলিক প্রতিস্থাপন (Electrophilic Substitution)। কারণ অ্যারোমেটিসিটি বজায় রাখার জন্য যোগ বিক্রিয়ার চেয়ে প্রতিস্থাপন সুবিধাজনক।",
+    explanation:
+      "বেনজিনের সবচেয়ে সাধারণ বিক্রিয়া ইলেকট্রোফিলিক প্রতিস্থাপন (Electrophilic Substitution)। কারণ অ্যারোমেটিসিটি বজায় রাখার জন্য যোগ বিক্রিয়ার চেয়ে প্রতিস্থাপন সুবিধাজনক।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "medium",
@@ -116,7 +134,8 @@ const chemistryQuestions: Question[] = [
     text: "গ্লুকোজের আণবিক সংকেত কোনটি?",
     options: ["C₅H₁₀O₅", "C₆H₁₂O₆", "C₁₂H₂₂O₁₁", "C₆H₁₀O₅"],
     correctIndex: 1,
-    explanation: "গ্লুকোজ (Glucose) এর আণবিক সংকেত C₆H₁₂O₆। এটি একটি মনোস্যাকারাইড (সরল শর্করা) এবং জীবের প্রধান শক্তির উৎস।",
+    explanation:
+      "গ্লুকোজ (Glucose) এর আণবিক সংকেত C₆H₁₂O₆। এটি একটি মনোস্যাকারাইড (সরল শর্করা) এবং জীবের প্রধান শক্তির উৎস।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -129,7 +148,8 @@ const chemistryQuestions: Question[] = [
     text: "অ্যামিনো এসিডে কোন কোন কার্যকরী মূলক থাকে?",
     options: ["-OH ও -CHO", "-NH₂ ও -COOH", "-NH₂ ও -OH", "-COOH ও -CHO"],
     correctIndex: 1,
-    explanation: "অ্যামিনো এসিডে দুটি কার্যকরী মূলক থাকে: অ্যামিনো মূলক (-NH₂) এবং কার্বক্সিল মূলক (-COOH)। এগুলো প্রোটিনের মনোমার।",
+    explanation:
+      "অ্যামিনো এসিডে দুটি কার্যকরী মূলক থাকে: অ্যামিনো মূলক (-NH₂) এবং কার্বক্সিল মূলক (-COOH)। এগুলো প্রোটিনের মনোমার।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -147,7 +167,8 @@ const chemistryQuestions: Question[] = [
       "জারণ-বিজারণ বিক্রিয়া",
     ],
     correctIndex: 1,
-    explanation: "পলিমারকরণ (Polymerization) একটি প্রক্রিয়া যেখানে অনেকগুলো ছোট অণু (মনোমার) যুক্ত হয়ে একটি বড় অণু (পলিমার) তৈরি করে। যেমন: ইথিলিন → পলিইথিলিন।",
+    explanation:
+      "পলিমারকরণ (Polymerization) একটি প্রক্রিয়া যেখানে অনেকগুলো ছোট অণু (মনোমার) যুক্ত হয়ে একটি বড় অণু (পলিমার) তৈরি করে। যেমন: ইথিলিন → পলিইথিলিন।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -165,7 +186,8 @@ const chemistryQuestions: Question[] = [
       "অ্যালডিহাইড ও কিটোন",
     ],
     correctIndex: 1,
-    explanation: "সাবানীকরণে চর্বি বা তেল (এস্টার) ক্ষার (NaOH/KOH) দ্বারা বিশ্লেষিত হয়ে সাবান (ফ্যাটি এসিডের সোডিয়াম/পটাশিয়াম লবণ) ও গ্লিসারল তৈরি করে।",
+    explanation:
+      "সাবানীকরণে চর্বি বা তেল (এস্টার) ক্ষার (NaOH/KOH) দ্বারা বিশ্লেষিত হয়ে সাবান (ফ্যাটি এসিডের সোডিয়াম/পটাশিয়াম লবণ) ও গ্লিসারল তৈরি করে।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "medium",
@@ -178,7 +200,8 @@ const chemistryQuestions: Question[] = [
     text: "ইথিলিনে C=C বন্ধনে কয়টি σ ও কয়টি π বন্ধন আছে?",
     options: ["2σ, 0π", "1σ, 1π", "0σ, 2π", "2σ, 1π"],
     correctIndex: 1,
-    explanation: "C=C দ্বিবন্ধনে 1টি σ (সিগমা) বন্ধন ও 1টি π (পাই) বন্ধন থাকে। σ বন্ধন হেড-অন ওভারল্যাপ এবং π বন্ধন সাইডওয়ে ওভারল্যাপ থেকে তৈরি।",
+    explanation:
+      "C=C দ্বিবন্ধনে 1টি σ (সিগমা) বন্ধন ও 1টি π (পাই) বন্ধন থাকে। σ বন্ধন হেড-অন ওভারল্যাপ এবং π বন্ধন সাইডওয়ে ওভারল্যাপ থেকে তৈরি।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "medium",
@@ -191,7 +214,8 @@ const chemistryQuestions: Question[] = [
     text: "টলুইনের IUPAC নাম কী?",
     options: ["বেনজিন", "মিথাইলবেনজিন", "ইথাইলবেনজিন", "ডাইমিথাইলবেনজিন"],
     correctIndex: 1,
-    explanation: "টলুইন (C₆H₅CH₃) এর IUPAC নাম মিথাইলবেনজিন (Methylbenzene)। বেনজিন রিংয়ে একটি মিথাইল (-CH₃) গ্রুপ যুক্ত।",
+    explanation:
+      "টলুইন (C₆H₅CH₃) এর IUPAC নাম মিথাইলবেনজিন (Methylbenzene)। বেনজিন রিংয়ে একটি মিথাইল (-CH₃) গ্রুপ যুক্ত।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "easy",
@@ -209,7 +233,8 @@ const chemistryQuestions: Question[] = [
       "কিটোন + পানি",
     ],
     correctIndex: 1,
-    explanation: "এস্টারকরণ: কার্বক্সিলিক এসিড + অ্যালকোহল → এস্টার + পানি। এটি একটি ঘনীভবন বিক্রিয়া। অনুঘটক হিসেবে ঘনীভূত H₂SO₄ ব্যবহৃত হয়।",
+    explanation:
+      "এস্টারকরণ: কার্বক্সিলিক এসিড + অ্যালকোহল → এস্টার + পানি। এটি একটি ঘনীভবন বিক্রিয়া। অনুঘটক হিসেবে ঘনীভূত H₂SO₄ ব্যবহৃত হয়।",
     subjectId: "chemistry",
     topicId: "organic",
     difficulty: "medium",
@@ -221,9 +246,15 @@ const chemistryQuestions: Question[] = [
   {
     id: "chem-inorg-001",
     text: "পর্যায় সারণিতে মৌল সংখ্যা অনুযায়ী মৌলগুলো কিভাবে সাজানো হয়?",
-    options: ["পারমাণবিক ভর অনুসারে", "পারমাণবিক সংখ্যা অনুসারে", "ইলেকট্রন বিন্যাস অনুসারে", "ঘনত্ব অনুসারে"],
+    options: [
+      "পারমাণবিক ভর অনুসারে",
+      "পারমাণবিক সংখ্যা অনুসারে",
+      "ইলেকট্রন বিন্যাস অনুসারে",
+      "ঘনত্ব অনুসারে",
+    ],
     correctIndex: 1,
-    explanation: "আধুনিক পর্যায় সারণিতে মৌলগুলো পারমাণবিক সংখ্যা (Z) অনুসারে সাজানো হয়। মেন্ডেলিভ ভর অনুসারে সাজিয়েছিলেন, কিন্তু মোসলে পারমাণবিক সংখ্যা অনুসারে সাজানোর প্রস্তাব দেন।",
+    explanation:
+      "আধুনিক পর্যায় সারণিতে মৌলগুলো পারমাণবিক সংখ্যা (Z) অনুসারে সাজানো হয়। মেন্ডেলিভ ভর অনুসারে সাজিয়েছিলেন, কিন্তু মোসলে পারমাণবিক সংখ্যা অনুসারে সাজানোর প্রস্তাব দেন।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -236,7 +267,8 @@ const chemistryQuestions: Question[] = [
     text: "নিষ্ক্রিয় গ্যাসসমূহ কোন গ্রুপে অবস্থিত?",
     options: ["গ্রুপ 1", "গ্রুপ 7", "গ্রুপ 17", "গ্রুপ 18"],
     correctIndex: 3,
-    explanation: "নিষ্ক্রিয় গ্যাসসমূহ (He, Ne, Ar, Kr, Xe, Rn) পর্যায় সারণির গ্রুপ 18 তে অবস্থিত। এদের বহিঃস্তরে ইলেকট্রন পূর্ণ থাকায় এরা রাসায়নিকভাবে নিষ্ক্রিয়।",
+    explanation:
+      "নিষ্ক্রিয় গ্যাসসমূহ (He, Ne, Ar, Kr, Xe, Rn) পর্যায় সারণির গ্রুপ 18 তে অবস্থিত। এদের বহিঃস্তরে ইলেকট্রন পূর্ণ থাকায় এরা রাসায়নিকভাবে নিষ্ক্রিয়।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -254,7 +286,8 @@ const chemistryQuestions: Question[] = [
       "ভ্যান ডের ওয়ালস বলের মাধ্যমে",
     ],
     correctIndex: 1,
-    explanation: "আয়নিক বন্ধন ইলেকট্রন স্থানান্তরের মাধ্যমে গঠিত হয়। একটি পরমাণু (সাধারণত ধাতু) ইলেকট্রন হারিয়ে ক্যাটায়ন এবং অন্যটি (অধাতু) ইলেকট্রন গ্রহণ করে অ্যানায়ন তৈরি করে।",
+    explanation:
+      "আয়নিক বন্ধন ইলেকট্রন স্থানান্তরের মাধ্যমে গঠিত হয়। একটি পরমাণু (সাধারণত ধাতু) ইলেকট্রন হারিয়ে ক্যাটায়ন এবং অন্যটি (অধাতু) ইলেকট্রন গ্রহণ করে অ্যানায়ন তৈরি করে।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -265,9 +298,15 @@ const chemistryQuestions: Question[] = [
   {
     id: "chem-inorg-004",
     text: "সোডিয়ামের ইলেকট্রন বিন্যাস কোনটি?",
-    options: ["1s² 2s² 2p⁶", "1s² 2s² 2p⁶ 3s¹", "1s² 2s² 2p⁶ 3s²", "1s² 2s² 2p⁶ 3s² 3p¹"],
+    options: [
+      "1s² 2s² 2p⁶",
+      "1s² 2s² 2p⁶ 3s¹",
+      "1s² 2s² 2p⁶ 3s²",
+      "1s² 2s² 2p⁶ 3s² 3p¹",
+    ],
     correctIndex: 1,
-    explanation: "সোডিয়ামের (Na, Z=11) ইলেকট্রন বিন্যাস: 1s² 2s² 2p⁶ 3s¹। বহিঃস্তরে 1টি ইলেকট্রন আছে, তাই এটি গ্রুপ 1 এ অবস্থিত।",
+    explanation:
+      "সোডিয়ামের (Na, Z=11) ইলেকট্রন বিন্যাস: 1s² 2s² 2p⁶ 3s¹। বহিঃস্তরে 1টি ইলেকট্রন আছে, তাই এটি গ্রুপ 1 এ অবস্থিত।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -285,7 +324,8 @@ const chemistryQuestions: Question[] = [
       "সব দিকে সমান",
     ],
     correctIndex: 1,
-    explanation: "তড়িৎ ঋণাত্মকতা পর্যায়ে বাম থেকে ডানে বাড়ে এবং গ্রুপে নিচ থেকে উপরে বাড়ে। সর্বোচ্চ তড়িৎ ঋণাত্মক মৌল ফ্লোরিন (F)।",
+    explanation:
+      "তড়িৎ ঋণাত্মকতা পর্যায়ে বাম থেকে ডানে বাড়ে এবং গ্রুপে নিচ থেকে উপরে বাড়ে। সর্বোচ্চ তড়িৎ ঋণাত্মক মৌল ফ্লোরিন (F)।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "medium",
@@ -298,7 +338,8 @@ const chemistryQuestions: Question[] = [
     text: "pH 7 দ্রবণ কোন ধরনের?",
     options: ["এসিডীয়", "ক্ষারীয়", "নিরপেক্ষ", "তীব্র ক্ষারীয়"],
     correctIndex: 2,
-    explanation: "pH 7 হলো নিরপেক্ষ। pH < 7 হলে এসিডীয় এবং pH > 7 হলে ক্ষারীয়। বিশুদ্ধ পানির pH 7।",
+    explanation:
+      "pH 7 হলো নিরপেক্ষ। pH < 7 হলে এসিডীয় এবং pH > 7 হলে ক্ষারীয়। বিশুদ্ধ পানির pH 7।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -311,7 +352,8 @@ const chemistryQuestions: Question[] = [
     text: "হ্যালোজেন মৌল কোনগুলো?",
     options: ["Li, Na, K", "F, Cl, Br, I", "He, Ne, Ar", "Fe, Cu, Zn"],
     correctIndex: 1,
-    explanation: "হ্যালোজেন মৌলগুলো গ্রুপ 17 তে অবস্থিত: ফ্লোরিন (F), ক্লোরিন (Cl), ব্রোমিন (Br), আয়োডিন (I), অ্যাস্ট্যাটিন (At)।",
+    explanation:
+      "হ্যালোজেন মৌলগুলো গ্রুপ 17 তে অবস্থিত: ফ্লোরিন (F), ক্লোরিন (Cl), ব্রোমিন (Br), আয়োডিন (I), অ্যাস্ট্যাটিন (At)।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -324,7 +366,8 @@ const chemistryQuestions: Question[] = [
     text: "জারণ সংখ্যা বৃদ্ধি মানে —",
     options: ["জারণ", "বিজারণ", "প্রশমন", "আয়নিকরণ"],
     correctIndex: 0,
-    explanation: "জারণ সংখ্যা বৃদ্ধি = জারণ (Oxidation)। ইলেকট্রন হারানোকে জারণ এবং ইলেকট্রন গ্রহণকে বিজারণ বলে।",
+    explanation:
+      "জারণ সংখ্যা বৃদ্ধি = জারণ (Oxidation)। ইলেকট্রন হারানোকে জারণ এবং ইলেকট্রন গ্রহণকে বিজারণ বলে।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -337,7 +380,8 @@ const chemistryQuestions: Question[] = [
     text: "অ্যাভোগেড্রো সংখ্যার মান কত?",
     options: ["6.022 × 10²³", "6.022 × 10²²", "3.14 × 10²³", "1.6 × 10⁻¹⁹"],
     correctIndex: 0,
-    explanation: "অ্যাভোগেড্রো সংখ্যা Nₐ = 6.022 × 10²³ /mol। 1 মোল যেকোনো পদার্থে 6.022 × 10²³ টি কণা (পরমাণু/অণু/আয়ন) থাকে।",
+    explanation:
+      "অ্যাভোগেড্রো সংখ্যা Nₐ = 6.022 × 10²³ /mol। 1 মোল যেকোনো পদার্থে 6.022 × 10²³ টি কণা (পরমাণু/অণু/আয়ন) থাকে।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -355,7 +399,8 @@ const chemistryQuestions: Question[] = [
       "ভ্যান ডের ওয়ালস বলের মাধ্যমে",
     ],
     correctIndex: 1,
-    explanation: "সমযোজী বন্ধন (Covalent Bond) দুটি পরমাণু তাদের যোজ্যতা ইলেকট্রন ভাগাভাগি (শেয়ার) করে গঠন করে। সাধারণত দুটি অধাতুর মধ্যে এই বন্ধন তৈরি হয়।",
+    explanation:
+      "সমযোজী বন্ধন (Covalent Bond) দুটি পরমাণু তাদের যোজ্যতা ইলেকট্রন ভাগাভাগি (শেয়ার) করে গঠন করে। সাধারণত দুটি অধাতুর মধ্যে এই বন্ধন তৈরি হয়।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -368,7 +413,8 @@ const chemistryQuestions: Question[] = [
     text: "ওজোন স্তর পৃথিবীকে কোন রশ্মি থেকে রক্ষা করে?",
     options: ["দৃশ্যমান আলো", "অবলোহিত রশ্মি", "অতিবেগুনি রশ্মি", "গামা রশ্মি"],
     correctIndex: 2,
-    explanation: "ওজোন (O₃) স্তর বায়ুমণ্ডলের স্ট্র্যাটোস্ফিয়ারে অবস্থিত এবং সূর্যের ক্ষতিকর অতিবেগুনি (UV) রশ্মি শোষণ করে পৃথিবীকে রক্ষা করে।",
+    explanation:
+      "ওজোন (O₃) স্তর বায়ুমণ্ডলের স্ট্র্যাটোস্ফিয়ারে অবস্থিত এবং সূর্যের ক্ষতিকর অতিবেগুনি (UV) রশ্মি শোষণ করে পৃথিবীকে রক্ষা করে।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -381,7 +427,8 @@ const chemistryQuestions: Question[] = [
     text: "লোহায় মরিচা পড়া কোন ধরনের রাসায়নিক পরিবর্তন?",
     options: ["বিজারণ", "জারণ", "প্রশমন", "পলিমারকরণ"],
     correctIndex: 1,
-    explanation: "লোহায় মরিচা পড়া একটি জারণ প্রক্রিয়া। 4Fe + 3O₂ + 6H₂O → 4Fe(OH)₃ → 2Fe₂O₃⋅3H₂O (মরিচা)।",
+    explanation:
+      "লোহায় মরিচা পড়া একটি জারণ প্রক্রিয়া। 4Fe + 3O₂ + 6H₂O → 4Fe(OH)₃ → 2Fe₂O₃⋅3H₂O (মরিচা)।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -394,7 +441,8 @@ const chemistryQuestions: Question[] = [
     text: "পানির সংকেত H₂O তে অক্সিজেনের জারণ সংখ্যা কত?",
     options: ["+2", "-2", "0", "-1"],
     correctIndex: 1,
-    explanation: "H₂O তে H এর জারণ সংখ্যা +1 এবং O এর জারণ সংখ্যা -2। 2(+1) + (-2) = 0, মোট জারণ সংখ্যা শূন্য।",
+    explanation:
+      "H₂O তে H এর জারণ সংখ্যা +1 এবং O এর জারণ সংখ্যা -2। 2(+1) + (-2) = 0, মোট জারণ সংখ্যা শূন্য।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -407,7 +455,8 @@ const chemistryQuestions: Question[] = [
     text: "সবচেয়ে হালকা মৌল কোনটি?",
     options: ["হিলিয়াম", "হাইড্রোজেন", "লিথিয়াম", "কার্বন"],
     correctIndex: 1,
-    explanation: "হাইড্রোজেন (H, পারমাণবিক ভর ≈ 1) সবচেয়ে হালকা মৌল। এটি পর্যায় সারণির প্রথম মৌল (Z = 1)।",
+    explanation:
+      "হাইড্রোজেন (H, পারমাণবিক ভর ≈ 1) সবচেয়ে হালকা মৌল। এটি পর্যায় সারণির প্রথম মৌল (Z = 1)।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "easy",
@@ -425,7 +474,8 @@ const chemistryQuestions: Question[] = [
       "চাপের প্রভাব নেই",
     ],
     correctIndex: 2,
-    explanation: "Le Chatelier এর নীতি: সাম্যাবস্থায় চাপ বাড়ালে বিক্রিয়া সেদিকে সরে যায় যেদিকে গ্যাসীয় মোল সংখ্যা (আয়তন) কম।",
+    explanation:
+      "Le Chatelier এর নীতি: সাম্যাবস্থায় চাপ বাড়ালে বিক্রিয়া সেদিকে সরে যায় যেদিকে গ্যাসীয় মোল সংখ্যা (আয়তন) কম।",
     subjectId: "chemistry",
     topicId: "inorganic",
     difficulty: "medium",
@@ -437,9 +487,15 @@ const chemistryQuestions: Question[] = [
   {
     id: "chem-phys-001",
     text: "রাউল্টের সূত্র কোন ধরনের দ্রবণের জন্য প্রযোজ্য?",
-    options: ["আদর্শ দ্রবণ", "অনাদর্শ দ্রবণ", "সম্পৃক্ত দ্রবণ", "তড়িৎ বিশ্লেষ্য দ্রবণ"],
+    options: [
+      "আদর্শ দ্রবণ",
+      "অনাদর্শ দ্রবণ",
+      "সম্পৃক্ত দ্রবণ",
+      "তড়িৎ বিশ্লেষ্য দ্রবণ",
+    ],
     correctIndex: 0,
-    explanation: "রাউল্টের সূত্র আদর্শ দ্রবণের জন্য প্রযোজ্য। সূত্রটি: P = P°₁X₁ + P°₂X₂, যেখানে X হলো মোল ভগ্নাংশ এবং P° হলো বিশুদ্ধ উপাদানের বাষ্পচাপ।",
+    explanation:
+      "রাউল্টের সূত্র আদর্শ দ্রবণের জন্য প্রযোজ্য। সূত্রটি: P = P°₁X₁ + P°₂X₂, যেখানে X হলো মোল ভগ্নাংশ এবং P° হলো বিশুদ্ধ উপাদানের বাষ্পচাপ।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "medium",
@@ -452,7 +508,8 @@ const chemistryQuestions: Question[] = [
     text: "তড়িৎ বিশ্লেষণে ক্যাথোডে কী ঘটে?",
     options: ["জারণ", "বিজারণ", "প্রশমন", "বাষ্পীভবন"],
     correctIndex: 1,
-    explanation: "তড়িৎ বিশ্লেষণে ক্যাথোডে (ঋণাত্মক তড়িদ্বার) বিজারণ (Reduction) ঘটে — ক্যাটায়ন ইলেকট্রন গ্রহণ করে। অ্যানোডে জারণ ঘটে।",
+    explanation:
+      "তড়িৎ বিশ্লেষণে ক্যাথোডে (ঋণাত্মক তড়িদ্বার) বিজারণ (Reduction) ঘটে — ক্যাটায়ন ইলেকট্রন গ্রহণ করে। অ্যানোডে জারণ ঘটে।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "medium",
@@ -465,7 +522,8 @@ const chemistryQuestions: Question[] = [
     text: "বিক্রিয়ার হার কিসের উপর নির্ভর করে না?",
     options: ["তাপমাত্রা", "ঘনমাত্রা", "অনুঘটক", "পাত্রের আকার"],
     correctIndex: 3,
-    explanation: "বিক্রিয়ার হার তাপমাত্রা, ঘনমাত্রা, অনুঘটক, পৃষ্ঠতলের ক্ষেত্রফল ইত্যাদির উপর নির্ভর করে, কিন্তু পাত্রের আকারের উপর নয়।",
+    explanation:
+      "বিক্রিয়ার হার তাপমাত্রা, ঘনমাত্রা, অনুঘটক, পৃষ্ঠতলের ক্ষেত্রফল ইত্যাদির উপর নির্ভর করে, কিন্তু পাত্রের আকারের উপর নয়।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "easy",
@@ -483,7 +541,8 @@ const chemistryQuestions: Question[] = [
       "বিক্রিয়ায় অংশ নেয় ও খরচ হয়ে যায়",
     ],
     correctIndex: 1,
-    explanation: "অনুঘটক বিক্রিয়ার সক্রিয়করণ শক্তি (Activation Energy) কমিয়ে বিক্রিয়ার হার বাড়ায়। এটি বিক্রিয়ায় অংশ নেয় কিন্তু শেষে অপরিবর্তিত থাকে।",
+    explanation:
+      "অনুঘটক বিক্রিয়ার সক্রিয়করণ শক্তি (Activation Energy) কমিয়ে বিক্রিয়ার হার বাড়ায়। এটি বিক্রিয়ায় অংশ নেয় কিন্তু শেষে অপরিবর্তিত থাকে।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "easy",
@@ -496,7 +555,8 @@ const chemistryQuestions: Question[] = [
     text: "তড়িৎ রাসায়নিক কোষে (Galvanic Cell) রাসায়নিক শক্তি কোন শক্তিতে রূপান্তরিত হয়?",
     options: ["তাপ শক্তি", "আলোক শক্তি", "তড়িৎ শক্তি", "যান্ত্রিক শক্তি"],
     correctIndex: 2,
-    explanation: "গ্যালভানিক কোষে (যেমন ড্যানিয়েল কোষ) রাসায়নিক শক্তি তড়িৎ শক্তিতে রূপান্তরিত হয়। স্বতঃস্ফূর্ত রাসায়নিক বিক্রিয়া তড়িৎ প্রবাহ সরবরাহ করে।",
+    explanation:
+      "গ্যালভানিক কোষে (যেমন ড্যানিয়েল কোষ) রাসায়নিক শক্তি তড়িৎ শক্তিতে রূপান্তরিত হয়। স্বতঃস্ফূর্ত রাসায়নিক বিক্রিয়া তড়িৎ প্রবাহ সরবরাহ করে।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "easy",
@@ -509,7 +569,8 @@ const chemistryQuestions: Question[] = [
     text: "কলয়েড কণার আকার কত?",
     options: ["< 1 nm", "1 - 1000 nm", "> 1000 nm", "> 10000 nm"],
     correctIndex: 1,
-    explanation: "কলয়েড কণার আকার 1 nm থেকে 1000 nm (1 μm)। এরা টিন্ড্যাল প্রভাব দেখায় এবং আলো বিক্ষিপ্ত করে।",
+    explanation:
+      "কলয়েড কণার আকার 1 nm থেকে 1000 nm (1 μm)। এরা টিন্ড্যাল প্রভাব দেখায় এবং আলো বিক্ষিপ্ত করে।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "medium",
@@ -522,7 +583,8 @@ const chemistryQuestions: Question[] = [
     text: "তাপোৎপাদী বিক্রিয়ায় ΔH এর মান —",
     options: ["ধনাত্মক", "ঋণাত্মক", "শূন্য", "অসীম"],
     correctIndex: 1,
-    explanation: "তাপোৎপাদী (Exothermic) বিক্রিয়ায় তাপ নির্গত হয়, তাই ΔH < 0 (ঋণাত্মক)। তাপশোষী (Endothermic) বিক্রিয়ায় ΔH > 0।",
+    explanation:
+      "তাপোৎপাদী (Exothermic) বিক্রিয়ায় তাপ নির্গত হয়, তাই ΔH < 0 (ঋণাত্মক)। তাপশোষী (Endothermic) বিক্রিয়ায় ΔH > 0।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "easy",
@@ -540,7 +602,8 @@ const chemistryQuestions: Question[] = [
       "দ্রব ও দ্রাবকের অনুপাত",
     ],
     correctIndex: 0,
-    explanation: "মোলারিটি M = দ্রবের মোল / দ্রবণের আয়তন (লিটারে)। এটি ঘনমাত্রার একটি সাধারণ একক।",
+    explanation:
+      "মোলারিটি M = দ্রবের মোল / দ্রবণের আয়তন (লিটারে)। এটি ঘনমাত্রার একটি সাধারণ একক।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "easy",
@@ -558,7 +621,8 @@ const chemistryQuestions: Question[] = [
       "বিশ্লেষিত পদার্থের ভর ঘনমাত্রার সমানুপাতিক",
     ],
     correctIndex: 0,
-    explanation: "ফ্যারাডের প্রথম সূত্র: তড়িৎ বিশ্লেষণে তড়িদ্বারে অধঃক্ষিপ্ত পদার্থের ভর (m) প্রবাহিত চার্জের (Q) সমানুপাতিক। m = ZQ = ZIt।",
+    explanation:
+      "ফ্যারাডের প্রথম সূত্র: তড়িৎ বিশ্লেষণে তড়িদ্বারে অধঃক্ষিপ্ত পদার্থের ভর (m) প্রবাহিত চার্জের (Q) সমানুপাতিক। m = ZQ = ZIt।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "medium",
@@ -569,9 +633,15 @@ const chemistryQuestions: Question[] = [
   {
     id: "chem-phys-010",
     text: "প্রথম ক্রমের বিক্রিয়ায় অর্ধ-জীবনকাল কিসের উপর নির্ভর করে?",
-    options: ["প্রারম্ভিক ঘনমাত্রা", "হার ধ্রুবক", "তাপমাত্রা ও ঘনমাত্রা", "কিছুর উপর নয়"],
+    options: [
+      "প্রারম্ভিক ঘনমাত্রা",
+      "হার ধ্রুবক",
+      "তাপমাত্রা ও ঘনমাত্রা",
+      "কিছুর উপর নয়",
+    ],
     correctIndex: 1,
-    explanation: "প্রথম ক্রমের বিক্রিয়ায় t½ = 0.693/k। অর্ধ-জীবনকাল শুধুমাত্র হার ধ্রুবক (k) এর উপর নির্ভর করে, প্রারম্ভিক ঘনমাত্রার উপর নয়।",
+    explanation:
+      "প্রথম ক্রমের বিক্রিয়ায় t½ = 0.693/k। অর্ধ-জীবনকাল শুধুমাত্র হার ধ্রুবক (k) এর উপর নির্ভর করে, প্রারম্ভিক ঘনমাত্রার উপর নয়।",
     subjectId: "chemistry",
     topicId: "physical-chem",
     difficulty: "hard",

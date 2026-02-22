@@ -1,28 +1,53 @@
 "use client";
 
-import { scheduledExams } from "@/data/questionBank";
+import { scheduledExams as staticScheduledExams } from "@/data/questionBank";
+import { apiGetLiveExams } from "@/lib/api";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+interface LiveExamItem {
+  id: string;
+  title: string;
+  titleBn: string;
+  category: string;
+  scheduledAt: string;
+  duration: number;
+  totalQuestions: number;
+  registeredCount: number;
+  status: string;
+  isPremium: boolean;
+}
 
 export default function LiveExamsPage() {
   const router = useRouter();
   const [tab, setTab] = useState<"upcoming" | "live" | "past">("upcoming");
+  const [allExams, setAllExams] = useState<LiveExamItem[]>(staticScheduledExams as unknown as LiveExamItem[]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await apiGetLiveExams();
+        const data = (res as any).exams || res;
+        if (Array.isArray(data) && data.length > 0) setAllExams(data);
+      } catch { /* use static fallback */ }
+    })();
+  }, []);
 
   const now = new Date();
 
   const categorized = {
-    upcoming: scheduledExams.filter((e) => new Date(e.scheduledAt) > now),
-    live: scheduledExams.filter(
+    upcoming: allExams.filter((e) => new Date(e.scheduledAt) > now),
+    live: allExams.filter(
       (e) =>
         new Date(e.scheduledAt) <= now &&
         new Date(e.scheduledAt).getTime() + e.duration * 1000 > now.getTime(),
     ),
-    past: [] as typeof scheduledExams,
+    past: [] as LiveExamItem[],
   };
 
   // Show empty state when no exams match the current category
   if (categorized.upcoming.length === 0 && categorized.live.length === 0) {
-    categorized.upcoming = scheduledExams;
+    categorized.upcoming = allExams;
   }
 
   const tabs = [

@@ -7,7 +7,8 @@ const ictQuestions: Question[] = [
     text: "কম্পিউটারের মস্তিষ্ক বলা হয় কোনটিকে?",
     options: ["RAM", "ROM", "CPU", "Hard Disk"],
     correctIndex: 2,
-    explanation: "CPU (Central Processing Unit) কে কম্পিউটারের মস্তিষ্ক বলা হয়। এটি সকল নির্দেশনা প্রক্রিয়াকরণ ও গণনার কাজ করে। CPU তে ALU ও CU থাকে।",
+    explanation:
+      "CPU (Central Processing Unit) কে কম্পিউটারের মস্তিষ্ক বলা হয়। এটি সকল নির্দেশনা প্রক্রিয়াকরণ ও গণনার কাজ করে। CPU তে ALU ও CU থাকে।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -25,7 +26,8 @@ const ictQuestions: Question[] = [
       "Read And Modify",
     ],
     correctIndex: 1,
-    explanation: "RAM = Random Access Memory। এটি কম্পিউটারের প্রাথমিক মেমরি (Primary Memory)। RAM Volatile - বিদ্যুৎ বন্ধ হলে ডাটা মুছে যায়।",
+    explanation:
+      "RAM = Random Access Memory। এটি কম্পিউটারের প্রাথমিক মেমরি (Primary Memory)। RAM Volatile - বিদ্যুৎ বন্ধ হলে ডাটা মুছে যায়।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -38,7 +40,8 @@ const ictQuestions: Question[] = [
     text: "1 KB = কত Byte?",
     options: ["100", "512", "1000", "1024"],
     correctIndex: 3,
-    explanation: "1 KB (Kilobyte) = 1024 Bytes = 2¹⁰ Bytes। কম্পিউটারে বাইনারি পদ্ধতি ব্যবহৃত হয় তাই 2 এর ঘাত ব্যবহার করা হয়।",
+    explanation:
+      "1 KB (Kilobyte) = 1024 Bytes = 2¹⁰ Bytes। কম্পিউটারে বাইনারি পদ্ধতি ব্যবহৃত হয় তাই 2 এর ঘাত ব্যবহার করা হয়।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -51,7 +54,8 @@ const ictQuestions: Question[] = [
     text: "কম্পিউটারের ভাষায় 0 এবং 1 কে কী বলে?",
     options: ["ডেসিমাল", "বাইনারি", "অক্টাল", "হেক্সাডেসিমাল"],
     correctIndex: 1,
-    explanation: "0 এবং 1 হলো বাইনারি (Binary) সংখ্যা পদ্ধতি। কম্পিউটার বাইনারিতে কাজ করে। প্রতিটি 0 বা 1 কে 1 bit (binary digit) বলে।",
+    explanation:
+      "0 এবং 1 হলো বাইনারি (Binary) সংখ্যা পদ্ধতি। কম্পিউটার বাইনারিতে কাজ করে। প্রতিটি 0 বা 1 কে 1 bit (binary digit) বলে।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -64,7 +68,8 @@ const ictQuestions: Question[] = [
     text: "কোনটি আউটপুট ডিভাইস?",
     options: ["কীবোর্ড", "মাউস", "মনিটর", "স্ক্যানার"],
     correctIndex: 2,
-    explanation: "মনিটর একটি আউটপুট ডিভাইস - এটি কম্পিউটারের প্রক্রিয়াকৃত ফলাফল দেখায়। কীবোর্ড, মাউস, স্ক্যানার ইনপুট ডিভাইস।",
+    explanation:
+      "মনিটর একটি আউটপুট ডিভাইস - এটি কম্পিউটারের প্রক্রিয়াকৃত ফলাফল দেখায়। কীবোর্ড, মাউস, স্ক্যানার ইনপুট ডিভাইস।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -82,7 +87,8 @@ const ictQuestions: Question[] = [
       "১ ঘণ্টা পর",
     ],
     correctIndex: 2,
-    explanation: "ROM (Read Only Memory) Non-volatile মেমরি। বিদ্যুৎ বন্ধ হলেও এর তথ্য মুছে যায় না। BIOS ROM এ সংরক্ষিত থাকে।",
+    explanation:
+      "ROM (Read Only Memory) Non-volatile মেমরি। বিদ্যুৎ বন্ধ হলেও এর তথ্য মুছে যায় না। BIOS ROM এ সংরক্ষিত থাকে।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -95,7 +101,8 @@ const ictQuestions: Question[] = [
     text: "অপারেটিং সিস্টেমের উদাহরণ কোনটি?",
     options: ["Microsoft Word", "Windows", "Google Chrome", "Photoshop"],
     correctIndex: 1,
-    explanation: "Windows একটি অপারেটিং সিস্টেম (OS)। অন্যান্য OS: Linux, macOS, Android, iOS। MS Word হলো Application Software।",
+    explanation:
+      "Windows একটি অপারেটিং সিস্টেম (OS)। অন্যান্য OS: Linux, macOS, Android, iOS। MS Word হলো Application Software।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -113,7 +120,8 @@ const ictQuestions: Question[] = [
       "Unified Serial Bus",
     ],
     correctIndex: 1,
-    explanation: "USB = Universal Serial Bus। এটি কম্পিউটারের সাথে বিভিন্ন ডিভাইস সংযুক্ত করার জন্য ব্যবহৃত একটি স্ট্যান্ডার্ড ইন্টারফেস।",
+    explanation:
+      "USB = Universal Serial Bus। এটি কম্পিউটারের সাথে বিভিন্ন ডিভাইস সংযুক্ত করার জন্য ব্যবহৃত একটি স্ট্যান্ডার্ড ইন্টারফেস।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -131,7 +139,8 @@ const ictQuestions: Question[] = [
       "Static Storage Drive",
     ],
     correctIndex: 1,
-    explanation: "SSD = Solid State Drive। HDD এর তুলনায় SSD অনেক দ্রুত, টেকসই ও শব্দহীন কারণ এতে কোনো মুভিং পার্ট নেই।",
+    explanation:
+      "SSD = Solid State Drive। HDD এর তুলনায় SSD অনেক দ্রুত, টেকসই ও শব্দহীন কারণ এতে কোনো মুভিং পার্ট নেই।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -144,7 +153,8 @@ const ictQuestions: Question[] = [
     text: "কম্পিউটারে (10)₁₀ এর বাইনারি মান কত?",
     options: ["1010", "1001", "1100", "1110"],
     correctIndex: 0,
-    explanation: "দশমিক 10 = বাইনারি 1010। রূপান্তর: 10÷2=5 (রেমেইন্ডার 0), 5÷2=2 (রেম 1), 2÷2=1 (রেম 0), 1÷2=0 (রেম 1)। নিচ থেকে পড়ুন: 1010।",
+    explanation:
+      "দশমিক 10 = বাইনারি 1010। রূপান্তর: 10÷2=5 (রেমেইন্ডার 0), 5÷2=2 (রেম 1), 2÷2=1 (রেম 0), 1÷2=0 (রেম 1)। নিচ থেকে পড়ুন: 1010।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "medium",
@@ -157,7 +167,8 @@ const ictQuestions: Question[] = [
     text: "কোনটি ওপেন সোর্স অপারেটিং সিস্টেম?",
     options: ["Windows", "macOS", "Linux", "iOS"],
     correctIndex: 2,
-    explanation: "Linux একটি ওপেন সোর্স অপারেটিং সিস্টেম। লিনাস টরভাল্ডস ১৯৯১ সালে এটি তৈরি করেন। উদাহরণ: Ubuntu, Fedora, CentOS।",
+    explanation:
+      "Linux একটি ওপেন সোর্স অপারেটিং সিস্টেম। লিনাস টরভাল্ডস ১৯৯১ সালে এটি তৈরি করেন। উদাহরণ: Ubuntu, Fedora, CentOS।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -175,7 +186,8 @@ const ictQuestions: Question[] = [
       "আউটপুট প্রদর্শন",
     ],
     correctIndex: 1,
-    explanation: "ALU (Arithmetic Logic Unit) গাণিতিক (যোগ, বিয়োগ, গুণ, ভাগ) ও যৌক্তিক (AND, OR, NOT, XOR) অপারেশন সম্পাদন করে। এটি CPU এর একটি অংশ।",
+    explanation:
+      "ALU (Arithmetic Logic Unit) গাণিতিক (যোগ, বিয়োগ, গুণ, ভাগ) ও যৌক্তিক (AND, OR, NOT, XOR) অপারেশন সম্পাদন করে। এটি CPU এর একটি অংশ।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -188,7 +200,8 @@ const ictQuestions: Question[] = [
     text: "Cache Memory কোথায় অবস্থিত?",
     options: ["হার্ড ডিস্কে", "RAM এ", "CPU এর ভিতরে", "মাদারবোর্ডের বাইরে"],
     correctIndex: 2,
-    explanation: "Cache Memory CPU এর ভিতরে বা খুব কাছে থাকে। এটি RAM ও CPU এর মধ্যে গতি পার্থক্য কমায়। L1, L2, L3 Cache থাকে।",
+    explanation:
+      "Cache Memory CPU এর ভিতরে বা খুব কাছে থাকে। এটি RAM ও CPU এর মধ্যে গতি পার্থক্য কমায়। L1, L2, L3 Cache থাকে।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "medium",
@@ -201,7 +214,8 @@ const ictQuestions: Question[] = [
     text: "1 TB = কত GB?",
     options: ["100", "500", "1024", "2048"],
     correctIndex: 2,
-    explanation: "1 TB (Terabyte) = 1024 GB (Gigabyte)। ক্রম: Bit → Byte → KB → MB → GB → TB → PB। প্রতিটি ধাপে 1024 গুণ।",
+    explanation:
+      "1 TB (Terabyte) = 1024 GB (Gigabyte)। ক্রম: Bit → Byte → KB → MB → GB → TB → PB। প্রতিটি ধাপে 1024 গুণ।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -219,7 +233,8 @@ const ictQuestions: Question[] = [
       "Basic Integrated Operating Software",
     ],
     correctIndex: 0,
-    explanation: "BIOS = Basic Input Output System। কম্পিউটার চালু হওয়ার সময় BIOS প্রথম চলে এবং হার্ডওয়্যার চেক করে (POST - Power On Self Test)।",
+    explanation:
+      "BIOS = Basic Input Output System। কম্পিউটার চালু হওয়ার সময় BIOS প্রথম চলে এবং হার্ডওয়্যার চেক করে (POST - Power On Self Test)।",
     subjectId: "ict",
     topicId: "computer-basics",
     difficulty: "easy",
@@ -238,7 +253,8 @@ const ictQuestions: Question[] = [
       "Interlinked Network",
     ],
     correctIndex: 1,
-    explanation: "Internet = Interconnected Network। এটি পৃথিবীব্যাপী কম্পিউটার নেটওয়ার্কের একটি বিশাল নেটওয়ার্ক। ১৯৬৯ সালে ARPANET হিসেবে যাত্রা শুরু।",
+    explanation:
+      "Internet = Interconnected Network। এটি পৃথিবীব্যাপী কম্পিউটার নেটওয়ার্কের একটি বিশাল নেটওয়ার্ক। ১৯৬৯ সালে ARPANET হিসেবে যাত্রা শুরু।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "easy",
@@ -251,7 +267,8 @@ const ictQuestions: Question[] = [
     text: "IP Address কত বিটের হয় (IPv4)?",
     options: ["16 bit", "32 bit", "64 bit", "128 bit"],
     correctIndex: 1,
-    explanation: "IPv4 Address ৩২ বিটের। উদাহরণ: 192.168.1.1। IPv6 Address ১২৮ বিটের। IPv4 এ সর্বোচ্চ 2³² ≈ 4.3 বিলিয়ন ঠিকানা সম্ভব।",
+    explanation:
+      "IPv4 Address ৩২ বিটের। উদাহরণ: 192.168.1.1। IPv6 Address ১২৮ বিটের। IPv4 এ সর্বোচ্চ 2³² ≈ 4.3 বিলিয়ন ঠিকানা সম্ভব।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "medium",
@@ -269,7 +286,8 @@ const ictQuestions: Question[] = [
       "Hyper Transfer Text Protocol",
     ],
     correctIndex: 0,
-    explanation: "HTTP = HyperText Transfer Protocol। ওয়েবে ডাটা আদান-প্রদানের জন্য ব্যবহৃত প্রোটোকল। HTTPS হলো HTTP এর সুরক্ষিত সংস্করণ (SSL/TLS সহ)।",
+    explanation:
+      "HTTP = HyperText Transfer Protocol। ওয়েবে ডাটা আদান-প্রদানের জন্য ব্যবহৃত প্রোটোকল। HTTPS হলো HTTP এর সুরক্ষিত সংস্করণ (SSL/TLS সহ)।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "easy",
@@ -287,7 +305,8 @@ const ictQuestions: Question[] = [
       "Wide Fidelity",
     ],
     correctIndex: 0,
-    explanation: "Wi-Fi = Wireless Fidelity। IEEE 802.11 স্ট্যান্ডার্ড অনুযায়ী তারবিহীন নেটওয়ার্ক প্রযুক্তি।",
+    explanation:
+      "Wi-Fi = Wireless Fidelity। IEEE 802.11 স্ট্যান্ডার্ড অনুযায়ী তারবিহীন নেটওয়ার্ক প্রযুক্তি।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "easy",
@@ -305,7 +324,8 @@ const ictQuestions: Question[] = [
       "Linked Area Network",
     ],
     correctIndex: 1,
-    explanation: "LAN = Local Area Network। একটি ছোট এলাকায় (অফিস, বিল্ডিং) কম্পিউটারগুলো সংযুক্ত করার নেটওয়ার্ক। WAN = Wide Area Network (বড় এলাকা)।",
+    explanation:
+      "LAN = Local Area Network। একটি ছোট এলাকায় (অফিস, বিল্ডিং) কম্পিউটারগুলো সংযুক্ত করার নেটওয়ার্ক। WAN = Wide Area Network (বড় এলাকা)।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "easy",
@@ -318,7 +338,8 @@ const ictQuestions: Question[] = [
     text: "OSI মডেলে কতটি স্তর আছে?",
     options: ["5", "6", "7", "8"],
     correctIndex: 2,
-    explanation: "OSI (Open Systems Interconnection) মডেলে ৭টি স্তর: Physical, Data Link, Network, Transport, Session, Presentation, Application।",
+    explanation:
+      "OSI (Open Systems Interconnection) মডেলে ৭টি স্তর: Physical, Data Link, Network, Transport, Session, Presentation, Application।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "medium",
@@ -331,7 +352,8 @@ const ictQuestions: Question[] = [
     text: "ইমেইল পাঠাতে কোন প্রোটোকল ব্যবহৃত হয়?",
     options: ["FTP", "SMTP", "HTTP", "TCP"],
     correctIndex: 1,
-    explanation: "SMTP (Simple Mail Transfer Protocol) ইমেইল পাঠাতে ব্যবহৃত হয়। ইমেইল গ্রহণে POP3 বা IMAP ব্যবহৃত হয়।",
+    explanation:
+      "SMTP (Simple Mail Transfer Protocol) ইমেইল পাঠাতে ব্যবহৃত হয়। ইমেইল গ্রহণে POP3 বা IMAP ব্যবহৃত হয়।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "medium",
@@ -349,7 +371,8 @@ const ictQuestions: Question[] = [
       "ভাইরাস সনাক্ত করা",
     ],
     correctIndex: 1,
-    explanation: "DNS (Domain Name System) ডোমেইন নেম (যেমন google.com) কে IP Address এ রূপান্তর করে। এটি ইন্টারনেটের 'ফোনবুক' এর মতো কাজ করে।",
+    explanation:
+      "DNS (Domain Name System) ডোমেইন নেম (যেমন google.com) কে IP Address এ রূপান্তর করে। এটি ইন্টারনেটের 'ফোনবুক' এর মতো কাজ করে।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "medium",
@@ -362,7 +385,8 @@ const ictQuestions: Question[] = [
     text: "কোন ডিভাইস নেটওয়ার্কে ডাটা রাউট করে?",
     options: ["হাব", "সুইচ", "রাউটার", "মডেম"],
     correctIndex: 2,
-    explanation: "রাউটার (Router) নেটওয়ার্কে ডাটা প্যাকেট সঠিক গন্তব্যে রাউট/পাঠায়। হাব সব পোর্টে পাঠায়। সুইচ নির্দিষ্ট পোর্টে পাঠায়।",
+    explanation:
+      "রাউটার (Router) নেটওয়ার্কে ডাটা প্যাকেট সঠিক গন্তব্যে রাউট/পাঠায়। হাব সব পোর্টে পাঠায়। সুইচ নির্দিষ্ট পোর্টে পাঠায়।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "easy",
@@ -380,7 +404,8 @@ const ictQuestions: Question[] = [
       "ওয়েবসাইট তৈরি",
     ],
     correctIndex: 1,
-    explanation: "Firewall নেটওয়ার্কে অননুমোদিত প্রবেশ ঠেকায় এবং ক্ষতিকর ট্র্যাফিক ফিল্টার করে। এটি হার্ডওয়্যার বা সফটওয়্যার ভিত্তিক হতে পারে।",
+    explanation:
+      "Firewall নেটওয়ার্কে অননুমোদিত প্রবেশ ঠেকায় এবং ক্ষতিকর ট্র্যাফিক ফিল্টার করে। এটি হার্ডওয়্যার বা সফটওয়্যার ভিত্তিক হতে পারে।",
     subjectId: "ict",
     topicId: "networking",
     difficulty: "easy",
@@ -399,7 +424,8 @@ const ictQuestions: Question[] = [
       "গুইডো ভ্যান রসাম",
     ],
     correctIndex: 1,
-    explanation: "ডেনিস রিচি (Dennis Ritchie) ১৯৭২ সালে AT&T বেল ল্যাবে C ভাষা তৈরি করেন। UNIX অপারেটিং সিস্টেম C তে লেখা।",
+    explanation:
+      "ডেনিস রিচি (Dennis Ritchie) ১৯৭২ সালে AT&T বেল ল্যাবে C ভাষা তৈরি করেন। UNIX অপারেটিং সিস্টেম C তে লেখা।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -410,14 +436,10 @@ const ictQuestions: Question[] = [
   {
     id: "ict-prog-002",
     text: "Java প্রোগ্রামিং ভাষার জনক কে?",
-    options: [
-      "ডেনিস রিচি",
-      "জেমস গসলিং",
-      "লিনাস টরভাল্ডস",
-      "টিম বার্নার্স লি",
-    ],
+    options: ["ডেনিস রিচি", "জেমস গসলিং", "লিনাস টরভাল্ডস", "টিম বার্নার্স লি"],
     correctIndex: 1,
-    explanation: "জেমস গসলিং (James Gosling) ১৯৯৫ সালে Sun Microsystems এ Java তৈরি করেন। Java এর স্লোগান: 'Write Once, Run Anywhere'।",
+    explanation:
+      "জেমস গসলিং (James Gosling) ১৯৯৫ সালে Sun Microsystems এ Java তৈরি করেন। Java এর স্লোগান: 'Write Once, Run Anywhere'।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -435,7 +457,8 @@ const ictQuestions: Question[] = [
       "মেশিন ভাষা",
     ],
     correctIndex: 1,
-    explanation: "HTML (HyperText Markup Language) একটি মার্কআপ ভাষা, প্রোগ্রামিং ভাষা নয়। এটি ওয়েবপেজের গঠন/কাঠামো তৈরি করে।",
+    explanation:
+      "HTML (HyperText Markup Language) একটি মার্কআপ ভাষা, প্রোগ্রামিং ভাষা নয়। এটি ওয়েবপেজের গঠন/কাঠামো তৈরি করে।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -453,7 +476,8 @@ const ictQuestions: Question[] = [
       "জেমস গসলিং",
     ],
     correctIndex: 1,
-    explanation: "গুইডো ভ্যান রসাম (Guido van Rossum) ১৯৯১ সালে Python প্রোগ্রামিং ভাষা তৈরি করেন। Python AI ও Machine Learning এ ব্যাপকভাবে ব্যবহৃত।",
+    explanation:
+      "গুইডো ভ্যান রসাম (Guido van Rossum) ১৯৯১ সালে Python প্রোগ্রামিং ভাষা তৈরি করেন। Python AI ও Machine Learning এ ব্যাপকভাবে ব্যবহৃত।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -466,7 +490,8 @@ const ictQuestions: Question[] = [
     text: "কোনটি Object Oriented Programming (OOP) ভাষা?",
     options: ["C", "Assembly", "Java", "FORTRAN"],
     correctIndex: 2,
-    explanation: "Java একটি সম্পূর্ণ Object Oriented Programming ভাষা। OOP এর চারটি মূলনীতি: Encapsulation, Inheritance, Polymorphism, Abstraction।",
+    explanation:
+      "Java একটি সম্পূর্ণ Object Oriented Programming ভাষা। OOP এর চারটি মূলনীতি: Encapsulation, Inheritance, Polymorphism, Abstraction।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -479,7 +504,8 @@ const ictQuestions: Question[] = [
     text: "ওয়েবপেজে স্টাইল যোগ করতে কোন ভাষা ব্যবহৃত হয়?",
     options: ["HTML", "CSS", "JavaScript", "PHP"],
     correctIndex: 1,
-    explanation: "CSS (Cascading Style Sheets) ওয়েবপেজে রং, ফন্ট, লেআউট ইত্যাদি স্টাইল যোগ করতে ব্যবহৃত হয়। HTML কাঠামো তৈরি করে, CSS সাজায়।",
+    explanation:
+      "CSS (Cascading Style Sheets) ওয়েবপেজে রং, ফন্ট, লেআউট ইত্যাদি স্টাইল যোগ করতে ব্যবহৃত হয়। HTML কাঠামো তৈরি করে, CSS সাজায়।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -497,7 +523,8 @@ const ictQuestions: Question[] = [
       "কম্পিউটারের হার্ডওয়্যার",
     ],
     correctIndex: 1,
-    explanation: "Algorithm হলো সুনির্দিষ্ট সমস্যা সমাধানের জন্য ক্রমিক ধাপে ধাপে নির্দেশনার একটি সেট। এটি প্রোগ্রামিং এর ভিত্তি।",
+    explanation:
+      "Algorithm হলো সুনির্দিষ্ট সমস্যা সমাধানের জন্য ক্রমিক ধাপে ধাপে নির্দেশনার একটি সেট। এটি প্রোগ্রামিং এর ভিত্তি।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -515,7 +542,8 @@ const ictQuestions: Question[] = [
       "একটি অপারেটিং সিস্টেম",
     ],
     correctIndex: 1,
-    explanation: "Compiler উচ্চস্তরের প্রোগ্রামিং ভাষা (C, Java) কে মেশিন ভাষায় (0, 1) রূপান্তর করে। Compiler পুরো প্রোগ্রাম এক সাথে অনুবাদ করে। Interpreter লাইন বাই লাইন করে।",
+    explanation:
+      "Compiler উচ্চস্তরের প্রোগ্রামিং ভাষা (C, Java) কে মেশিন ভাষায় (0, 1) রূপান্তর করে। Compiler পুরো প্রোগ্রাম এক সাথে অনুবাদ করে। Interpreter লাইন বাই লাইন করে।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "medium",
@@ -533,7 +561,8 @@ const ictQuestions: Question[] = [
       "Simple Query Language",
     ],
     correctIndex: 1,
-    explanation: "SQL = Structured Query Language। ডাটাবেজে ডাটা ব্যবস্থাপনার জন্য ব্যবহৃত ভাষা। উদাহরণ: SELECT, INSERT, UPDATE, DELETE।",
+    explanation:
+      "SQL = Structured Query Language। ডাটাবেজে ডাটা ব্যবস্থাপনার জন্য ব্যবহৃত ভাষা। উদাহরণ: SELECT, INSERT, UPDATE, DELETE।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -546,7 +575,8 @@ const ictQuestions: Question[] = [
     text: "কোনটি সার্ভার-সাইড প্রোগ্রামিং ভাষা?",
     options: ["HTML", "CSS", "PHP", "Bootstrap"],
     correctIndex: 2,
-    explanation: "PHP (Hypertext Preprocessor) একটি সার্ভার-সাইড স্ক্রিপ্টিং ভাষা। WordPress, Facebook এর প্রাথমিক সংস্করণ PHP তে লেখা।",
+    explanation:
+      "PHP (Hypertext Preprocessor) একটি সার্ভার-সাইড স্ক্রিপ্টিং ভাষা। WordPress, Facebook এর প্রাথমিক সংস্করণ PHP তে লেখা।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -564,7 +594,8 @@ const ictQuestions: Question[] = [
       "Automatic Interface",
     ],
     correctIndex: 1,
-    explanation: "AI = Artificial Intelligence (কৃত্রিম বুদ্ধিমত্তা)। যন্ত্রকে মানুষের মতো চিন্তা, শেখা ও সিদ্ধান্ত নেওয়ার ক্ষমতা প্রদান করে।",
+    explanation:
+      "AI = Artificial Intelligence (কৃত্রিম বুদ্ধিমত্তা)। যন্ত্রকে মানুষের মতো চিন্তা, শেখা ও সিদ্ধান্ত নেওয়ার ক্ষমতা প্রদান করে।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -582,7 +613,8 @@ const ictQuestions: Question[] = [
       "Internal of Technology",
     ],
     correctIndex: 1,
-    explanation: "IoT = Internet of Things (ইন্টারনেট অব থিংস)। দৈনন্দিন বস্তু (ফ্রিজ, AC, গাড়ি) ইন্টারনেটের সাথে যুক্ত করার প্রযুক্তি।",
+    explanation:
+      "IoT = Internet of Things (ইন্টারনেট অব থিংস)। দৈনন্দিন বস্তু (ফ্রিজ, AC, গাড়ি) ইন্টারনেটের সাথে যুক্ত করার প্রযুক্তি।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -600,7 +632,8 @@ const ictQuestions: Question[] = [
       "ভিডিও এডিটিং",
     ],
     correctIndex: 0,
-    explanation: "Blockchain প্রযুক্তি ক্রিপ্টোকারেন্সি (Bitcoin, Ethereum) তে ব্যবহৃত হয়। এটি একটি বিকেন্দ্রীভূত (Decentralized) ও অপরিবর্তনীয় ডিজিটাল লেজার।",
+    explanation:
+      "Blockchain প্রযুক্তি ক্রিপ্টোকারেন্সি (Bitcoin, Ethereum) তে ব্যবহৃত হয়। এটি একটি বিকেন্দ্রীভূত (Decentralized) ও অপরিবর্তনীয় ডিজিটাল লেজার।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "medium",
@@ -618,7 +651,8 @@ const ictQuestions: Question[] = [
       "Notepad",
     ],
     correctIndex: 1,
-    explanation: "Google Drive একটি Cloud Computing সেবা। ক্লাউড কম্পিউটিং এ ইন্টারনেটের মাধ্যমে দূরবর্তী সার্ভার থেকে ডাটা সংরক্ষণ ও প্রক্রিয়া করা হয়।",
+    explanation:
+      "Google Drive একটি Cloud Computing সেবা। ক্লাউড কম্পিউটিং এ ইন্টারনেটের মাধ্যমে দূরবর্তী সার্ভার থেকে ডাটা সংরক্ষণ ও প্রক্রিয়া করা হয়।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",
@@ -636,7 +670,8 @@ const ictQuestions: Question[] = [
       "ডাটা ব্যাকআপ",
     ],
     correctIndex: 1,
-    explanation: "Phishing হলো প্রতারণামূলক ইমেইল, মেসেজ বা ওয়েবসাইট ব্যবহার করে ব্যবহারকারীর ব্যক্তিগত তথ্য (পাসওয়ার্ড, ক্রেডিট কার্ড) চুরি করার কৌশল।",
+    explanation:
+      "Phishing হলো প্রতারণামূলক ইমেইল, মেসেজ বা ওয়েবসাইট ব্যবহার করে ব্যবহারকারীর ব্যক্তিগত তথ্য (পাসওয়ার্ড, ক্রেডিট কার্ড) চুরি করার কৌশল।",
     subjectId: "ict",
     topicId: "programming",
     difficulty: "easy",

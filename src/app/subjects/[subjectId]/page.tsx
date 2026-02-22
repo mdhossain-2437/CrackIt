@@ -1,8 +1,14 @@
 "use client";
 
-import { subjects, topicsBySubject } from "@/data/questionBank";
+import {
+  subjects as staticSubjects,
+  topicsBySubject as staticTopicsBySubject,
+} from "@/data/questionBank";
+import { apiGetSubjectDetail } from "@/lib/api";
+import { cacheTopics, getCachedTopics } from "@/lib/offline";
+import type { Subject, Topic } from "@/types";
 import Link from "next/link";
-import { use } from "react";
+import { use, useEffect, useState } from "react";
 
 export default function SubjectDetailPage({
   params,
@@ -10,8 +16,27 @@ export default function SubjectDetailPage({
   params: Promise<{ subjectId: string }>;
 }) {
   const { subjectId } = use(params);
-  const subject = subjects.find((s) => s.id === subjectId);
-  const topics = topicsBySubject[subjectId] || [];
+  const staticSubject = staticSubjects.find((s) => s.id === subjectId);
+  const staticTopics = staticTopicsBySubject[subjectId] || [];
+
+  const [subject, setSubject] = useState<Subject | null>(staticSubject || null);
+  const [topics, setTopics] = useState<Topic[]>(staticTopics);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await apiGetSubjectDetail(subjectId);
+        if (data.subject) setSubject(data.subject);
+        if (data.topics && data.topics.length > 0) {
+          setTopics(data.topics);
+          cacheTopics(data.topics).catch(() => {});
+        }
+      } catch {
+        const cached = await getCachedTopics(subjectId).catch(() => null);
+        if (cached && cached.length > 0) setTopics(cached);
+      }
+    })();
+  }, [subjectId]);
 
   if (!subject) {
     return (

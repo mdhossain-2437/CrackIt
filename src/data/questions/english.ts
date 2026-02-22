@@ -7,7 +7,8 @@ const englishQuestions: Question[] = [
     text: "Choose the correct tense: 'She ___ to school every day.'",
     options: ["go", "goes", "going", "gone"],
     correctIndex: 1,
-    explanation: "Third person singular (She/He/It) এর সাথে Present Simple Tense এ verb এর শেষে -s/-es যোগ হয়। She goes.",
+    explanation:
+      "Third person singular (She/He/It) এর সাথে Present Simple Tense এ verb এর শেষে -s/-es যোগ হয়। She goes.",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -25,7 +26,8 @@ const englishQuestions: Question[] = [
       "He not like coffee.",
     ],
     correctIndex: 2,
-    explanation: "Third person singular negative: does not (doesn't) + base form of verb। 'He doesn't like coffee.'",
+    explanation:
+      "Third person singular negative: does not (doesn't) + base form of verb। 'He doesn't like coffee.'",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -43,7 +45,8 @@ const englishQuestions: Question[] = [
       "Football are played by them.",
     ],
     correctIndex: 0,
-    explanation: "Active (Present Simple): Subject + V₁ + Object → Passive: Object + is/am/are + V₃ + by + Subject. 'Football is played by them.'",
+    explanation:
+      "Active (Present Simple): Subject + V₁ + Object → Passive: Object + is/am/are + V₃ + by + Subject. 'Football is played by them.'",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -56,7 +59,8 @@ const englishQuestions: Question[] = [
     text: "Choose the correct article: '___ honest man is respected by all.'",
     options: ["A", "An", "The", "No article"],
     correctIndex: 1,
-    explanation: "'Honest' শব্দে 'h' silent, তাই vowel sound দিয়ে শুরু (অনেস্ট)। Vowel sound এর আগে 'An' বসে।",
+    explanation:
+      "'Honest' শব্দে 'h' silent, তাই vowel sound দিয়ে শুরু (অনেস্ট)। Vowel sound এর আগে 'An' বসে।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -69,7 +73,8 @@ const englishQuestions: Question[] = [
     text: "Choose the correct preposition: 'He is good ___ mathematics.'",
     options: ["in", "at", "on", "with"],
     correctIndex: 1,
-    explanation: "'Good at' একটি fixed preposition collocation। 'Good at something' মানে কোনো বিষয়ে দক্ষ।",
+    explanation:
+      "'Good at' একটি fixed preposition collocation। 'Good at something' মানে কোনো বিষয়ে দক্ষ।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -87,7 +92,8 @@ const englishQuestions: Question[] = [
       "He told that he was happy.",
     ],
     correctIndex: 1,
-    explanation: "Direct → Indirect: said → said that; 'I' → 'he'; Present tense → Past tense (am → was). 'He said that he was happy.'",
+    explanation:
+      "Direct → Indirect: said → said that; 'I' → 'he'; Present tense → Past tense (am → was). 'He said that he was happy.'",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "medium",
@@ -105,7 +111,8 @@ const englishQuestions: Question[] = [
       "The boy who is tall.",
     ],
     correctIndex: 1,
-    explanation: "Compound sentence: দুটি independent clause 'and', 'but', 'or' ইত্যাদি coordinating conjunction দ্বারা যুক্ত। 'He came and I went.'",
+    explanation:
+      "Compound sentence: দুটি independent clause 'and', 'but', 'or' ইত্যাদি coordinating conjunction দ্বারা যুক্ত। 'He came and I went.'",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "medium",
@@ -118,7 +125,8 @@ const englishQuestions: Question[] = [
     text: "'If I were a bird, I ___ fly.' — Fill in the blank:",
     options: ["will", "would", "shall", "can"],
     correctIndex: 1,
-    explanation: "2nd Conditional (অসম্ভব শর্ত): If + Past Simple, Subject + would + V₁। 'If I were a bird, I would fly.'",
+    explanation:
+      "2nd Conditional (অসম্ভব শর্ত): If + Past Simple, Subject + would + V₁। 'If I were a bird, I would fly.'",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "medium",
@@ -131,7 +139,8 @@ const englishQuestions: Question[] = [
     text: "Which is the correct spelling?",
     options: ["Occurence", "Occurrence", "Occurance", "Ocurrence"],
     correctIndex: 1,
-    explanation: "সঠিক বানান: Occurrence (double c, double r)। BCS ও ব্যাংক পরীক্ষায় spelling question সাধারণ।",
+    explanation:
+      "সঠিক বানান: Occurrence (double c, double r)। BCS ও ব্যাংক পরীক্ষায় spelling question সাধারণ।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -144,7 +153,8 @@ const englishQuestions: Question[] = [
     text: "The feminine of 'hero' is:",
     options: ["heroness", "heroine", "heroin", "heroes"],
     correctIndex: 1,
-    explanation: "Hero → Heroine (স্ত্রীলিঙ্গ)। 'Heroin' (হেরোইন) একটি মাদকদ্রব্য, 'Heroine' নারী নায়ক।",
+    explanation:
+      "Hero → Heroine (স্ত্রীলিঙ্গ)। 'Heroin' (হেরোইন) একটি মাদকদ্রব্য, 'Heroine' নারী নায়ক।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -155,9 +165,15 @@ const englishQuestions: Question[] = [
   {
     id: "eng-gram-011",
     text: "'He has been working since morning.' — This is:",
-    options: ["Present Perfect", "Present Perfect Continuous", "Past Perfect", "Past Continuous"],
+    options: [
+      "Present Perfect",
+      "Present Perfect Continuous",
+      "Past Perfect",
+      "Past Continuous",
+    ],
     correctIndex: 1,
-    explanation: "has/have + been + V-ing = Present Perfect Continuous Tense। 'Since' point of time এবং 'for' period of time এর সাথে ব্যবহৃত হয়।",
+    explanation:
+      "has/have + been + V-ing = Present Perfect Continuous Tense। 'Since' point of time এবং 'for' period of time এর সাথে ব্যবহৃত হয়।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "medium",
@@ -170,7 +186,8 @@ const englishQuestions: Question[] = [
     text: "Choose the correct tag question: 'She is a student, ___?'",
     options: ["is she", "isn't she", "does she", "doesn't she"],
     correctIndex: 1,
-    explanation: "Positive statement → Negative tag। 'She is' → 'isn't she?' Tag question এ auxiliary verb ব্যবহার হয়।",
+    explanation:
+      "Positive statement → Negative tag। 'She is' → 'isn't she?' Tag question এ auxiliary verb ব্যবহার হয়।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -183,7 +200,8 @@ const englishQuestions: Question[] = [
     text: "The plural of 'ox' is:",
     options: ["oxes", "oxen", "ox", "oxs"],
     correctIndex: 1,
-    explanation: "Ox → Oxen (irregular plural)। অন্যান্য irregular: child → children, man → men, woman → women।",
+    explanation:
+      "Ox → Oxen (irregular plural)। অন্যান্য irregular: child → children, man → men, woman → women।",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "easy",
@@ -201,7 +219,8 @@ const englishQuestions: Question[] = [
       "The running water is clear.",
     ],
     correctIndex: 1,
-    explanation: "Gerund: V-ing form used as a noun। 'Running' এখানে subject হিসেবে noun এর কাজ করছে। 'Running is good for health.'",
+    explanation:
+      "Gerund: V-ing form used as a noun। 'Running' এখানে subject হিসেবে noun এর কাজ করছে। 'Running is good for health.'",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "medium",
@@ -219,7 +238,8 @@ const englishQuestions: Question[] = [
       "Zero Conditional",
     ],
     correctIndex: 2,
-    explanation: "3rd Conditional (past unreal): Had + V₃, would have + V₃। Inversion: 'Had I known' = 'If I had known'.",
+    explanation:
+      "3rd Conditional (past unreal): Had + V₃, would have + V₃। Inversion: 'Had I known' = 'If I had known'.",
     subjectId: "english",
     topicId: "grammar",
     difficulty: "hard",
@@ -233,7 +253,8 @@ const englishQuestions: Question[] = [
     text: "The synonym of 'abundant' is:",
     options: ["scarce", "plentiful", "rare", "limited"],
     correctIndex: 1,
-    explanation: "Abundant = প্রচুর, বিপুল। Synonym: plentiful, ample, copious। Antonym: scarce, rare।",
+    explanation:
+      "Abundant = প্রচুর, বিপুল। Synonym: plentiful, ample, copious। Antonym: scarce, rare।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "easy",
@@ -246,7 +267,8 @@ const englishQuestions: Question[] = [
     text: "The antonym of 'benevolent' is:",
     options: ["kind", "generous", "malevolent", "charitable"],
     correctIndex: 2,
-    explanation: "Benevolent = দয়ালু, পরোপকারী। Antonym: malevolent = হিংসুক, দুষ্ট। 'Bene' = ভালো, 'Male' = খারাপ।",
+    explanation:
+      "Benevolent = দয়ালু, পরোপকারী। Antonym: malevolent = হিংসুক, দুষ্ট। 'Bene' = ভালো, 'Male' = খারাপ।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -259,7 +281,8 @@ const englishQuestions: Question[] = [
     text: "One word substitution: 'One who speaks many languages' —",
     options: ["Polyglot", "Linguist", "Bilingual", "Translator"],
     correctIndex: 0,
-    explanation: "Polyglot = বহুভাষী (যিনি অনেক ভাষায় কথা বলতে পারেন)। Poly = many, Glot = tongue/language।",
+    explanation:
+      "Polyglot = বহুভাষী (যিনি অনেক ভাষায় কথা বলতে পারেন)। Poly = many, Glot = tongue/language।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -277,7 +300,8 @@ const englishQuestions: Question[] = [
       "A sleeping place",
     ],
     correctIndex: 1,
-    explanation: "'A bed of roses' = আরামদায়ক অবস্থা। 'Life is not a bed of roses' = জীবন এত সহজ নয়।",
+    explanation:
+      "'A bed of roses' = আরামদায়ক অবস্থা। 'Life is not a bed of roses' = জীবন এত সহজ নয়।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "easy",
@@ -290,7 +314,8 @@ const englishQuestions: Question[] = [
     text: "'At sixes and sevens' means:",
     options: ["In order", "In confusion", "In a hurry", "In peace"],
     correctIndex: 1,
-    explanation: "'At sixes and sevens' = বিশৃঙ্খলা, এলোমেলো অবস্থা (in a state of confusion/disorder)।",
+    explanation:
+      "'At sixes and sevens' = বিশৃঙ্খলা, এলোমেলো অবস্থা (in a state of confusion/disorder)।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -303,7 +328,8 @@ const englishQuestions: Question[] = [
     text: "The synonym of 'eloquent' is:",
     options: ["silent", "articulate", "dull", "boring"],
     correctIndex: 1,
-    explanation: "Eloquent = বাগ্মী, সুবক্তা। Synonym: articulate, fluent, expressive। Antonym: inarticulate।",
+    explanation:
+      "Eloquent = বাগ্মী, সুবক্তা। Synonym: articulate, fluent, expressive। Antonym: inarticulate।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -321,7 +347,8 @@ const englishQuestions: Question[] = [
       "To feel disgusted",
     ],
     correctIndex: 1,
-    explanation: "'To smell a rat' = কিছু সন্দেহজনক মনে করা, কোনো চক্রান্ত আঁচ করা (to suspect a trick or deceit)।",
+    explanation:
+      "'To smell a rat' = কিছু সন্দেহজনক মনে করা, কোনো চক্রান্ত আঁচ করা (to suspect a trick or deceit)।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -334,7 +361,8 @@ const englishQuestions: Question[] = [
     text: "The antonym of 'transparent' is:",
     options: ["clear", "obvious", "opaque", "visible"],
     correctIndex: 2,
-    explanation: "Transparent = স্বচ্ছ। Antonym: opaque = অস্বচ্ছ, আলোকভেদ্য নয়।",
+    explanation:
+      "Transparent = স্বচ্ছ। Antonym: opaque = অস্বচ্ছ, আলোকভেদ্য নয়।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "easy",
@@ -347,7 +375,8 @@ const englishQuestions: Question[] = [
     text: "One word substitution: 'Government by the people' —",
     options: ["Autocracy", "Monarchy", "Democracy", "Aristocracy"],
     correctIndex: 2,
-    explanation: "Democracy = গণতন্ত্র (জনগণের সরকার)। Demo = people, Cracy = rule/government।",
+    explanation:
+      "Democracy = গণতন্ত্র (জনগণের সরকার)। Demo = people, Cracy = rule/government।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "easy",
@@ -365,7 +394,8 @@ const englishQuestions: Question[] = [
       "To feel cold",
     ],
     correctIndex: 1,
-    explanation: "'Break the ice' = জমাটবাঁধা পরিবেশ ভাঙা, কথোপকথন শুরু করা (to initiate social interaction)।",
+    explanation:
+      "'Break the ice' = জমাটবাঁধা পরিবেশ ভাঙা, কথোপকথন শুরু করা (to initiate social interaction)।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "easy",
@@ -378,7 +408,8 @@ const englishQuestions: Question[] = [
     text: "The synonym of 'ubiquitous' is:",
     options: ["rare", "omnipresent", "unique", "absent"],
     correctIndex: 1,
-    explanation: "Ubiquitous = সর্বব্যাপী। Synonym: omnipresent, pervasive, universal। Antonym: rare, scarce।",
+    explanation:
+      "Ubiquitous = সর্বব্যাপী। Synonym: omnipresent, pervasive, universal। Antonym: rare, scarce।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "hard",
@@ -391,7 +422,8 @@ const englishQuestions: Question[] = [
     text: "One word substitution: 'A person who hates mankind' —",
     options: ["Philanthropist", "Misanthrope", "Misogynist", "Altruist"],
     correctIndex: 1,
-    explanation: "Misanthrope = মানবদ্বেষী। Miso = hatred, Anthropos = mankind। Philanthropist (বিপরীত) = মানবপ্রেমী।",
+    explanation:
+      "Misanthrope = মানবদ্বেষী। Miso = hatred, Anthropos = mankind। Philanthropist (বিপরীত) = মানবপ্রেমী।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "hard",
@@ -409,7 +441,8 @@ const englishQuestions: Question[] = [
       "A powerful leader",
     ],
     correctIndex: 1,
-    explanation: "'A white elephant' = ব্যয়বহুল কিন্তু অকেজো বস্তু (a costly possession that is useless to its owner)।",
+    explanation:
+      "'A white elephant' = ব্যয়বহুল কিন্তু অকেজো বস্তু (a costly possession that is useless to its owner)।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -422,7 +455,8 @@ const englishQuestions: Question[] = [
     text: "The antonym of 'diligent' is:",
     options: ["hardworking", "lazy", "active", "careful"],
     correctIndex: 1,
-    explanation: "Diligent = পরিশ্রমী, অধ্যবসায়ী। Antonym: lazy, idle, slothful।",
+    explanation:
+      "Diligent = পরিশ্রমী, অধ্যবসায়ী। Antonym: lazy, idle, slothful।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "easy",
@@ -435,7 +469,8 @@ const englishQuestions: Question[] = [
     text: "One word substitution: 'A person who lives in solitude' —",
     options: ["Hermit", "Hero", "Hedonist", "Hypocrite"],
     correctIndex: 0,
-    explanation: "Hermit = সন্ন্যাসী, একাকী জীবনযাপনকারী। Synonym: recluse, ascetic।",
+    explanation:
+      "Hermit = সন্ন্যাসী, একাকী জীবনযাপনকারী। Synonym: recluse, ascetic।",
     subjectId: "english",
     topicId: "vocabulary",
     difficulty: "medium",
@@ -449,7 +484,8 @@ const englishQuestions: Question[] = [
     text: "Which is correct? 'He insisted ___ my going there.'",
     options: ["on", "in", "at", "to"],
     correctIndex: 0,
-    explanation: "'Insist on' একটি fixed phrase। 'He insisted on my going there.' Insist on + gerund/noun।",
+    explanation:
+      "'Insist on' একটি fixed phrase। 'He insisted on my going there.' Insist on + gerund/noun।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",
@@ -467,7 +503,8 @@ const englishQuestions: Question[] = [
       "Each of the boys having a book.",
     ],
     correctIndex: 1,
-    explanation: "Each, every, everyone, everybody এর সাথে singular verb বসে। 'Each of the boys has a book.'",
+    explanation:
+      "Each, every, everyone, everybody এর সাথে singular verb বসে। 'Each of the boys has a book.'",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",
@@ -480,7 +517,8 @@ const englishQuestions: Question[] = [
     text: "'He is ___ European.' — Choose the correct article:",
     options: ["a", "an", "the", "no article"],
     correctIndex: 0,
-    explanation: "'European' /jʊərəˈpiːən/ — শুরুতে 'y' (consonant) sound আছে, vowel letter (E) দিয়ে শুরু হলেও। তাই 'a' বসে।",
+    explanation:
+      "'European' /jʊərəˈpiːən/ — শুরুতে 'y' (consonant) sound আছে, vowel letter (E) দিয়ে শুরু হলেও। তাই 'a' বসে।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",
@@ -493,7 +531,8 @@ const englishQuestions: Question[] = [
     text: "Which is the correct comparative form of 'good'?",
     options: ["gooder", "more good", "better", "best"],
     correctIndex: 2,
-    explanation: "Good → Better (Comparative) → Best (Superlative)। Irregular comparison।",
+    explanation:
+      "Good → Better (Comparative) → Best (Superlative)। Irregular comparison।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "easy",
@@ -506,7 +545,8 @@ const englishQuestions: Question[] = [
     text: "'Neither Ram nor Shyam ___ present.' — Fill the blank:",
     options: ["were", "was", "are", "have been"],
     correctIndex: 1,
-    explanation: "'Neither...nor' এর ক্ষেত্রে verb সবচেয়ে কাছের subject (Shyam = singular) অনুসারে হয়। 'was' (singular)।",
+    explanation:
+      "'Neither...nor' এর ক্ষেত্রে verb সবচেয়ে কাছের subject (Shyam = singular) অনুসারে হয়। 'was' (singular)।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",
@@ -524,7 +564,8 @@ const englishQuestions: Question[] = [
       "To give up",
     ],
     correctIndex: 1,
-    explanation: "Procrastinate = ইচ্ছাকৃতভাবে বিলম্ব করা, দেরি করা (to delay or postpone action)।",
+    explanation:
+      "Procrastinate = ইচ্ছাকৃতভাবে বিলম্ব করা, দেরি করা (to delay or postpone action)।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",
@@ -537,7 +578,8 @@ const englishQuestions: Question[] = [
     text: "'Penultimate' means:",
     options: ["First", "Last", "Second to last", "Most important"],
     correctIndex: 2,
-    explanation: "Penultimate = শেষ থেকে দ্বিতীয় (second to last)। 'Pen' (almost) + 'ultimate' (last)।",
+    explanation:
+      "Penultimate = শেষ থেকে দ্বিতীয় (second to last)। 'Pen' (almost) + 'ultimate' (last)।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "hard",
@@ -555,7 +597,8 @@ const englishQuestions: Question[] = [
       "The news have been good.",
     ],
     correctIndex: 1,
-    explanation: "'News' দেখতে plural মনে হলেও এটি uncountable noun, তাই singular verb (is) বসে। 'The news is good.'",
+    explanation:
+      "'News' দেখতে plural মনে হলেও এটি uncountable noun, তাই singular verb (is) বসে। 'The news is good.'",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "easy",
@@ -568,7 +611,8 @@ const englishQuestions: Question[] = [
     text: "'I wish I ___ a king.' — Fill the blank:",
     options: ["am", "was", "were", "will be"],
     correctIndex: 2,
-    explanation: "'Wish' এর পরে past subjunctive ব্যবহৃত হয়। I/he/she/it সবার সাথে 'were' বসে (subjunctive mood)।",
+    explanation:
+      "'Wish' এর পরে past subjunctive ব্যবহৃত হয়। I/he/she/it সবার সাথে 'were' বসে (subjunctive mood)।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",
@@ -581,7 +625,8 @@ const englishQuestions: Question[] = [
     text: "'Let him and ___ go.' — Fill the blank:",
     options: ["I", "me", "my", "mine"],
     correctIndex: 1,
-    explanation: "'Let' এর পরে objective case বসে। 'Let him and me go.' (me = objective case of I)।",
+    explanation:
+      "'Let' এর পরে objective case বসে। 'Let him and me go.' (me = objective case of I)।",
     subjectId: "english",
     topicId: "comprehension",
     difficulty: "medium",

@@ -1,8 +1,23 @@
 import type { LiveExam, Question, Subject, Topic } from "@/types";
-import { allQuestions, totalQuestionCount, getQuestionsBySubject, getQuestionsByTopic, getQuestionsBySubjectAndTopic, getRandomQuestions, getQuestionStats } from "./questions";
+import {
+  allQuestions,
+  getQuestionsBySubject,
+  getQuestionsBySubjectAndTopic,
+  getQuestionsByTopic,
+  getQuestionStats,
+  getRandomQuestions,
+  totalQuestionCount,
+} from "./questions";
 
 // Re-export utilities from modular question bank
-export { getQuestionsBySubject, getQuestionsByTopic, getQuestionsBySubjectAndTopic, getRandomQuestions, getQuestionStats, totalQuestionCount };
+export {
+  getQuestionsBySubject,
+  getQuestionsBySubjectAndTopic,
+  getQuestionsByTopic,
+  getQuestionStats,
+  getRandomQuestions,
+  totalQuestionCount,
+};
 
 // ==========================================
 // Subject Database — CrackIt Platform
